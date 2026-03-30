@@ -31,6 +31,9 @@ Edit `index.html` directly and push to `main`. Pages deploys automatically, usua
 
 ## Pending
 
-- [ ] Confirm `hello@glowstrm.com` email address is live
 - [ ] Mobile nav: links collapse without hamburger (intentional for now — revisit for production)
 - [ ] Copyright year: currently `2025–2026`
+
+## Contact
+
+CTA buttons link to `northnode@glowstrm.com`
