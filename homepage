@@ -1276,7 +1276,7 @@
     <hr class="rule" style="margin-bottom:clamp(3rem,8vw,5rem);" />
     <h2 class="cta-headline">If this sounds<br><em>aligned</em></h2>
     <p class="cta-body">Send a brief note with your context and timing. I'll confirm fit and availability. If it's not aligned, I'll say so directly — no weird sales dance.</p>
-    <a href="mailto:hello@glowstrm.com" class="btn-primary">hello@glowstrm.com</a>
+    <a href="mailto:northnode@glowstrm.com" class="btn-primary">northnode@glowstrm.com</a>
     <p class="cta-note">Availability is limited to Two spots per quarter.</p>
   </div>
 </section>
@@ -1725,16 +1725,7 @@
       border-top: 1px solid var(--rule);
       border-bottom: 1px solid var(--rule);
       padding: 0.9rem 0;
-      overflow: hidden;
-    }
-    .marquee-track {
-      display: flex;
-      width: max-content;
-      animation: ticker 30s linear infinite;
-    }
-    .marquee-track:hover { animation-play-state: paused; }
-    .marquee-item {
-      font-family: var(--f-body);
+      overflow: hi);
       font-size: 0.62rem;
       font-weight: 600;
       letter-spacing: 0.22em;
@@ -2690,7 +2681,7 @@
     <hr class="rule" style="margin-bottom:clamp(3rem,8vw,5rem);" />
     <h2 class="cta-headline">If this sounds<br><em>aligned</em></h2>
     <p class="cta-body">Send a brief note with your context and timing. I'll confirm fit and availability. If it's not aligned, I'll say so directly — no weird sales dance.</p>
-    <a href="/cdn-cgi/l/email-protection#543c3138383b1433383b23272026397a373b39" class="btn-primary"><span class="__cf_email__" data-cfemail="9bf3fef7f7f4dbfcf7f4ece8efe9f6b5f8f4f6">[email&#160;protected]</span></a>
+    <a href="mailto:northnode@glowstrm.com" class="btn-primary">northnode@glowstrm.com</a>
     <p class="cta-note">Availability is limited to Two spots per quarter.</p>
   </div>
 </section>
