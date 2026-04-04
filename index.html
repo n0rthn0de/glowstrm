@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <link rel="icon" type="image/svg+xml" href="assets/Flat Logo Light - Mark.svg" />
   <meta name="theme-color" content="#271F41" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -265,6 +264,15 @@
       width: min(460px, 52vw);
       pointer-events: none;
       opacity: 0.1;
+    }
+    /* GlowStrm mark watermark behind the rings */
+    .hero-mark {
+      position: absolute;
+      right: clamp(-60px, -3vw, 0px);
+      top: clamp(10px, 3vw, 50px);
+      width: min(420px, 48vw);
+      pointer-events: none;
+      opacity: 0.07;
     }
     .hero-eyebrow {
       font-family: var(--f-body);
@@ -963,19 +971,6 @@
     }
 
 
-    /* ══ LOGO IMAGES ══ */
-    .nav-logo { display: flex; align-items: center; padding: 0; }
-    .nav-logo-img {
-      height: 28px;
-      width: auto;
-      display: block;
-    }
-    .footer-logo-img {
-      height: 48px;
-      width: auto;
-      display: block;
-      opacity: 0.28;
-    }
 
     /* ══ SPRINT ONE-LINER ══ */
     .sprint-oneliner {
@@ -1024,10 +1019,11 @@
 <!-- ══════════════════ NAV ══════════════════ -->
 <nav>
   <div class="nav-inner">
-    <a href="#" class="nav-logo" aria-label="GlowStrm home"><img src="assets/Flat Logo Light - Secondary.svg" alt="GlowStrm" class="nav-logo-img" /></a>
+    <a href="#" class="nav-logo">GlowStrm</a>
 
     <ul class="nav-links" aria-label="Main navigation">
       <li><a href="#work">Work</a></li>
+      <li><a href="#founder">About</a></li>
       <li><a href="#sprint">Sprint</a></li>
       <li><a href="#process">Process</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -1045,6 +1041,7 @@
 <nav class="nav-drawer" id="navDrawer" aria-label="Mobile navigation">
   <ul>
     <li><a href="#work"    onclick="closeNav()">Work</a></li>
+    <li><a href="#founder" onclick="closeNav()">About</a></li>
     <li><a href="#sprint"  onclick="closeNav()">Sprint</a></li>
     <li><a href="#process" onclick="closeNav()">Process</a></li>
     <li><a href="#contact" onclick="closeNav()">Contact</a></li>
@@ -1053,6 +1050,9 @@
 
 <!-- ══════════════════ HERO ══════════════════ -->
 <div class="hero">
+
+  <!-- GlowStrm mark watermark -->
+  <img class="hero-mark" src="assets/Flat Logo Light - Mark.svg" alt="" aria-hidden="true" />
 
   <!-- Brand supergraphic: flowing concentric rings, right side -->
   <svg class="hero-sg" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -1091,7 +1091,7 @@
     <p class="hero-body fade-up d3">
       Especially when the work is complex and the stakes are real.
       <br><br>
-      <strong>Message architecture</strong> is the structural work that comes before content, campaigns, or execution — clarifying what needs to be said, who you're speaking to, and how to make it hold.
+      Most communications problems aren&#8217;t writing problems. They&#8217;re clarity problems. <strong>Message architecture</strong> is the foundation work that happens before content, campaigns, or execution — so that when you do say something, it holds.
     </p>
     <div class="hero-actions fade-up d4">
       <a href="#contact" class="btn-primary">Start a conversation</a>
@@ -1131,28 +1131,28 @@
   <div class="container">
     <p class="section-label">The work</p>
     <h2 class="section-headline">Clarity before<br><em>everything else.</em></h2>
-    <p class="section-body">We address messaging problems early — before they turn into rework, misalignment, or political confusion. If your message needs to hold up across rooms, roles, and realities, this work is designed for you.</p>
+    <p class="section-body">When messaging isn&#8217;t working, people reach for better words. But words built on a shaky foundation will always wobble. This work goes upstream — before the copy, before the campaign, before the deck.</p>
 
     <div class="work-grid">
       <div class="work-item">
         <p class="work-number">01</p>
         <h3 class="work-title">What needs to be said</h3>
-        <p class="work-desc">Not everything. The specific message that must land every time — defined before content production begins.</p>
+        <p class="work-desc">Not everything. The specific message that has to land every time — named before content production starts.</p>
       </div>
       <div class="work-item">
         <p class="work-number">02</p>
         <h3 class="work-title">Who you're speaking to</h3>
-        <p class="work-desc">Audience reality, not audience assumption. What they care about, what pressures they carry, and what they're not focused on.</p>
+        <p class="work-desc">Not who you assume. What they actually care about, what pressures they're carrying, and what they're not thinking about at all.</p>
       </div>
       <div class="work-item">
         <p class="work-number">03</p>
-        <h3 class="work-title">A defensible position</h3>
-        <p class="work-desc">Narrative structure that holds under scrutiny. Positioned clearly, so it doesn't get reinterpreted in transit.</p>
+        <h3 class="work-title">A position that holds</h3>
+        <p class="work-desc">Structured clearly enough that it doesn't get reinterpreted in transit. Defensible in the room, not just on paper.</p>
       </div>
       <div class="work-item">
         <p class="work-number">04</p>
-        <h3 class="work-title">Language guardrails</h3>
-        <p class="work-desc">The words that work, the words to avoid, and the boundaries that prevent drift — documented so teams can use them independently.</p>
+        <h3 class="work-title">Language that travels</h3>
+        <p class="work-desc">The words that work, the ones to avoid, and the guardrails that keep teams aligned — documented so anyone can use them without a briefing.</p>
       </div>
     </div>
   </div>
@@ -1214,7 +1214,7 @@
   <div class="container">
     <p class="section-label">The offer</p>
     <h2 class="section-headline">Message Architecture<br><em>Sprint</em></h2>
-    <p class="section-body">Two weeks. Fixed scope. One clear output. This sprint replaces open-ended advisory work with a focused intervention — so you're not paying for ambiguity.</p>
+    <p class="section-body">Two weeks. A fixed scope. One clear output: a Message Architecture Brief you can actually use. Not a deck that sits in a folder. A working document that should change how you communicate.</p>
 
     <div class="sprint-block">
       <div class="sprint-header">
@@ -1227,7 +1227,7 @@
         <div class="sprint-meta">
           <div class="sprint-price">$2,500</div>
           <div class="sprint-duration">Fixed fee · 2 weeks</div>
-          <div class="sprint-duration" style="margin-top:0.3rem;">Two spots per quarter</div>
+          <div class="sprint-duration" style="margin-top:0.3rem;">Four clients per quarter</div>
         </div>
       </div>
 
@@ -1376,7 +1376,7 @@
     <h2 class="cta-headline">If this sounds<br><em>aligned</em></h2>
     <p class="cta-body">Send a brief note with your context and timing. I'll confirm fit and availability. If it's not aligned, I'll say so directly — no weird sales dance.</p>
     <a href="mailto:northnode@glowstrm.com" class="btn-primary">Let's start a conversation</a>
-    <p class="cta-note">Availability is limited to Two spots per quarter.</p>
+    <p class="cta-note">Availability is limited to Four clients per quarter.</p>
   </div>
 </section>
 
@@ -1391,7 +1391,7 @@
 <!-- ══════════════════ FOOTER ══════════════════ -->
 <footer>
   <div class="footer-inner">
-    <img src="assets/Flat Logo Light - Primary.svg" alt="GlowStrm, LLC" class="footer-logo-img" />
+    <span class="footer-logo">GlowStrm, LLC</span>
     <span class="footer-copy">Richmond, VA &nbsp;·&nbsp; Black woman-owned &nbsp;·&nbsp; © 2026</span>
   </div>
   <div class="gradient-bar" style="margin-top:2.5rem;"></div>
