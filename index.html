@@ -108,13 +108,17 @@
       justify-content: space-between;
     }
     .nav-logo {
-      font-family: var(--f-display);
-      font-size: 1.3rem;
-      font-weight: 400;
-      letter-spacing: 0.04em;
-      color: var(--cream);
       text-decoration: none;
       flex-shrink: 0;
+      display: flex;
+      align-items: center;
+    }
+    .nav-logo-img {
+      height: 32px;
+      width: auto;
+      display: block;
+      mix-blend-mode: screen;
+      opacity: 0.9;
     }
 
     /* Desktop links */
@@ -256,23 +260,16 @@
       position: relative;
       overflow: hidden;
     }
-    /* Supergraphic: absolutely positioned, right side */
-    .hero-sg {
+
+    /* GlowStrm colored mark — screen blend removes black bg */
+    .hero-mark {
       position: absolute;
       right: clamp(-80px, -5vw, -20px);
       top: clamp(20px, 5vw, 60px);
-      width: min(460px, 52vw);
+      width: min(480px, 54vw);
       pointer-events: none;
-      opacity: 0.1;
-    }
-    /* GlowStrm mark watermark behind the rings */
-    .hero-mark {
-      position: absolute;
-      right: clamp(-60px, -3vw, 0px);
-      top: clamp(10px, 3vw, 50px);
-      width: min(420px, 48vw);
-      pointer-events: none;
-      opacity: 0.07;
+      opacity: 0.55;
+      mix-blend-mode: screen;
     }
     .hero-eyebrow {
       font-family: var(--f-body);
@@ -1019,7 +1016,7 @@
 <!-- ══════════════════ NAV ══════════════════ -->
 <nav>
   <div class="nav-inner">
-    <a href="#" class="nav-logo">GlowStrm</a>
+    <a href="#" class="nav-logo" aria-label="GlowStrm"><img src="assets/Colored Logo - Secondary.svg" alt="GlowStrm" class="nav-logo-img" /></a>
 
     <ul class="nav-links" aria-label="Main navigation">
       <li><a href="#work">Work</a></li>
@@ -1052,34 +1049,8 @@
 <div class="hero">
 
   <!-- GlowStrm mark watermark -->
-  <img class="hero-mark" src="assets/Flat Logo Light - Mark.svg" alt="" aria-hidden="true" />
+  <img class="hero-mark" src="assets/Colored Logo - Mark.svg" alt="" aria-hidden="true" />
 
-  <!-- Brand supergraphic: flowing concentric rings, right side -->
-  <svg class="hero-sg" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <circle cx="200" cy="200" r="80"  stroke="url(#hsg1)" stroke-width="0.8" fill="none"/>
-    <circle cx="200" cy="200" r="115" stroke="url(#hsg2)" stroke-width="0.7" fill="none" transform="rotate(25 200 200)"/>
-    <circle cx="200" cy="200" r="148" stroke="url(#hsg1)" stroke-width="0.6" fill="none" transform="rotate(-18 200 200)"/>
-    <circle cx="200" cy="200" r="178" stroke="url(#hsg2)" stroke-width="0.55" fill="none" transform="rotate(45 200 200)"/>
-    <circle cx="200" cy="200" r="205" stroke="url(#hsg1)" stroke-width="0.5" fill="none" transform="rotate(10 200 200)"/>
-    <circle cx="200" cy="200" r="230" stroke="url(#hsg2)" stroke-width="0.4" fill="none" transform="rotate(-35 200 200)"/>
-    <line x1="200" y1="170" x2="200" y2="230" stroke="#E6B65C" stroke-width="0.7" opacity="0.6"/>
-    <line x1="170" y1="200" x2="230" y2="200" stroke="#E6B65C" stroke-width="0.7" opacity="0.6"/>
-    <line x1="179" y1="179" x2="221" y2="221" stroke="#E6B65C" stroke-width="0.5" opacity="0.4"/>
-    <line x1="221" y1="179" x2="179" y2="221" stroke="#E6B65C" stroke-width="0.5" opacity="0.4"/>
-    <circle cx="200" cy="200" r="4" fill="#E6B65C" opacity="0.5"/>
-    <defs>
-      <linearGradient id="hsg1" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
-        <stop offset="0%"   stop-color="#BB4072"/>
-        <stop offset="50%"  stop-color="#774ECE"/>
-        <stop offset="100%" stop-color="#E6B65C"/>
-      </linearGradient>
-      <linearGradient id="hsg2" x1="400" y1="0" x2="0" y2="400" gradientUnits="userSpaceOnUse">
-        <stop offset="0%"   stop-color="#783E8D"/>
-        <stop offset="50%"  stop-color="#FB896D"/>
-        <stop offset="100%" stop-color="#BB4072"/>
-      </linearGradient>
-    </defs>
-  </svg>
 
   <div class="container">
     <p class="hero-eyebrow fade-up d1">GlowStrm, LLC &nbsp;·&nbsp; Message Architecture</p>
