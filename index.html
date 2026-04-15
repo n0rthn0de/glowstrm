@@ -168,7 +168,21 @@
   .btn-group { display: flex; gap: 12px; flex-wrap: wrap; }
 
   /* ── HERO ── */
-  .hero { padding: 96px 0 88px; border-bottom: 1px solid var(--border); }
+  .hero { padding: 96px 0 88px; border-bottom: 1px solid var(--border); position: relative; overflow: hidden; }
+
+  .hero-mark {
+    position: absolute;
+    right: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 520px;
+    height: auto;
+    opacity: 0.9;
+    pointer-events: none;
+  }
+
+  @media (max-width: 960px) { .hero-mark { width: 360px; right: -80px; opacity: 0.6; } }
+  @media (max-width: 640px) { .hero-mark { display: none; } }
 
   .hero-tagline {
     font-family: 'Source Sans 3', sans-serif;
@@ -631,7 +645,7 @@
   <a href="#" class="nav-wordmark">GlowStrm</a>
   <div class="nav-links">
     <a href="#work" class="nav-link">Work</a>
-    <a href="#about" class="nav-link">About</a>
+    <a href="about.html" class="nav-link">About</a>
     <a href="#services" class="nav-link">Services</a>
     <a href="sprint.html" class="nav-link">Sprint</a>
     <a href="#contact" class="nav-link">Contact</a>
@@ -643,6 +657,7 @@
      HERO — updated: third CTA added
 ════════════════════════════════════════════ -->
 <section class="hero">
+  <img src="glowstrm-mark.svg" class="hero-mark" alt="" aria-hidden="true">
   <div class="container">
     <p class="hero-tagline">GlowStrm, LLC · Message Architecture</p>
 
