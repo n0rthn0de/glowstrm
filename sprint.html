@@ -21,459 +21,72 @@
       --border-hi: #453b62;
       --gradient:  linear-gradient(90deg, #BB4072, #783E8D, #774ECE, #FB896D);
     }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
-      height: 100%;
-    }
-
-    body {
-      font-family: 'Source Sans 3', sans-serif;
-      background-color: var(--dark);
-      color: var(--cream);
-      font-size: 16px;
-      line-height: 1.6;
-      font-weight: 300;
-    }
-
-    /* Top gradient bar */
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: var(--gradient);
-      z-index: 1000;
-    }
-
-    /* Navigation */
-    nav {
-      position: sticky;
-      top: 3px;
-      background-color: var(--surface);
-      border-bottom: 1px solid var(--border);
-      z-index: 999;
-      padding: 0 clamp(24px, 6vw, 80px);
-      height: 88px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    nav .logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 24px;
-      font-weight: 400;
-      color: var(--cream);
-      text-decoration: none;
-      letter-spacing: 1px;
-    }
-
-    nav .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 32px;
-      list-style: none;
-    }
-
-    nav .nav-links a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 400;
-      transition: color 0.3s ease;
-    }
-
-    nav .nav-links a:hover {
-      color: var(--gold);
-    }
-
-    nav .nav-links a.active {
-      color: var(--cream);
-    }
-
-    .nav-cta {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .nav-cta a {
-      color: var(--dark) !important;
-      background-color: var(--gold);
-      padding: 12px 24px;
-      border-radius: 4px;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-      min-height: 52px;
-      display: flex;
-      align-items: center;
-    }
-
-    .nav-cta a:hover {
-      background-color: #f5d88a;
-    }
-
-    /* Main content */
-    main {
-      padding-top: 0;
-    }
-
-    /* Hero section */
-    .hero {
-      background-color: var(--surface);
-      padding: clamp(88px, 12vw, 120px) clamp(24px, 6vw, 80px);
-      border-bottom: 1px solid var(--border);
-      animation: fadeUp 0.8s ease-out;
-    }
-
-    .hero-content {
-      max-width: 880px;
-      margin: 0 auto;
-    }
-
-    .eyebrow {
-      font-family: 'Source Sans 3', sans-serif;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 16px;
-    }
-
-    .hero h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(36px, 6vw, 64px);
-      font-weight: 300;
-      line-height: 1.2;
-      color: var(--cream);
-      margin-bottom: 24px;
-    }
-
-    .subhead {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(20px, 3vw, 28px);
-      font-weight: 300;
-      font-style: italic;
-      color: var(--muted);
-      line-height: 1.4;
-      margin-bottom: 32px;
-      max-width: 700px;
-    }
-
-    .meta-dots {
-      font-size: 14px;
-      color: var(--muted);
-      margin-bottom: 32px;
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .meta-dots span {
-      display: flex;
-      align-items: center;
-    }
-
-    .meta-dots span:not(:last-child)::after {
-      content: '·';
-      margin-left: 16px;
-      color: var(--border-hi);
-    }
-
-    .hero-cta-buttons {
-      display: flex;
-      gap: 16px;
-      margin-top: 40px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 12px 24px;
-      border-radius: 4px;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      min-height: 52px;
-      display: inline-flex;
-      align-items: center;
-      transition: all 0.3s ease;
-      border: 1px solid transparent;
-    }
-
-    .btn-gold {
-      background-color: var(--gold);
-      color: var(--dark);
-    }
-
-    .btn-gold:hover {
-      background-color: #f5d88a;
-    }
-
-    .btn-ghost {
-      background-color: transparent;
-      color: var(--muted);
-      border: 1px solid var(--border-hi);
-    }
-
-    .btn-ghost:hover {
-      color: var(--gold);
-      border-color: var(--gold);
-    }
-
-    /* Sections */
-    section {
-      padding: clamp(88px, 12vw, 120px) clamp(24px, 6vw, 80px);
-      border-bottom: 1px solid var(--border);
-      animation: fadeUp 0.8s ease-out;
-    }
-
-    section:nth-child(even) {
-      background-color: rgba(33, 26, 54, 0.5);
-    }
-
-    .section-content {
-      max-width: 880px;
-      margin: 0 auto;
-    }
-
-    section h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(32px, 5vw, 48px);
-      font-weight: 300;
-      color: var(--cream);
-      margin-bottom: 32px;
-      line-height: 1.3;
-    }
-
-    section p {
-      font-size: 16px;
-      line-height: 1.8;
-      color: var(--cream);
-      margin-bottom: 20px;
-    }
-
-    section p:last-of-type {
-      margin-bottom: 0;
-    }
-
-    section ul {
-      list-style: none;
-      margin-top: 20px;
-    }
-
-    section li {
-      font-size: 16px;
-      line-height: 1.8;
-      color: var(--cream);
-      margin-bottom: 16px;
-      padding-left: 24px;
-      position: relative;
-    }
-
-    section li::before {
-      content: '→';
-      position: absolute;
-      left: 0;
-      color: var(--gold);
-    }
-
-    /* Two-column list */
-    .two-col-list {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      margin-top: 32px;
-    }
-
-    .two-col-list h3 {
-      font-family: 'Source Sans 3', sans-serif;
-      font-size: 14px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--gold);
-      margin-bottom: 16px;
-    }
-
-    .two-col-list ul {
-      margin-top: 0;
-    }
-
-    .note {
-      font-size: 14px;
-      color: var(--muted);
-      font-style: italic;
-      margin-top: 24px;
-      padding: 16px 20px;
-      border-left: 3px solid var(--border-hi);
-    }
-
-    /* Process steps */
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 32px;
-      margin-top: 40px;
-    }
-
-    .process-step {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .step-number {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 32px;
-      font-weight: 300;
-      color: var(--gold);
-      margin-bottom: 12px;
-    }
-
-    .step-title {
-      font-family: 'Source Sans 3', sans-serif;
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--cream);
-      margin-bottom: 8px;
-      line-height: 1.3;
-    }
-
-    .step-desc {
-      font-size: 14px;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    /* Fit section styling */
-    .fit-content {
-      margin-top: 32px;
-    }
-
-    .fit-col {
-      margin-bottom: 40px;
-    }
-
-    .fit-col h3 {
-      font-family: 'Source Sans 3', sans-serif;
-      font-size: 14px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--gold);
-      margin-bottom: 16px;
-    }
-
-    .fit-col ul {
-      margin-top: 0;
-    }
-
-    /* Footer */
-    footer {
-      background-color: var(--surface);
-      border-top: 1px solid var(--border);
-      padding: 48px clamp(24px, 6vw, 80px);
-      text-align: center;
-    }
-
-    footer p {
-      font-size: 14px;
-      color: var(--muted);
-      line-height: 1.8;
-    }
-
-    footer a {
-      color: var(--gold);
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* Animations */
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Responsive */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; }
+    body { font-family: 'Source Sans 3', sans-serif; background-color: var(--dark); color: var(--cream); font-size: 16px; line-height: 1.6; font-weight: 300; }
+    body::before { content: ''; position: fixed; top: 0; left: 0; right: 0; height: 3px; background: var(--gradient); z-index: 1000; }
+    nav { position: sticky; top: 3px; background-color: var(--surface); border-bottom: 1px solid var(--border); z-index: 999; padding: 0 clamp(24px, 6vw, 80px); height: 88px; display: flex; align-items: center; justify-content: space-between; }
+    nav .logo { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 400; color: var(--cream); text-decoration: none; letter-spacing: 1px; }
+    nav .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    nav .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 400; transition: color 0.3s ease; }
+    nav .nav-links a:hover { color: var(--gold); }
+    nav .nav-links a.active { color: var(--cream); }
+    .nav-cta { display: flex; align-items: center; gap: 8px; }
+    .nav-cta a { color: var(--dark) !important; background-color: var(--gold); padding: 12px 24px; border-radius: 4px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background-color 0.3s ease; min-height: 52px; display: flex; align-items: center; }
+    .nav-cta a:hover { background-color: #f5d88a; }
+    main { padding-top: 0; }
+    .hero { background-color: var(--surface); padding: clamp(88px, 12vw, 120px) clamp(24px, 6vw, 80px); border-bottom: 1px solid var(--border); animation: fadeUp 0.8s ease-out; }
+    .hero-content { max-width: 880px; margin: 0 auto; }
+    .eyebrow { font-family: 'Source Sans 3', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 6vw, 64px); font-weight: 300; line-height: 1.2; color: var(--cream); margin-bottom: 24px; }
+    .subhead { font-family: 'Cormorant Garamond', serif; font-size: clamp(20px, 3vw, 28px); font-weight: 300; font-style: italic; color: var(--muted); line-height: 1.4; margin-bottom: 20px; max-width: 700px; }
+    .best-for { font-family: 'Source Sans 3', sans-serif; font-size: 15px; font-weight: 300; color: var(--muted); line-height: 1.7; max-width: 620px; margin-bottom: 32px; }
+    .meta-dots { font-size: 14px; color: var(--muted); margin-bottom: 8px; display: flex; gap: 16px; flex-wrap: wrap; }
+    .meta-dots span { display: flex; align-items: center; }
+    .meta-dots span:not(:last-child)::after { content: '·'; margin-left: 16px; color: var(--border-hi); }
+    .founding-note { font-family: 'Source Sans 3', sans-serif; font-size: 13px; font-weight: 300; color: var(--gold); line-height: 1.6; margin-bottom: 32px; padding: 12px 16px; border-left: 2px solid var(--gold); background: rgba(230,182,92,0.06); max-width: 580px; }
+    .hero-cta-buttons { display: flex; gap: 16px; margin-top: 8px; flex-wrap: wrap; }
+    .btn { padding: 12px 24px; border-radius: 4px; font-size: 14px; font-weight: 600; text-decoration: none; min-height: 52px; display: inline-flex; align-items: center; transition: all 0.3s ease; border: 1px solid transparent; }
+    .btn-gold { background-color: var(--gold); color: var(--dark); }
+    .btn-gold:hover { background-color: #f5d88a; }
+    .btn-ghost { background-color: transparent; color: var(--muted); border: 1px solid var(--border-hi); }
+    .btn-ghost:hover { color: var(--gold); border-color: var(--gold); }
+    section { padding: clamp(88px, 12vw, 120px) clamp(24px, 6vw, 80px); border-bottom: 1px solid var(--border); animation: fadeUp 0.8s ease-out; }
+    section:nth-child(even) { background-color: rgba(33, 26, 54, 0.5); }
+    .section-content { max-width: 880px; margin: 0 auto; }
+    section h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 5vw, 48px); font-weight: 300; color: var(--cream); margin-bottom: 32px; line-height: 1.3; }
+    section p { font-size: 16px; line-height: 1.8; color: var(--cream); margin-bottom: 20px; }
+    section p:last-of-type { margin-bottom: 0; }
+    section ul { list-style: none; margin-top: 20px; }
+    section li { font-size: 16px; line-height: 1.8; color: var(--cream); margin-bottom: 16px; padding-left: 24px; position: relative; }
+    section li::before { content: '→'; position: absolute; left: 0; color: var(--gold); }
+    .brief-components { margin-top: 24px; padding: 0; list-style: none; }
+    .brief-components li { font-size: 15px; line-height: 1.8; color: var(--muted); margin-bottom: 0; padding: 14px 0 14px 24px; border-bottom: 1px solid var(--border); position: relative; }
+    .brief-components li:last-child { border-bottom: none; }
+    .brief-components li::before { content: '✦'; position: absolute; left: 0; color: var(--coral); font-size: 11px; top: 18px; }
+    .brief-components li strong { color: var(--cream); font-weight: 600; }
+    .two-col-list { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 32px; }
+    .two-col-list h3 { font-family: 'Source Sans 3', sans-serif; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); margin-bottom: 16px; }
+    .two-col-list ul { margin-top: 0; }
+    .fit-bridge { font-size: 16px; line-height: 1.8; color: var(--muted); font-style: italic; margin-bottom: 32px; padding: 20px 24px; background: var(--surface); border-left: 3px solid var(--border-hi); }
+    footer { background-color: var(--surface); border-top: 1px solid var(--border); padding: 48px clamp(24px, 6vw, 80px); text-align: center; }
+    footer p { font-size: 14px; color: var(--muted); line-height: 1.8; }
+    footer a { color: var(--gold); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     @media (max-width: 640px) {
-      nav {
-        flex-direction: column;
-        height: auto;
-        padding: 16px clamp(24px, 6vw, 80px);
-        gap: 16px;
-      }
-
-      nav .nav-links {
-        flex-direction: column;
-        gap: 12px;
-        width: 100%;
-      }
-
-      nav .nav-links a {
-        font-size: 14px;
-      }
-
-      .nav-cta {
-        width: 100%;
-      }
-
-      .nav-cta a {
-        flex: 1;
-        justify-content: center;
-      }
-
-      .meta-dots {
-        flex-direction: column;
-        gap: 8px;
-      }
-
-      .meta-dots span:not(:last-child)::after {
-        display: none;
-      }
-
-      .hero-cta-buttons {
-        flex-direction: column;
-      }
-
-      .hero-cta-buttons .btn {
-        width: 100%;
-        justify-content: center;
-      }
-
-      .two-col-list {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-
-      .process-grid {
-        grid-template-columns: 1fr;
-      }
+      nav { flex-direction: column; height: auto; padding: 16px clamp(24px, 6vw, 80px); gap: 16px; }
+      nav .nav-links { flex-direction: column; gap: 12px; width: 100%; }
+      .meta-dots { flex-direction: column; gap: 8px; }
+      .meta-dots span:not(:last-child)::after { display: none; }
+      .hero-cta-buttons { flex-direction: column; }
+      .hero-cta-buttons .btn { width: 100%; justify-content: center; }
+      .two-col-list { grid-template-columns: 1fr; gap: 32px; }
     }
   </style>
 </head>
 <body>
-  <!-- Top gradient bar handled by CSS -->
 
-  <!-- Navigation -->
   <nav>
     <a href="index.html" class="logo">GlowStrm</a>
     <ul class="nav-links">
@@ -490,17 +103,20 @@
   </nav>
 
   <main>
-    <!-- Hero Section -->
     <section class="hero">
       <div class="hero-content">
         <div class="eyebrow">Message Architecture Sprint</div>
         <h1>The foundation before everything else.</h1>
         <p class="subhead">A structured, two-week engagement to establish clarity and alignment around what you're saying — before you scale content or design.</p>
+        <p class="best-for">Best for founders and leaders with a real initiative on the line: a launch, repositioning, board-facing shift, funding ask, or public-facing change that needs clarity before execution.</p>
         <div class="meta-dots">
-          <span>$2,500</span>
+          <span>$2,500 — Founding Client Rate ★</span>
           <span>Fixed fee</span>
           <span>2 weeks</span>
           <span>Four clients per quarter</span>
+        </div>
+        <div class="founding-note">
+          ★ Founding client rate. This rate closes when the first cohort is full — the sprint then moves to $10,000. This is not a discount; it is a real window for founders who are ready now.
         </div>
         <div class="hero-cta-buttons">
           <a href="mailto:northnode@glowstrm.com?subject=Message Architecture Sprint Inquiry" class="btn btn-gold">Inquire about availability</a>
@@ -509,32 +125,39 @@
       </div>
     </section>
 
-    <!-- What the Sprint Is -->
     <section>
       <div class="section-content">
         <h2>What the sprint is</h2>
+        <p>Most people come to the sprint when they've rewritten the same thing so many times that changing the words isn't working anymore. The problem isn't the copy; it's the structure underneath it.</p>
         <p>Most communications support starts at the output layer — the copy, the campaign, the content calendar. The sprint starts earlier.</p>
         <p>At the question: what are you actually trying to say, and to whom, and why does it matter that they hear it this way?</p>
-        <p>That's not a writing question. It's a clarity question. And clarity is the work.</p>
+        <p>That's not a writing question; it's a clarity question. And clarity is the work.</p>
       </div>
     </section>
 
-    <!-- What You Leave With -->
     <section>
       <div class="section-content">
         <h2>What you leave with</h2>
-        <p>At the end of the sprint, you have a Message Architecture Brief — a working document that goes underneath all the content, campaigns, and communications you'll ever make. It names your audience's reality, your positioning, the message hierarchy, and the language guardrails that keep everything consistent across rooms and registers.</p>
-        <p>It is the foundation before your content.</p>
+        <p>At the end of the sprint, you have a Message Architecture Brief: a working document that goes underneath all the content, campaigns, and communications you'll ever make.</p>
+        <p>It names:</p>
+        <ul class="brief-components">
+          <li><strong>Your audience's reality</strong> — who you're talking to, what they believe before they encounter you, and what needs to shift for the message to land</li>
+          <li><strong>Your positioning</strong> — what you are, what you are not, and why that distinction matters to the people you're trying to reach</li>
+          <li><strong>Your message hierarchy</strong> — what to lead with, what follows, and what supports it across different rooms and formats</li>
+          <li><strong>Your language guardrails</strong> — phrases to use, phrases to retire, and how the message should sound when you're not in the room</li>
+          <li><strong>Your application guidance</strong> — how to use the Brief across the homepage, decks, emails, vendor briefs, and presentations</li>
+        </ul>
+        <p style="margin-top:32px;">It is the foundation before your content.</p>
         <p>This document should change how you communicate for years. If it doesn't, the sprint wasn't done right.</p>
       </div>
     </section>
 
-    <!-- Who It's For -->
     <section>
       <div class="section-content">
         <h2>This sprint is for specific people.</h2>
-        <div class="fit-content">
-          <div class="fit-col">
+        <p class="fit-bridge">If you have a real initiative — a launch, a repositioning, a high-stakes presentation, a major ask, and you can feel the message wobbling, this is the room it belongs in.</p>
+        <div class="two-col-list">
+          <div>
             <h3>Good fit</h3>
             <ul>
               <li>Messaging complexity is slowing progress or stalling decisions</li>
@@ -545,12 +168,11 @@
               <li>You have a specific initiative, shift, or moment that requires clarity before you move</li>
             </ul>
           </div>
-          <div class="fit-col">
+          <div>
             <h3>Not the right fit? Start here instead.</h3>
             <ul>
               <li><a href="messaging-audit.html" style="color:var(--coral);">The Messaging Audit — $197</a> — quick feedback on one existing piece</li>
               <li><a href="self-audit.html" style="color:var(--coral);">Where's the Gap? Self-Audit — Free</a> — find your gaps before you commit to anything</li>
-              <li><a href="thought-doula.html" style="color:var(--coral);">Thought Doula — $150–$200</a> — stuck getting it out of your head and onto the page</li>
               <li><a href="workshop.html" style="color:var(--coral);">Where's the Gap? Workshop</a> — a facilitated session before a full engagement</li>
             </ul>
           </div>
@@ -558,11 +180,10 @@
       </div>
     </section>
 
-    <!-- Availability -->
     <section>
       <div class="section-content">
         <h2>Four clients per quarter.</h2>
-        <p>This is not scarcity marketing. It is a real constraint and a real commitment. You work with Sharéa — not a team she assembled. That requires capacity. Four clients per quarter is what that looks like in practice.</p>
+        <p>This is not scarcity marketing; it is a real constraint and a real commitment. You work with Sharéa — not a team she assembled; that requires capacity. Four clients per quarter is what that looks like in practice.</p>
         <p style="margin-top: 16px;">Reach out to confirm current availability and timing.</p>
         <div style="margin-top: 40px;">
           <a href="mailto:northnode@glowstrm.com?subject=Message Architecture Sprint Inquiry" class="btn btn-gold">Inquire about availability</a>
@@ -572,9 +193,10 @@
     </section>
   </main>
 
-  <!-- Footer -->
   <footer>
-    <p>GlowStrm, LLC · Richmond, VA · Black woman-owned · © 2026</p>
+    <p>© 2025–2026 GlowStrm™, LLC. All rights reserved.</p>
+        <p style="margin-top:8px;">GlowStrm™ is a trademark of GlowStrm, LLC. Unauthorized reproduction, distribution, or use of any content, tools, or materials on this site is strictly prohibited.</p>
+        <p style="margin-top:8px;">Richmond, VA · Black woman-owned</p>
   </footer>
 </body>
 </html>
