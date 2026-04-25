@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GlowStrm, LLC · Message Architecture</title>
+<title>GlowStrm™ · Message Architecture</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -37,7 +37,6 @@
 
   .gradient-bar { width: 100%; height: 3px; background: var(--gradient); }
 
-  /* ── nav ── */
   nav {
     display: flex;
     justify-content: space-between;
@@ -49,588 +48,114 @@
     background: var(--dark);
     z-index: 99;
   }
-
-  .nav-wordmark {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--cream);
-    text-decoration: none;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 32px;
-    align-items: center;
-  }
-
-  .nav-link {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 13px;
-    font-weight: 400;
-    color: var(--muted);
-    text-decoration: none;
-    letter-spacing: 0.04em;
-    transition: color 0.2s;
-  }
+  .nav-wordmark { font-family: 'Source Sans 3', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
+  .nav-links { display: flex; gap: 32px; align-items: center; }
+  .nav-link { font-family: 'Source Sans 3', sans-serif; font-size: 13px; font-weight: 400; color: var(--muted); text-decoration: none; letter-spacing: 0.04em; transition: color 0.2s; }
   .nav-link:hover { color: var(--cream); }
-
-  .nav-link-cta {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--dark);
-    background: var(--gold);
-    padding: 10px 20px;
-    text-decoration: none;
-    transition: background 0.2s;
-  }
+  .nav-link-cta { font-family: 'Source Sans 3', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dark); background: var(--gold); padding: 10px 20px; text-decoration: none; transition: background 0.2s; }
   .nav-link-cta:hover { background: #edc46a; }
 
-  /* ── shared layout ── */
-  .container {
-    max-width: 880px;
-    margin: 0 auto;
-    padding: 0 clamp(24px, 6vw, 80px);
-  }
-
+  .container { max-width: 880px; margin: 0 auto; padding: 0 clamp(24px, 6vw, 80px); }
   .section { padding: 88px 0; border-bottom: 1px solid var(--border); }
 
-  .eyebrow {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 24px;
-  }
+  .eyebrow { font-family: 'Source Sans 3', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 24px; }
+  .gradient-rule { width: 64px; height: 2px; background: var(--gradient); margin-bottom: 40px; }
 
-  .gradient-rule {
-    width: 64px;
-    height: 2px;
-    background: var(--gradient);
-    margin-bottom: 40px;
-  }
-
-  .section-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(32px, 5vw, 48px);
-    font-weight: 300;
-    line-height: 1.1;
-    color: var(--cream);
-    margin-bottom: 24px;
-    letter-spacing: -0.01em;
-  }
-
+  .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 5vw, 48px); font-weight: 300; line-height: 1.1; color: var(--cream); margin-bottom: 24px; letter-spacing: -0.01em; }
   .section-title em { color: var(--coral); font-style: italic; }
+  .section-body { font-family: 'Source Sans 3', sans-serif; font-size: 17px; font-weight: 300; line-height: 1.8; color: var(--muted); max-width: 580px; }
 
-  .section-body {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 17px;
-    font-weight: 300;
-    line-height: 1.8;
-    color: var(--muted);
-    max-width: 580px;
-  }
-
-  /* ── buttons ── */
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 15px 36px;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.25s ease;
-    min-height: 52px;
-  }
+  .btn { display: inline-flex; align-items: center; font-family: 'Source Sans 3', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 15px 36px; border: none; cursor: pointer; text-decoration: none; transition: all 0.25s ease; min-height: 52px; }
   .btn-gold { background: var(--gold); color: var(--dark); }
   .btn-gold:hover { background: #edc46a; transform: translateY(-1px); }
-  .btn-ghost {
-    background: transparent;
-    color: var(--muted);
-    border: 1px solid var(--border);
-  }
+  .btn-ghost { background: transparent; color: var(--muted); border: 1px solid var(--border); }
   .btn-ghost:hover { border-color: var(--border-hi); color: var(--cream); }
-  .btn-rose { background: var(--rose); color: var(--cream); }
-  .btn-rose:hover { background: #c94a7e; transform: translateY(-1px); }
-
   .btn-group { display: flex; gap: 12px; flex-wrap: wrap; }
 
   /* ── HERO ── */
   .hero { padding: 96px 0 88px; border-bottom: 1px solid var(--border); position: relative; overflow: hidden; }
-
-  .hero-mark {
-    position: absolute;
-    right: -60px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 520px;
-    height: auto;
-    opacity: 0.9;
-    pointer-events: none;
-  }
-
+  .hero-mark { position: absolute; right: -60px; top: 50%; transform: translateY(-50%); width: 520px; height: auto; opacity: 0.9; pointer-events: none; }
   @media (max-width: 960px) { .hero-mark { width: 360px; right: -80px; opacity: 0.6; } }
   @media (max-width: 640px) { .hero-mark { display: none; } }
 
-  .hero-tagline {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 32px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .hero-tagline::before {
-    content: '';
-    display: block;
-    width: 32px;
-    height: 2px;
-    background: var(--gradient);
-  }
+  .hero-tagline { font-family: 'Source Sans 3', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 32px; display: flex; align-items: center; gap: 12px; }
+  .hero-tagline::before { content: ''; display: block; width: 32px; height: 2px; background: var(--gradient); }
 
-  .hero-headline {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(48px, 9vw, 80px);
-    font-weight: 300;
-    line-height: 1.0;
-    color: var(--cream);
-    margin-bottom: 20px;
-    letter-spacing: -0.02em;
-  }
+  .hero-headline { font-family: 'Cormorant Garamond', serif; font-size: clamp(48px, 9vw, 80px); font-weight: 300; line-height: 1.0; color: var(--cream); margin-bottom: 20px; letter-spacing: -0.02em; }
   .hero-headline em { color: var(--coral); font-style: italic; }
 
-  .hero-sub {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(18px, 3vw, 24px);
-    font-weight: 300;
-    font-style: italic;
-    color: var(--muted);
-    margin-bottom: 40px;
-    max-width: 560px;
-    line-height: 1.5;
-  }
+  .hero-audience { font-family: 'Source Sans 3', sans-serif; font-size: 16px; font-weight: 400; color: var(--gold); margin-bottom: 16px; max-width: 560px; line-height: 1.6; }
 
-  .hero-body {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 17px;
-    font-weight: 300;
-    line-height: 1.8;
-    color: var(--muted);
-    max-width: 560px;
-    margin-bottom: 52px;
-  }
+  .hero-symptom { font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 3vw, 22px); font-weight: 300; font-style: italic; color: var(--muted); margin-bottom: 32px; max-width: 560px; line-height: 1.5; }
+
+  .hero-body { font-family: 'Source Sans 3', sans-serif; font-size: 17px; font-weight: 300; line-height: 1.8; color: var(--muted); max-width: 560px; margin-bottom: 52px; }
   .hero-body strong { color: var(--cream); font-weight: 400; }
 
-  .hero-signal {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--border-hi);
-    margin-top: 40px;
-  }
+  .hero-signal { font-family: 'Source Sans 3', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--border-hi); margin-top: 40px; }
 
-  /* ── NEW: change annotation ── */
-  .change-tag {
-    display: inline-block;
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    background: rgba(251,137,109,0.15);
-    color: var(--coral);
-    border: 1px solid rgba(251,137,109,0.3);
-    padding: 3px 10px;
-    margin-left: 12px;
-    vertical-align: middle;
-  }
+  .change-tag { display: inline-block; font-family: 'Source Sans 3', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; background: rgba(251,137,109,0.15); color: var(--coral); border: 1px solid rgba(251,137,109,0.3); padding: 3px 10px; margin-left: 12px; vertical-align: middle; }
 
-  /* ── WORK section ── */
-  .work-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    margin-top: 48px;
-    border: 1px solid var(--border);
-  }
-
-  .work-item {
-    padding: 32px;
-    border-right: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-  }
+  /* ── WORK ── */
+  .work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 48px; border: 1px solid var(--border); }
+  .work-item { padding: 32px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
   .work-item:nth-child(2n) { border-right: none; }
   .work-item:nth-child(3), .work-item:nth-child(4) { border-bottom: none; }
+  .work-item-num { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 300; color: var(--border-hi); margin-bottom: 16px; }
+  .work-item-title { font-family: 'Source Sans 3', sans-serif; font-size: 14px; font-weight: 600; color: var(--cream); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 10px; }
+  .work-item-body { font-family: 'Source Sans 3', sans-serif; font-size: 14px; font-weight: 300; color: var(--muted); line-height: 1.7; }
 
-  .work-item-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 32px;
-    font-weight: 300;
-    color: var(--border-hi);
-    margin-bottom: 16px;
-  }
+  .work-deliverable { font-family: 'Source Sans 3', sans-serif; font-size: 15px; font-weight: 300; color: var(--muted); max-width: 580px; margin-top: 32px; line-height: 1.8; border-left: 2px solid var(--gold); padding-left: 20px; }
+  .work-deliverable strong { color: var(--cream); font-weight: 400; }
 
-  .work-item-title {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--cream);
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-  }
-
-  .work-item-body {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    color: var(--muted);
-    line-height: 1.7;
-  }
-
-  /* ── PRODUCT LADDER (NEW) ── */
-  .ladder-intro {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 17px;
-    font-weight: 300;
-    line-height: 1.8;
-    color: var(--muted);
-    max-width: 580px;
-    margin-bottom: 56px;
-  }
-
+  /* ── LADDER ── */
+  .ladder-intro { font-family: 'Source Sans 3', sans-serif; font-size: 17px; font-weight: 300; line-height: 1.8; color: var(--muted); max-width: 580px; margin-bottom: 56px; }
   .ladder { display: flex; flex-direction: column; gap: 0; }
 
-  .ladder-item {
-    display: grid;
-    grid-template-columns: 100px 1fr auto;
-    gap: 32px;
-    align-items: start;
-    padding: 36px 0;
-    border-bottom: 1px solid var(--border);
-    transition: background 0.2s;
-  }
+  .ladder-item { display: grid; grid-template-columns: 100px 1fr auto; gap: 32px; align-items: start; padding: 36px 0; border-bottom: 1px solid var(--border); }
   .ladder-item:last-child { border-bottom: none; }
+  .ladder-item.featured { background: rgba(230,182,92,0.04); margin: 0 -24px; padding: 36px 24px; border-left: 2px solid var(--gold); }
 
-  .ladder-price {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
-    font-weight: 300;
-    color: var(--muted);
-    padding-top: 4px;
-  }
+  .ladder-price { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; color: var(--muted); padding-top: 4px; }
   .ladder-price.free { color: var(--coral); }
   .ladder-price.featured { color: var(--gold); }
 
-  .ladder-content {}
+  .ladder-name { font-family: 'Source Sans 3', sans-serif; font-size: 15px; font-weight: 600; color: var(--cream); letter-spacing: 0.04em; margin-bottom: 6px; }
+  .ladder-best-for { font-family: 'Source Sans 3', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+  .ladder-desc { font-family: 'Source Sans 3', sans-serif; font-size: 15px; font-weight: 300; color: var(--muted); line-height: 1.7; max-width: 480px; }
+  .ladder-meta { font-family: 'Source Sans 3', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--border-hi); margin-top: 8px; }
+  .ladder-founding { font-family: 'Source Sans 3', sans-serif; font-size: 12px; font-weight: 300; color: var(--gold); margin-top: 8px; font-style: italic; }
 
-  .ladder-name {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--cream);
-    letter-spacing: 0.04em;
-    margin-bottom: 8px;
-  }
-
-  .ladder-desc {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 15px;
-    font-weight: 300;
-    color: var(--muted);
-    line-height: 1.7;
-    max-width: 480px;
-  }
-
-  .ladder-meta {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--border-hi);
-    margin-top: 8px;
-  }
-
-  .ladder-action {
-    padding-top: 4px;
-    white-space: nowrap;
-  }
-
-  .ladder-link {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--violet);
-    text-decoration: none;
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 2px;
-    transition: color 0.2s, border-color 0.2s;
-  }
+  .ladder-action { padding-top: 4px; white-space: nowrap; }
+  .ladder-link { font-family: 'Source Sans 3', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--violet); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; }
   .ladder-link:hover { color: var(--cream); border-color: var(--border-hi); }
 
-  /* ── GAP SECTION (existing, updated) ── */
-  .gap-pull {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(24px, 4vw, 36px);
-    font-weight: 300;
-    font-style: italic;
-    line-height: 1.4;
-    color: var(--cream);
-    max-width: 640px;
-    margin-bottom: 32px;
-  }
-
-  /* ── SPRINT ── */
-  .sprint-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 48px;
-    margin-top: 48px;
-  }
-
-  .sprint-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 32px;
-    flex-wrap: wrap;
-    gap: 24px;
-  }
-
-  .sprint-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 36px;
-    font-weight: 300;
-    color: var(--cream);
-    margin-bottom: 8px;
-  }
-
-  .sprint-tagline {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    color: var(--muted);
-    max-width: 440px;
-    line-height: 1.7;
-  }
-
-  .sprint-price-block { text-align: right; }
-
-  .sprint-price {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 48px;
-    font-weight: 300;
-    color: var(--gold);
-    line-height: 1;
-    margin-bottom: 6px;
-  }
-
-  .sprint-meta {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 12px;
-    font-weight: 300;
-    color: var(--muted);
-    letter-spacing: 0.06em;
-  }
-
-  .sprint-includes {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin: 32px 0;
-  }
-
-  .sprint-item {
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    color: var(--muted);
-    line-height: 1.5;
-  }
-  .sprint-item::before {
-    content: '✦';
-    color: var(--violet);
-    font-size: 10px;
-    margin-top: 4px;
-    flex-shrink: 0;
-  }
-
-  /* ── FIT ── */
-  .fit-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    margin-top: 48px;
-  }
-
-  .fit-col-label {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    margin-bottom: 24px;
-  }
-  .fit-col-label.yes { color: var(--violet); }
-  .fit-col-label.no { color: var(--muted); }
-
-  .fit-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
-  .fit-list li {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 15px;
-    font-weight: 300;
-    color: var(--muted);
-    line-height: 1.6;
-    padding-left: 20px;
-    position: relative;
-  }
-  .fit-list.yes li::before { content: '✓'; position: absolute; left: 0; color: var(--violet); }
-  .fit-list.no li::before { content: '×'; position: absolute; left: 0; color: var(--border-hi); }
-
-  /* ── PROCESS ── */
-  .process-steps { display: flex; flex-direction: column; gap: 0; margin-top: 48px; }
-  .process-step {
-    display: flex;
-    gap: 32px;
-    padding: 28px 0;
-    border-bottom: 1px solid var(--border);
-  }
-  .process-step:last-child { border-bottom: none; }
-  .process-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 28px;
-    font-weight: 300;
-    color: var(--border-hi);
-    min-width: 36px;
-    line-height: 1;
-    margin-top: 2px;
-  }
-  .process-title {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--cream);
-    letter-spacing: 0.04em;
-    margin-bottom: 6px;
-  }
-  .process-body {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    color: var(--muted);
-    line-height: 1.7;
-  }
+  /* ── GAP ── */
+  .gap-pull { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 4vw, 36px); font-weight: 300; font-style: italic; line-height: 1.4; color: var(--cream); max-width: 640px; margin-bottom: 32px; }
 
   /* ── FINAL CTA ── */
-  .final-cta {
-    padding: 96px 0;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .final-cta-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(36px, 6vw, 60px);
-    font-weight: 300;
-    color: var(--cream);
-    margin-bottom: 20px;
-    line-height: 1.1;
-    letter-spacing: -0.01em;
-  }
+  .final-cta { padding: 96px 0; border-bottom: 1px solid var(--border); }
+  .final-cta-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 6vw, 60px); font-weight: 300; color: var(--cream); margin-bottom: 20px; line-height: 1.1; letter-spacing: -0.01em; }
   .final-cta-title em { color: var(--coral); font-style: italic; }
-
-  .final-cta-body {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    color: var(--muted);
-    max-width: 520px;
-    line-height: 1.8;
-    margin-bottom: 40px;
-  }
-
-  .availability {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 12px;
-    font-weight: 300;
-    color: var(--border-hi);
-    letter-spacing: 0.06em;
-    margin-top: 20px;
-  }
+  .final-cta-body { font-family: 'Source Sans 3', sans-serif; font-size: 16px; font-weight: 300; color: var(--muted); max-width: 520px; line-height: 1.8; margin-bottom: 16px; }
+  .final-cta-secondary { font-family: 'Source Sans 3', sans-serif; font-size: 15px; font-weight: 300; color: var(--muted); max-width: 520px; line-height: 1.8; margin-bottom: 40px; }
 
   /* ── FOOTER ── */
-  footer {
-    padding: 40px clamp(24px, 6vw, 80px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-  .footer-left {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 12px;
-    font-weight: 300;
-    color: var(--border-hi);
-    line-height: 1.8;
-  }
-  .footer-left strong {
-    font-weight: 600;
-    color: var(--muted);
-    display: block;
-    font-size: 13px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    margin-bottom: 4px;
-  }
-  .footer-right {
-    display: flex;
-    gap: 24px;
-  }
-  .footer-link {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 12px;
-    font-weight: 300;
-    color: var(--border-hi);
-    text-decoration: none;
-    letter-spacing: 0.04em;
-    transition: color 0.2s;
-  }
+  footer { padding: 40px clamp(24px, 6vw, 80px); border-top: 1px solid var(--border); }
+  .footer-legal { font-family: 'Source Sans 3', sans-serif; font-size: 12px; font-weight: 300; color: var(--border-hi); line-height: 1.9; }
+  .footer-legal strong { font-weight: 600; color: var(--muted); display: block; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 6px; }
+  .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border); }
+  .footer-links { display: flex; gap: 24px; }
+  .footer-link { font-family: 'Source Sans 3', sans-serif; font-size: 12px; font-weight: 300; color: var(--border-hi); text-decoration: none; letter-spacing: 0.04em; transition: color 0.2s; }
   .footer-link:hover { color: var(--muted); }
 
   @media (max-width: 640px) {
     .work-grid { grid-template-columns: 1fr; }
     .work-item { border-right: none; }
-    .sprint-header { flex-direction: column; }
-    .sprint-price-block { text-align: left; }
-    .sprint-includes { grid-template-columns: 1fr; }
-    .fit-grid { grid-template-columns: 1fr; }
     .ladder-item { grid-template-columns: 1fr; }
+    .ladder-item.featured { margin: 0; padding: 36px 0; }
     .ladder-action { padding-top: 0; }
     .nav-links { gap: 16px; }
+    .footer-bottom { flex-direction: column; align-items: flex-start; }
   }
 </style>
 </head>
@@ -638,9 +163,6 @@
 
 <div class="gradient-bar"></div>
 
-<!-- ══════════════════════════════════════════
-     NAV — updated: Audit added
-════════════════════════════════════════════ -->
 <nav>
   <a href="#" class="nav-wordmark">GlowStrm</a>
   <div class="nav-links">
@@ -653,30 +175,29 @@
   </div>
 </nav>
 
-<!-- ══════════════════════════════════════════
-     HERO — updated: third CTA added
-════════════════════════════════════════════ -->
+<!-- ── HERO ── -->
 <section class="hero">
-  <img src="glowstrm-mark.svg" class="hero-mark" alt="" aria-hidden="true">
+  <img src="assets/Flat Logo Light - Mark.svg" class="hero-mark" alt="" aria-hidden="true">
   <div class="container">
-    <p class="hero-tagline">GlowStrm, LLC · Message Architecture</p>
+    <p class="hero-tagline">GlowStrm™ · Message Architecture</p>
 
     <h1 class="hero-headline">
-      I help people get<br>clear about what<br>they're <em>saying.</em>
+      I help founders, leaders,<br>and teams get clear about<br>what they're <em>saying.</em>
     </h1>
 
-    <p class="hero-sub">Especially when the work is complex and the stakes are real.</p>
+    <p class="hero-audience">For people doing complex work who are tired of rewriting the same message.</p>
+
+    <p class="hero-symptom">If your homepage, your deck, and your pitch all say slightly different things — the foundation is the problem.</p>
 
     <p class="hero-body">
       Most communications problems aren't writing problems. They're clarity problems.
       <strong>Message architecture</strong> is the foundation work that happens before content,
-      campaigns, or execution — so that when you do say something, it holds.
+      campaigns, or execution; so that when you do say something, it holds.
     </p>
 
-    <!-- UPDATED: three CTAs instead of two -->
     <div class="btn-group">
       <a href="#contact" class="btn btn-gold">Start a conversation</a>
-      <a href="#sprint" class="btn btn-ghost">See the sprint</a>
+      <a href="#services" class="btn btn-ghost">See the work</a>
       <a href="self-audit.html" class="btn btn-ghost">Find your gap →</a>
     </div>
 
@@ -684,47 +205,48 @@
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════
-     WORK — unchanged
-════════════════════════════════════════════ -->
+<!-- ── THE WORK ── -->
 <section class="section" id="work">
   <div class="container">
     <p class="eyebrow">The work</p>
     <h2 class="section-title">Clarity before <em>everything else.</em></h2>
     <p class="section-body">
       When messaging isn't working, people reach for better words. But words built
-      on a shaky foundation will always wobble. This work goes upstream — before
+      on a shaky foundation will always wobble. This work goes upstream; before
       the copy, before the campaign, before the deck.
     </p>
 
     <div class="work-grid">
       <div class="work-item">
         <p class="work-item-num">01</p>
-        <p class="work-item-title">What needs to be said</p>
-        <p class="work-item-body">Identifying the specific message before content production begins.</p>
+        <p class="work-item-title">The core message that has to land first</p>
+        <p class="work-item-body">Identifying what needs to be said before content production begins.</p>
       </div>
       <div class="work-item">
         <p class="work-item-num">02</p>
-        <p class="work-item-title">Who you're speaking to</p>
-        <p class="work-item-body">Understanding what your audience actually needs to hear.</p>
+        <p class="work-item-title">What your audience needs to hear before they can act</p>
+        <p class="work-item-body">Not just who they are; what they're carrying, what they doubt, and what has to shift.</p>
       </div>
       <div class="work-item">
         <p class="work-item-num">03</p>
-        <p class="work-item-title">A position that holds</p>
-        <p class="work-item-body">A defensible structure that doesn't shift with every new room.</p>
+        <p class="work-item-title">A clear position that doesn't change every time the room does</p>
+        <p class="work-item-body">A defensible structure built to hold across audiences, formats, and high-stakes moments.</p>
       </div>
       <div class="work-item">
         <p class="work-item-num">04</p>
-        <p class="work-item-title">Language that travels</p>
-        <p class="work-item-body">Documented guardrails that keep teams aligned when Sharéa isn't in the room.</p>
+        <p class="work-item-title">Guardrails and phrasing your team can reuse without drifting</p>
+        <p class="work-item-body">Documented language rules that keep teams aligned when Sharéa isn't in the room.</p>
       </div>
     </div>
+
+    <p class="work-deliverable">
+      <strong>You leave with a documented message system</strong> your team and vendors can actually use —
+      not a conversation, not a deck to file away; a working Brief with every component named.
+    </p>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════
-     GAP — updated: connects to self-audit
-════════════════════════════════════════════ -->
+<!-- ── WHY THIS WORKS ── -->
 <section class="section" id="about">
   <div class="container">
     <p class="eyebrow">Why this works</p>
@@ -736,28 +258,37 @@
 
     <p class="section-body" style="margin-bottom: 24px;">
       There's a unique kind of exhaustion that comes from having something important
-      to share — and watching it land wrong. Again. Most messaging problems aren't
-      really about writing. They're about clarity.
+      to share and watching it land wrong. Again. You've tried writing it differently;
+      you've briefed someone new. The words get better, but the problem stays.
     </p>
     <p class="section-body" style="margin-bottom: 24px;">
-      I'm Sharéa Harris. I'm a writer, a writing consultant, and a communications
-      strategist. I work with organizations and individuals who have real, complex
-      work to communicate — and who need a clear-eyed partner to help them get there.
+      That's usually not a writing problem. It's a foundation problem.
+    </p>
+    <p class="section-body" style="margin-bottom: 24px;">
+      I'm Sharéa Harris, founder of GlowStrm. I do message architecture — the strategic
+      clarity work that happens before content, campaigns, or execution. Not writing. Foundation.
+    </p>
+    <p class="section-body" style="margin-bottom: 24px;">
+      Clients usually come when the work is strong but the message won't hold across
+      the homepage, the deck, the room, and the ask. That's the gap I close.
+    </p>
+    <p class="section-body">
+      I work with a small number of clients each quarter — founders, leaders, and teams
+      who are ready to stop rewriting and start building from something solid.
     </p>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════
-     SERVICES / PRODUCT LADDER — NEW
-════════════════════════════════════════════ -->
+<!-- ── SERVICES ── -->
 <section class="section" id="services">
   <div class="container">
     <p class="eyebrow">Ways to work <span class="change-tag">New</span></p>
     <h2 class="section-title">Not everyone comes in<br>the same <em>way.</em></h2>
 
     <p class="ladder-intro">
-      Some people know exactly what they need. Others need to find the gap first.
-      There are multiple ways to work with GlowStrm — start wherever you are.
+      Most people should start with the Self-Audit. It takes about ten minutes and
+      shows you where the message is breaking down: signal, structure, audience, or steadiness.
+      If you already know you need direct support, the ladder below is where to go next.
     </p>
 
     <div class="ladder">
@@ -765,12 +296,14 @@
       <div class="ladder-item">
         <div class="ladder-price free">Free</div>
         <div class="ladder-content">
+          <p class="ladder-best-for">Best for: Early diagnosis</p>
           <p class="ladder-name">Where's the Gap? Self-Audit</p>
           <p class="ladder-desc">
-            15 questions. Five dimensions. A clear picture of where your communication
-            gaps live — and where to focus first. Takes about 10 minutes.
+            A fast diagnostic for founders and teams who know something isn't landing
+            but can't yet name where the problem lives. 15 questions; five dimensions;
+            a clear picture of where to focus.
           </p>
-          <p class="ladder-meta">Online · Instant results</p>
+          <p class="ladder-meta">Online · Instant results · ~10 min</p>
         </div>
         <div class="ladder-action">
           <a href="self-audit.html" class="ladder-link">Take the audit →</a>
@@ -780,11 +313,11 @@
       <div class="ladder-item">
         <div class="ladder-price">$197</div>
         <div class="ladder-content">
+          <p class="ladder-best-for">Best for: One piece that needs an expert read right now</p>
           <p class="ladder-name">The Messaging Audit</p>
           <p class="ladder-desc">
-            Send one piece of communication. Get back a written assessment of what's
-            working, what isn't, and what to do about it — with specific language
-            recommendations.
+            Send one homepage, email, deck, or message. Get back a written assessment
+            of what's working, what's missing, and what the language needs to do next.
           </p>
           <p class="ladder-meta">Async · Delivered in 48–72 hours</p>
         </div>
@@ -796,11 +329,11 @@
       <div class="ladder-item">
         <div class="ladder-price">$497</div>
         <div class="ladder-content">
+          <p class="ladder-best-for">Best for: Teams who need alignment before rewriting or launching</p>
           <p class="ladder-name">Where's the Gap? Workshop</p>
           <p class="ladder-desc">
-            A facilitated session for communicators ready to go deeper. GlowStrm in
-            the room — working through your specific gaps, finding the language that's
-            already yours, and building a clear path forward.
+            A live working session for founders or teams who need alignment before they
+            rewrite the website, brief a vendor, or walk into an important room.
           </p>
           <p class="ladder-meta">Live · 90 minutes · Coming soon</p>
         </div>
@@ -809,19 +342,21 @@
         </div>
       </div>
 
-      <div class="ladder-item">
-        <div class="ladder-price featured">$2,500</div>
+      <div class="ladder-item featured">
+        <div class="ladder-price featured">$2,500 ★</div>
         <div class="ladder-content">
+          <p class="ladder-best-for">Best for: A launch, repositioning, board shift, or funding ask</p>
           <p class="ladder-name">Message Architecture Sprint</p>
           <p class="ladder-desc">
-            The full engagement. A structured, time-bound process to establish clarity
-            and alignment around a specific initiative, product, or shift — before you
-            scale content or design.
+            A two-week strategic engagement. You leave with a documented Message Architecture Brief:
+            core message, audience realities, message hierarchy, language guardrails,
+            and application guidance your team can build from.
           </p>
-          <p class="ladder-meta">2 weeks · Four clients per quarter</p>
+          <p class="ladder-meta">Full engagement · 2 weeks · Four clients per quarter</p>
+          <p class="ladder-founding">★ Founding client rate — closes when the first cohort is full. Rate moves to $10,000.</p>
         </div>
         <div class="ladder-action">
-          <a href="#contact" class="ladder-link">Inquire →</a>
+          <a href="sprint.html" class="ladder-link">See the sprint →</a>
         </div>
       </div>
 
@@ -829,38 +364,42 @@
   </div>
 </section>
 
-<!-- Sprint and Where to Start sections moved to sprint.html -->
-
-<!-- ══════════════════════════════════════════
-     FINAL CTA
-════════════════════════════════════════════ -->
+<!-- ── FINAL CTA ── -->
 <section class="final-cta" id="contact">
   <div class="container">
     <p class="eyebrow">Start here</p>
-    <h2 class="final-cta-title">Find your gap.<br><em>Then find us.</em></h2>
+    <h2 class="final-cta-title">Start with the audit.<br><em>Then we'll know where you are.</em></h2>
     <p class="final-cta-body">
-      The self-audit is a good first step — it takes about ten minutes and tells you exactly where the distance lives between what you mean and what's landing. If you have questions after, or you already know what you need, reach out.
+      Most people should start with the Self-Audit. It takes about ten minutes and shows
+      you where the message is breaking down: signal, structure, audience, or steadiness.
+    </p>
+    <p class="final-cta-secondary">
+      If you already know you need direct support — inquire about the Messaging Audit,
+      the Workshop, or the Message Architecture Sprint. We'll point you to the right next step.
     </p>
     <div class="btn-group">
       <a href="self-audit.html" class="btn btn-gold">Take the free self-audit →</a>
-      <a href="mailto:northnode@glowstrm.com" class="btn btn-ghost">Reach out with questions</a>
+      <a href="mailto:northnode@glowstrm.com" class="btn btn-ghost">Inquire about direct support</a>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════
-     FOOTER
-════════════════════════════════════════════ -->
+<!-- ── FOOTER ── -->
 <footer>
-  <div class="footer-left">
-    <strong>GlowStrm, LLC</strong>
-    Richmond, VA · Black woman-owned · © 2026
+  <div class="footer-legal">
+    <strong>GlowStrm™, LLC</strong>
+    © 2025–2026 GlowStrm™, LLC. All rights reserved.<br>
+    GlowStrm™ is a trademark of GlowStrm, LLC. Unauthorized reproduction, distribution, or use of any content, tools, or materials on this site is strictly prohibited.<br>
+    Richmond, VA · Black woman-owned
   </div>
-  <div class="footer-right">
-    <a href="#" class="footer-link">Work</a>
-    <a href="#" class="footer-link">About</a>
-    <a href="#" class="footer-link">Sprint</a>
-    <a href="#" class="footer-link">Contact</a>
+  <div class="footer-bottom">
+    <span style="font-family:'Source Sans 3',sans-serif; font-size:11px; color:var(--border-hi); letter-spacing:0.06em;">What grows, glows.</span>
+    <div class="footer-links">
+      <a href="#work" class="footer-link">Work</a>
+      <a href="about.html" class="footer-link">About</a>
+      <a href="sprint.html" class="footer-link">Sprint</a>
+      <a href="#contact" class="footer-link">Contact</a>
+    </div>
   </div>
 </footer>
 
