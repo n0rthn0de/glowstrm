@@ -4,476 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Sharéa Harris | GlowStrm</title>
-
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
-
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --dark:      #271F41;
-            --surface:   #211a36;
-            --card:      #1e1830;
-            --violet:    #774ECE;
-            --rose:      #BB4072;
-            --plum:      #783E8D;
-            --coral:     #FB896D;
-            --gold:      #E6B65C;
-            --cream:     #F5F2EC;
-            --muted:     #9C96AE;
-            --border:    #362d52;
-            --border-hi: #453b62;
-            --gradient:  linear-gradient(90deg, #BB4072, #783E8D, #774ECE, #FB896D);
-        }
-
-        body {
-            background-color: var(--dark);
-            color: var(--cream);
-            font-family: 'Source Sans 3', sans-serif;
-            font-weight: 400;
-            line-height: 1.6;
-            font-size: 16px;
-        }
-
-        /* Gradient top bar */
-        .gradient-bar {
-            height: 3px;
-            background: var(--gradient);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-        }
-
-        /* Navigation */
-        nav {
-            position: sticky;
-            top: 3px;
-            z-index: 999;
-            background-color: var(--surface);
-            border-bottom: 1px solid var(--border);
-            padding: 0;
-        }
-
-        .nav-container {
-            max-width: 880px;
-            margin: 0 auto;
-            padding: 20px 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 40px;
-        }
-
-        .nav-logo {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 20px;
-            font-weight: 400;
-            color: var(--cream);
-            text-decoration: none;
-            letter-spacing: 1px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 32px;
-            list-style: none;
-            flex: 1;
-        }
-
-        .nav-links a {
-            color: var(--cream);
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 400;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--gold);
-        }
-
-        .nav-cta {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-        }
-
-        .nav-cta a {
-            color: var(--dark);
-            background-color: var(--gold);
-            padding: 12px 20px;
-            border-radius: 2px;
-            font-size: 13px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: opacity 0.3s ease;
-            white-space: nowrap;
-        }
-
-        .nav-cta a:hover {
-            opacity: 0.9;
-        }
-
-        /* Content container */
-        .container {
-            max-width: 880px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* Hero section */
-        .hero {
-            padding: 120px 24px 88px;
-            text-align: center;
-            animation: fadeUp 0.8s ease-out;
-        }
-
-        .hero-eyebrow {
-            font-family: 'Source Sans 3', sans-serif;
-            font-size: 12px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: var(--muted);
-            margin-bottom: 24px;
-        }
-
-        .hero-headline {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 56px;
-            font-weight: 300;
-            line-height: 1.2;
-            color: var(--cream);
-            margin-bottom: 20px;
-        }
-
-        .hero-subhead {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 24px;
-            font-weight: 300;
-            font-style: italic;
-            color: var(--muted);
-            line-height: 1.5;
-        }
-
-        /* Section styles */
-        section {
-            padding: 88px 24px;
-            border-bottom: 1px solid var(--border);
-        }
-
-        section:last-of-type {
-            border-bottom: none;
-        }
-
-        .section-headline {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 40px;
-            font-weight: 300;
-            margin-bottom: 40px;
-            color: var(--cream);
-        }
-
-        .section-body {
-            font-size: 16px;
-            line-height: 1.8;
-            color: var(--cream);
-        }
-
-        .section-body p {
-            margin-bottom: 24px;
-        }
-
-        .section-body p:last-child {
-            margin-bottom: 0;
-        }
-
-        .section-body strong {
-            font-weight: 600;
-            color: var(--gold);
-        }
-
-        /* Accordion */
-        .accordion {
-            margin-top: 32px;
-            border-top: 1px solid var(--border);
-        }
-
-        .accordion-item {
-            border-bottom: 1px solid var(--border);
-        }
-
-        .accordion-trigger {
-            width: 100%;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 20px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 16px;
-            text-align: left;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --dark: #271F41; --surface: #211a36; --card: #1e1830; --violet: #774ECE; --rose: #BB4072; --plum: #783E8D; --coral: #FB896D; --gold: #E6B65C; --cream: #F5F2EC; --muted: #9C96AE; --border: #362d52; --border-hi: #453b62; --gradient: linear-gradient(90deg, #BB4072, #783E8D, #774ECE, #FB896D); }
+        body { background-color: var(--dark); color: var(--cream); font-family: 'Source Sans 3', sans-serif; font-weight: 400; line-height: 1.6; font-size: 16px; }
+        .gradient-bar { height: 3px; background: var(--gradient); position: fixed; top: 0; left: 0; right: 0; z-index: 1000; }
+        nav { position: sticky; top: 3px; z-index: 999; background-color: var(--surface); border-bottom: 1px solid var(--border); padding: 0; }
+        .nav-container { max-width: 880px; margin: 0 auto; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; gap: 40px; }
+        .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 400; color: var(--cream); text-decoration: none; letter-spacing: 1px; }
+        .nav-links { display: flex; gap: 32px; list-style: none; flex: 1; }
+        .nav-links a { color: var(--cream); text-decoration: none; font-size: 14px; font-weight: 400; transition: color 0.3s ease; }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-cta a { color: var(--dark); background-color: var(--gold); padding: 12px 20px; border-radius: 2px; font-size: 13px; font-weight: 600; text-decoration: none; transition: opacity 0.3s ease; white-space: nowrap; }
+        .nav-cta a:hover { opacity: 0.9; }
+        .container { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+        .hero { padding: 120px 24px 88px; text-align: center; animation: fadeUp 0.8s ease-out; }
+        .hero-eyebrow { font-family: 'Source Sans 3', sans-serif; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); margin-bottom: 24px; }
+        .hero-headline { font-family: 'Cormorant Garamond', serif; font-size: 56px; font-weight: 300; line-height: 1.2; color: var(--cream); margin-bottom: 20px; }
+        .hero-subhead { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 300; font-style: italic; color: var(--muted); line-height: 1.5; }
+        section { padding: 88px 24px; border-bottom: 1px solid var(--border); }
+        section:last-of-type { border-bottom: none; }
+        .section-headline { font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 300; margin-bottom: 40px; color: var(--cream); }
+        .section-body { font-size: 16px; line-height: 1.8; color: var(--cream); }
+        .section-body p { margin-bottom: 24px; }
+        .section-body p:last-child { margin-bottom: 0; }
+        .section-body strong { font-weight: 600; color: var(--gold); }
+        .accordion { margin-top: 32px; border-top: 1px solid var(--border); }
+        .accordion-item { border-bottom: 1px solid var(--border); }
+        .accordion-trigger { width: 100%; background: none; border: none; cursor: pointer; padding: 20px 0; display: flex; justify-content: space-between; align-items: center; gap: 16px; text-align: left; }
         .accordion-trigger:hover .accordion-title { color: var(--cream); }
-
-        .accordion-title {
-            font-family: 'Source Sans 3', sans-serif;
-            font-size: 15px;
-            font-weight: 600;
-            color: var(--muted);
-            letter-spacing: 0.02em;
-            transition: color 0.2s;
-            flex: 1;
-        }
-
+        .accordion-title { font-family: 'Source Sans 3', sans-serif; font-size: 15px; font-weight: 600; color: var(--muted); letter-spacing: 0.02em; transition: color 0.2s; flex: 1; }
         .accordion-item.open .accordion-title { color: var(--cream); }
-
-        .accordion-meta {
-            font-family: 'Source Sans 3', sans-serif;
-            font-size: 12px;
-            font-weight: 300;
-            color: var(--border-hi);
-            letter-spacing: 0.06em;
-            white-space: nowrap;
-            text-transform: uppercase;
-        }
-
-        .accordion-icon {
-            font-size: 18px;
-            color: var(--gold);
-            font-weight: 300;
-            line-height: 1;
-            transition: transform 0.3s ease;
-            flex-shrink: 0;
-        }
-
+        .accordion-meta { font-family: 'Source Sans 3', sans-serif; font-size: 12px; font-weight: 300; color: var(--border-hi); letter-spacing: 0.06em; white-space: nowrap; text-transform: uppercase; }
+        .accordion-icon { font-size: 18px; color: var(--gold); font-weight: 300; line-height: 1; transition: transform 0.3s ease; flex-shrink: 0; }
         .accordion-item.open .accordion-icon { transform: rotate(45deg); }
-
-        .accordion-body {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease;
-        }
-
+        .accordion-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
         .accordion-item.open .accordion-body { max-height: 1400px; }
-
-        .accordion-content {
-            font-family: 'Source Sans 3', sans-serif;
-            font-size: 15px;
-            font-weight: 300;
-            line-height: 1.8;
-            color: var(--muted);
-            padding: 0 0 24px 0;
-        }
-
-        /* Workshop callout */
-        .workshop-callout {
-            background: var(--surface);
-            border-left: 3px solid var(--violet);
-            padding: 24px 28px;
-            margin-top: 40px;
-        }
-
-        .workshop-callout-label {
-            font-family: 'Source Sans 3', sans-serif;
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
-            color: var(--violet);
-            margin-bottom: 12px;
-        }
-
-        .workshop-callout p {
-            font-family: 'Source Sans 3', sans-serif;
-            font-size: 15px;
-            font-weight: 300;
-            line-height: 1.8;
-            color: var(--muted);
-        }
-
-        /* Credentials grid */
-        .credentials-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 32px;
-            margin-top: 40px;
-        }
-
-        .credential-item {
-            padding: 24px;
-            background-color: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 2px;
-        }
-
-        .credential-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 16px;
-            font-weight: 400;
-            color: var(--gold);
-            margin-bottom: 8px;
-        }
-
-        .credential-detail {
-            font-size: 14px;
-            color: var(--muted);
-            font-weight: 300;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            padding: 88px 24px;
-            border-bottom: 1px solid var(--border);
-            text-align: center;
-        }
-
-        .cta-headline {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 48px;
-            font-weight: 300;
-            margin-bottom: 24px;
-            color: var(--cream);
-        }
-
-        .cta-body {
-            font-size: 16px;
-            line-height: 1.8;
-            color: var(--cream);
-            max-width: 600px;
-            margin: 0 auto 40px;
-        }
-
-        .button-group {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            padding: 16px 32px;
-            border-radius: 2px;
-            font-size: 14px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            min-height: 48px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .btn-gold {
-            background-color: var(--gold);
-            color: var(--dark);
-            border: none;
-        }
-
-        .btn-gold:hover {
-            opacity: 0.9;
-            transform: translateY(-2px);
-        }
-
-        .btn-ghost {
-            background-color: transparent;
-            color: var(--muted);
-            border: 1px solid var(--muted);
-        }
-
-        .btn-ghost:hover {
-            border-color: var(--gold);
-            color: var(--gold);
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--card);
-            border-top: 1px solid var(--border);
-            padding: 48px 24px;
-            text-align: center;
-            font-size: 13px;
-            color: var(--muted);
-        }
-
-        /* Animations */
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive */
-        @media (max-width: 640px) {
-            .nav-container {
-                flex-direction: column;
-                gap: 20px;
-                padding: 16px 24px;
-            }
-
-            .nav-links {
-                flex-direction: column;
-                gap: 16px;
-            }
-
-            .hero {
-                padding: 80px 24px 60px;
-            }
-
-            .hero-headline {
-                font-size: 36px;
-            }
-
-            .hero-subhead {
-                font-size: 18px;
-            }
-
-            .section-headline {
-                font-size: 28px;
-            }
-
-            .credentials-grid {
-                grid-template-columns: 1fr;
-                gap: 24px;
-            }
-
-            .cta-headline {
-                font-size: 32px;
-            }
-
-            .button-group {
-                flex-direction: column;
-            }
-
-            .btn {
-                width: 100%;
-            }
-
-            .through-line-list li {
-                padding-left: 24px;
-            }
-        }
+        .accordion-content { font-family: 'Source Sans 3', sans-serif; font-size: 15px; font-weight: 300; line-height: 1.8; color: var(--muted); padding: 0 0 24px 0; }
+        .workshop-callout { background: var(--surface); border-left: 3px solid var(--violet); padding: 24px 28px; margin-top: 40px; }
+        .workshop-callout-label { font-family: 'Source Sans 3', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--violet); margin-bottom: 12px; }
+        .workshop-callout p { font-family: 'Source Sans 3', sans-serif; font-size: 15px; font-weight: 300; line-height: 1.8; color: var(--muted); }
+        .credentials-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 40px; }
+        .credential-item { padding: 24px; background-color: var(--card); border: 1px solid var(--border); border-radius: 2px; }
+        .credential-title { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 400; color: var(--gold); margin-bottom: 8px; }
+        .credential-detail { font-size: 14px; color: var(--muted); font-weight: 300; }
+        .cta-section { padding: 88px 24px; border-bottom: 1px solid var(--border); text-align: center; }
+        .cta-headline { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 300; margin-bottom: 24px; color: var(--cream); }
+        .cta-body { font-size: 16px; line-height: 1.8; color: var(--cream); max-width: 600px; margin: 0 auto 40px; }
+        .button-group { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+        .btn { display: inline-flex; padding: 16px 32px; border-radius: 2px; font-size: 14px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; min-height: 48px; align-items: center; justify-content: center; }
+        .btn-gold { background-color: var(--gold); color: var(--dark); border: none; }
+        .btn-gold:hover { opacity: 0.9; transform: translateY(-2px); }
+        .btn-ghost { background-color: transparent; color: var(--muted); border: 1px solid var(--muted); }
+        .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+        footer { background-color: var(--card); border-top: 1px solid var(--border); padding: 48px 24px; text-align: center; font-size: 13px; color: var(--muted); }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @media (max-width: 640px) { .nav-container { flex-direction: column; gap: 20px; } .nav-links { flex-direction: column; gap: 16px; } .hero { padding: 80px 24px 60px; } .hero-headline { font-size: 36px; } .hero-subhead { font-size: 18px; } .section-headline { font-size: 28px; } .credentials-grid { grid-template-columns: 1fr; gap: 24px; } .cta-headline { font-size: 32px; } .button-group { flex-direction: column; } .btn { width: 100%; } }
     </style>
 </head>
 <body>
     <div class="gradient-bar"></div>
-
     <nav>
         <div class="nav-container">
             <a href="index.html" class="nav-logo">GLOWSTRM</a>
@@ -485,32 +76,29 @@
                 <li><a href="workshop.html">Workshop</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
             </ul>
-            <div class="nav-cta">
-                <a href="self-audit.html">Find your gap →</a>
-            </div>
+            <div class="nav-cta"><a href="self-audit.html">Find your gap →</a></div>
         </div>
     </nav>
 
-    <!-- Hero -->
     <section class="hero">
         <div class="container">
             <div class="hero-eyebrow">About Sharéa Harris</div>
             <h1 class="hero-headline">The work has always been the same.</h1>
-            <p class="hero-subhead">The tools have changed. The rooms have changed. The question hasn't.</p>
+            <p class="hero-subhead">The tools have changed; the rooms have changed. The question hasn't.</p>
         </div>
     </section>
 
-    <!-- The Through-Line -->
     <section>
         <div class="container">
             <h2 class="section-headline">The Through-Line</h2>
             <div class="section-body">
-                <p>Sharéa has been in rooms where someone had something important to say and couldn't get it out. Not because they didn't know their subject. Because the gap between what they meant and what landed kept opening up — in the writing center, in the classroom, in the briefing room, in the pitch. In federal agencies. In artists' studios. In bookstores. In organizations doing work that matters, at scale, with real stakes.</p>
+                <p>GlowStrm exists because the problem is rarely a lack of effort. It is usually a gap between what someone means, what the room hears, and what the message can hold under pressure.</p>
+
+                <p>Sharéa has been in rooms where someone had something important to say and couldn't get it out. Not because they didn't know their subject. Because the gap between what they meant and what landed kept opening up: in the writing center, in the classroom, in the briefing room, in the pitch. In federal agencies. In artists' studios. In bookstores. In organizations doing work that matters, at scale, with real stakes.</p>
 
                 <p style="margin-top: 32px;"><strong>Sharéa's career spans institutions, disciplines, and registers:</strong></p>
 
                 <div class="accordion">
-
                     <div class="accordion-item">
                         <button class="accordion-trigger" aria-expanded="false">
                             <span class="accordion-title">Senior Communications Strategist</span>
@@ -518,10 +106,9 @@
                             <span class="accordion-icon">+</span>
                         </button>
                         <div class="accordion-body">
-                            <p class="accordion-content">Sharéa applies message architecture at the organizational level — leading stakeholder communication strategy, conducting communications audits, and building alignment across complex teams and high-stakes initiatives.</p>
+                            <p class="accordion-content">Sharéa applies message architecture at the organizational level, leading stakeholder communication strategy, conducting communications audits, and building alignment across complex teams and high-stakes initiatives.</p>
                         </div>
                     </div>
-
                     <div class="accordion-item">
                         <button class="accordion-trigger" aria-expanded="false">
                             <span class="accordion-title">Editor · Asherah House Creative Consulting</span>
@@ -529,10 +116,9 @@
                             <span class="accordion-icon">+</span>
                         </button>
                         <div class="accordion-body">
-                            <p class="accordion-content">Sharéa worked with artists, fellows, and mission-driven creatives to sharpen their language and amplify their work. She consulted with a 2023 United States Artists Fellow in crafting their artistic narrative, and served as Developmental Editor for food designer and activist Krystal C. Mack of IAO Studio. Sharéa contributed substantially to the script for Profound Pixels' musical documentary <em>This Is My Black</em> — writing large sections and reorganizing the narrative for clarity and direction — a production that earned an NAACP nomination and multiple independent film festival awards. She also worked with the founder of Lenoir-Rhyne University's Equity and Diversity Institute to refine their organizational voice, branding, and web copy.</p>
+                            <p class="accordion-content">Sharéa worked with artists, fellows, and mission-driven creatives to sharpen their language and amplify their work. She consulted with a 2023 United States Artists Fellow in crafting their artistic narrative, and served as Developmental Editor for food designer and activist Krystal C. Mack of IAO Studio. Sharéa contributed substantially to the script for Profound Pixels' musical documentary <em>This Is My Black</em>, writing large sections and reorganizing the narrative for clarity and direction, a production that earned an NAACP nomination and multiple independent film festival awards. She also worked with the founder of Lenoir-Rhyne University's Equity and Diversity Institute to refine their organizational voice, branding, and web copy.</p>
                         </div>
                     </div>
-
                     <div class="accordion-item">
                         <button class="accordion-trigger" aria-expanded="false">
                             <span class="accordion-title">Writing Specialist · United States Naval Academy</span>
@@ -540,10 +126,9 @@
                             <span class="accordion-icon">+</span>
                         </button>
                         <div class="accordion-body">
-                            <p class="accordion-content">Sharéa increased Writing Center engagement by 90%, built curriculum for engineering students learning to communicate technical work, and led the MGSP Equity Initiative — a collaborative effort to revise peer-leadership programs to better reflect the Academy's diverse brigade, recognized with USNA's On-the-Spot Award. She created and facilitated a three-part Multilingual Writers training series for peer tutors, and developed embedded workshops for historians and aerospace engineers — including a technical writing and lab report workshop drawn from NASA genre conventions.</p>
+                            <p class="accordion-content">Sharéa increased Writing Center engagement by 90%, built curriculum for engineering students learning to communicate technical work, and led the MGSP Equity Initiative, recognized with USNA's On-the-Spot Award. She created and facilitated a three-part Multilingual Writers training series for peer tutors, and developed embedded workshops for historians and aerospace engineers, including a technical writing and lab report workshop drawn from NASA genre conventions.</p>
                         </div>
                     </div>
-
                     <div class="accordion-item">
                         <button class="accordion-trigger" aria-expanded="false">
                             <span class="accordion-title">Marketing Content Specialist · UMBC</span>
@@ -554,7 +139,6 @@
                             <p class="accordion-content">Audited messaging across undergraduate, graduate, and global studies programs, and held the line on brand consistency as a member of the UMBC Brand Ambassadors community.</p>
                         </div>
                     </div>
-
                     <div class="accordion-item">
                         <button class="accordion-trigger" aria-expanded="false">
                             <span class="accordion-title">Associate Professor & Multilingual Faculty Fellow · University of Maryland Baltimore</span>
@@ -565,7 +149,6 @@
                             <p class="accordion-content">Sharéa taught graduate students, researchers, and medical professionals in writing and research communication. As Multilingual Faculty Fellow (2023–2024), she supported peer tutor development and participated in the Baltimore Writing Center Project as a guest organizer.</p>
                         </div>
                     </div>
-
                     <div class="accordion-item">
                         <button class="accordion-trigger" aria-expanded="false">
                             <span class="accordion-title">Composition Instructor, Interim Writing Center Director & Writing Consultant · University of Baltimore</span>
@@ -573,17 +156,25 @@
                             <span class="accordion-icon">+</span>
                         </button>
                         <div class="accordion-body">
-                            <p class="accordion-content">Sharéa taught the full composition sequence — WRIT 100, 101, 200, and 300 — in face-to-face, hybrid, and online formats, supporting 500+ student portfolios through the writing process. She developed and taught a funded Honors course, <em>Redefining the Narrative: Research and Writing Tools for Metaliteracy</em>, which challenged students to interrogate how museums construct knowledge. Sharéa also served as Interim Writing Center Director, overseeing staffing, CRLA tutor training, and programming that deepened the center's relationship with the writing program. She taught in Cuba as a Graduate Teaching Assistant and worked as a Graduate Writing Consultant supporting the launch of the Writing Fellows Program.</p>
+                            <p class="accordion-content">Sharéa taught the full composition sequence (WRIT 100, 101, 200, and 300) in face-to-face, hybrid, and online formats, supporting 500+ student portfolios. She developed and taught a funded Honors course, <em>Redefining the Narrative: Research and Writing Tools for Metaliteracy</em>. She also served as Interim Writing Center Director, overseeing staffing, CRLA tutor training, and programming. She taught in Cuba as a Graduate Teaching Assistant and worked as a Graduate Writing Consultant supporting the launch of the Writing Fellows Program.</p>
                         </div>
                     </div>
-
                 </div>
 
-                <p style="margin-top: 40px;">Sharéa holds an M.F.A. in Creative Writing and Publication Arts — Poetry concentration, summa cum laude — from the University of Baltimore. She is a certified Strategic Communications practitioner through PRSA, with completed modules in behavioral strategic planning, stakeholder research, behavioral science application, goal-setting, tactics, and measurement.</p>
+                <p style="margin-top: 40px;">Sharéa holds an M.F.A. in Creative Writing and Publication Arts, Poetry concentration, summa cum laude, from the University of Baltimore. She is a certified Strategic Communications practitioner through PRSA, with completed modules in behavioral strategic planning, stakeholder research, behavioral science application, goal-setting, tactics, and measurement.</p>
 
                 <div class="workshop-callout">
                     <p class="workshop-callout-label">On Workshops</p>
-                    <p>Sharéa has been creating and facilitating workshops for over a decade — for writing tutors and military midshipmen, for creatives in bookstores and libraries, for historians and aerospace engineers. She has facilitated at the Baltimore Book Festival as moderator of <em>Memoir: Writing the Difficult Story</em>, presented at the Mid-Atlantic Writing Centers Association on Black academic identity, and brought public creative workshops to Enoch Pratt Free Library, Greedy Reads, and Femme Fatale DC through her Moonlit Workshops series. Building the learning experience is part of the work. It always has been.</p>
+                    <p>Sharéa has been creating and facilitating workshops for over a decade, including for writing tutors and military midshipmen, for creatives in bookstores and libraries, for historians and aerospace engineers. She has facilitated at the Baltimore Book Festival, presented at the Mid-Atlantic Writing Centers Association on Black academic identity, and brought public creative workshops to Enoch Pratt Free Library, Greedy Reads, and Femme Fatale DC through her Moonlit Workshops series. Building the learning experience is part of the work; it always has been.</p>
+                </div>
+
+                <div style="background:var(--surface); border-left:3px solid var(--gold); padding:24px 28px; margin-top:40px;">
+                    <p style="font-family:'Source Sans 3',sans-serif; font-size:11px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold); margin-bottom:16px;">What clients get from this background</p>
+                    <ul style="list-style:none; padding:0; margin:0;">
+                        <li style="font-family:'Source Sans 3',sans-serif; font-size:15px; font-weight:300; line-height:1.8; color:var(--muted); padding:10px 0 10px 24px; border-bottom:1px solid var(--border); position:relative;"><span style="position:absolute;left:0;color:var(--coral);">✦</span> Someone who can hear where the structure is breaking, not just where the sentence is weak</li>
+                        <li style="font-family:'Source Sans 3',sans-serif; font-size:15px; font-weight:300; line-height:1.8; color:var(--muted); padding:10px 0 10px 24px; border-bottom:1px solid var(--border); position:relative;"><span style="position:absolute;left:0;color:var(--coral);">✦</span> Someone who can see how the room is changing the meaning — boardroom, funder, team, public</li>
+                        <li style="font-family:'Source Sans 3',sans-serif; font-size:15px; font-weight:300; line-height:1.8; color:var(--muted); padding:10px 0 10px 24px; position:relative;"><span style="position:absolute;left:0;color:var(--coral);">✦</span> A message foundation that can travel without you in the room</li>
+                    </ul>
                 </div>
 
                 <p style="margin-top: 32px;">The through-line in all of it: the problem was never the writing. It was always the clarity underneath it.</p>
@@ -591,12 +182,9 @@
         </div>
     </section>
 
-    <!-- GlowStrm + Creative Practice + Credentials accordion -->
     <section>
         <div class="container">
             <div class="accordion">
-
-                <!-- GlowStrm -->
                 <div class="accordion-item">
                     <button class="accordion-trigger" aria-expanded="false">
                         <span class="accordion-title">GlowStrm</span>
@@ -604,14 +192,13 @@
                     </button>
                     <div class="accordion-body">
                         <div class="accordion-content">
-                            <p style="margin-bottom:16px;">GlowStrm is the natural evolution of work Sharéa has been doing across every room she's occupied. The institutions changed. The titles changed. The core didn't.</p>
-                            <p style="margin-bottom:16px;">What she learned across writing centers, classrooms, studios, and briefing rooms is this: the people who come in already carry wisdom, experience, and authority. They are not empty. The gap is never about what they know — it's about what happens when they try to get what they know into a form that travels. That's always been the work. GlowStrm is just the first time it has its own name.</p>
-                            <p>The Thought Doula service has a specific origin. Long before GlowStrm existed, Sharéa described her approach to working with writers as acting as a thought doula — supporting the process of bringing something from thought to page. That framework didn't start as a product. It started as a practice. GlowStrm built a container for it.</p>
+                            <p style="margin-bottom:16px;">GlowStrm is the natural evolution of work Sharéa has been doing across every room she's occupied. The institutions changed; the titles changed; the core didn't.</p>
+                            <p style="margin-bottom:16px;">What she learned across writing centers, classrooms, studios, and briefing rooms is this: the people who come in already carry wisdom, experience, and authority. They are not empty. The gap is never about what they know; it's about what happens when they try to get what they know into a form that travels. That's always been the work. GlowStrm is just the first time it has its own name.</p>
+                            <p style="margin-bottom:16px;">The Thought Doula service has a specific origin. Long before GlowStrm existed, Sharéa described her approach to working with writers as acting as a thought doula, supporting the process of bringing something from thought to page. That framework didn't start as a product; it started as a practice. GlowStrm built a container for it.</p>
+                            <p style="font-style:italic; color:var(--gold);">And the first time the pricing reflects what the work is actually worth.</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Creative Practice -->
                 <div class="accordion-item">
                     <button class="accordion-trigger" aria-expanded="false">
                         <span class="accordion-title">The Creative Practice</span>
@@ -619,14 +206,12 @@
                     </button>
                     <div class="accordion-body">
                         <div class="accordion-content">
-                            <p style="margin-bottom:16px;">Before Sharéa was a strategist, she was a poet. She still is. The M.F.A. was in Poetry. The practice is ongoing — in publication, in performance, in playwriting. That's not a separate track from the communications work. It's the foundation of it. A poet reads language the way other people read faces. Sharéa knows when something is off before she can name why.</p>
-                            <p style="margin-bottom:16px;">Sharéa's creative work has appeared in <em>The Black Love Book</em> (Soft Savage Press, 2023), <em>PalatePalette</em> (HomieHouse Press/IAO Design), and <em>The Tiny</em>, among others. She has performed at the Baltimore Book Festival, the Modell Lyric, and the Enoch Pratt Free Library, and presented at the John Hewitt Society International Summer School in Armagh, Northern Ireland. She is an alumna of the Horticulture Playwriting Fellowship (2022–2023), the Emerging Voices Project, and the NEA Big Read — serving on the planning committee that brought Claudia Rankine to Baltimore, supported by a $15,000 grant.</p>
-                            <p>This is why the listening in a Thought Doula session or the reading in a Messaging Audit isn't just analytical. It's also trained. Sharéa has spent years paying close attention to what language is doing underneath what it says. That's the work — in any room.</p>
+                            <p style="margin-bottom:16px;">Before Sharéa was a strategist, she was a poet. She still is. The M.F.A. was in Poetry. The practice is ongoing: in publication, in performance, in playwriting. That's not a separate track from the communications work; it's the foundation of it. A poet reads language the way other people read faces. Sharéa knows when something is off before she can name why.</p>
+                            <p style="margin-bottom:16px;">Sharéa's creative work has appeared in <em>The Black Love Book</em> (Soft Savage Press, 2023), <em>PalatePalette</em> (HomieHouse Press/IAO Design), and <em>The Tiny</em>, among others. She has performed at the Baltimore Book Festival, the Modell Lyric, and the Enoch Pratt Free Library, and presented at the John Hewitt Society International Summer School in Armagh, Northern Ireland. She is an alumna of the Horticulture Playwriting Fellowship (2022–2023), the Emerging Voices Project, and the NEA Big Read, serving on the planning committee that brought Claudia Rankine to Baltimore, supported by a $15,000 grant.</p>
+                            <p>This is why the listening in a Thought Doula session or the reading in a Messaging Audit isn't just analytical. It's also trained. Sharéa has spent years paying close attention to what language is doing underneath what it says. That's the work. In any room.</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Credentials -->
                 <div class="accordion-item">
                     <button class="accordion-trigger" aria-expanded="false">
                         <span class="accordion-title">Credentials & Background</span>
@@ -635,68 +220,30 @@
                     <div class="accordion-body">
                         <div class="accordion-content">
                             <div class="credentials-grid" style="margin-top:16px;">
-                                <div class="credential-item">
-                                    <div class="credential-title">M.F.A., Creative Writing and Publication Arts</div>
-                                    <div class="credential-detail">University of Baltimore · Poetry · Summa Cum Laude</div>
-                                </div>
-                                <div class="credential-item">
-                                    <div class="credential-title">Strategic Communications Certificate</div>
-                                    <div class="credential-detail">PRSA (Modules 1–6)</div>
-                                </div>
-                                <div class="credential-item">
-                                    <div class="credential-title">CRLA Certification</div>
-                                    <div class="credential-detail">Level III Master Tutor</div>
-                                </div>
-                                <div class="credential-item">
-                                    <div class="credential-title">NEA Big Read — Planning Committee</div>
-                                    <div class="credential-detail">$15,000 grant · Claudia Rankine, Baltimore (2018)</div>
-                                </div>
-                                <div class="credential-item">
-                                    <div class="credential-title">On-the-Spot Award</div>
-                                    <div class="credential-detail">United States Naval Academy · MGSP Equity Initiative (2021)</div>
-                                </div>
-                                <div class="credential-item">
-                                    <div class="credential-title">Horticulture Playwriting Fellowship</div>
-                                    <div class="credential-detail">2022–2023 Cohort</div>
-                                </div>
-                                <div class="credential-item">
-                                    <div class="credential-title">Published Poet & Playwright</div>
-                                    <div class="credential-detail">Soft Savage Press · HomieHouse Press · The Tiny · and others</div>
-                                </div>
-                                <div class="credential-item">
-                                    <div class="credential-title">Writing Specialist</div>
-                                    <div class="credential-detail">United States Naval Academy (2019–2022)</div>
-                                </div>
-                                <div class="credential-item">
-                                    <div class="credential-title">Interim Writing Center Director</div>
-                                    <div class="credential-detail">University of Baltimore (2017)</div>
-                                </div>
-                                <div class="credential-item">
-                                    <div class="credential-title">Multilingual Faculty Fellow</div>
-                                    <div class="credential-detail">UMB Writing Center (2023–2024)</div>
-                                </div>
-                                <div class="credential-item">
-                                    <div class="credential-title">Composition Instructor · WRIT 100–300</div>
-                                    <div class="credential-detail">University of Baltimore · Honors: Rhetorical Frameworks of Museums</div>
-                                </div>
-                                <div class="credential-item">
-                                    <div class="credential-title">Writing Consultant</div>
-                                    <div class="credential-detail">10+ years across academic institutions</div>
-                                </div>
+                                <div class="credential-item"><div class="credential-title">M.F.A., Creative Writing and Publication Arts</div><div class="credential-detail">University of Baltimore · Poetry · Summa Cum Laude</div></div>
+                                <div class="credential-item"><div class="credential-title">Strategic Communications Certificate</div><div class="credential-detail">PRSA (Modules 1–6)</div></div>
+                                <div class="credential-item"><div class="credential-title">CRLA Certification</div><div class="credential-detail">Level III Master Tutor</div></div>
+                                <div class="credential-item"><div class="credential-title">NEA Big Read — Planning Committee</div><div class="credential-detail">$15,000 grant · Claudia Rankine, Baltimore (2018)</div></div>
+                                <div class="credential-item"><div class="credential-title">On-the-Spot Award</div><div class="credential-detail">United States Naval Academy · MGSP Equity Initiative (2021)</div></div>
+                                <div class="credential-item"><div class="credential-title">Horticulture Playwriting Fellowship</div><div class="credential-detail">2022–2023 Cohort</div></div>
+                                <div class="credential-item"><div class="credential-title">Published Poet & Playwright</div><div class="credential-detail">Soft Savage Press · HomieHouse Press · The Tiny · and others</div></div>
+                                <div class="credential-item"><div class="credential-title">Writing Specialist</div><div class="credential-detail">United States Naval Academy (2019–2022)</div></div>
+                                <div class="credential-item"><div class="credential-title">Interim Writing Center Director</div><div class="credential-detail">University of Baltimore (2017)</div></div>
+                                <div class="credential-item"><div class="credential-title">Multilingual Faculty Fellow</div><div class="credential-detail">UMB Writing Center (2023–2024)</div></div>
+                                <div class="credential-item"><div class="credential-title">Composition Instructor · WRIT 100–300</div><div class="credential-detail">University of Baltimore · Honors: Rhetorical Frameworks of Museums</div></div>
+                                <div class="credential-item"><div class="credential-title">Writing Consultant</div><div class="credential-detail">10+ years across academic institutions</div></div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
             <h2 class="cta-headline">Ready to find the gap?</h2>
-            <p class="cta-body">If the work sounds familiar — the stakes are real, the message isn't landing, and you need more than better words — reach out. Four clients per quarter. I'll tell you directly whether it's a fit.</p>
+            <p class="cta-body">If the work sounds familiar — the stakes are real, the message isn't landing, and you need more than better words. Reach out. Four clients per quarter; I'll tell you directly whether it's a fit.</p>
             <div class="button-group">
                 <a href="mailto:northnode@glowstrm.com" class="btn btn-gold">Start a conversation</a>
                 <a href="self-audit.html" class="btn btn-ghost">Take the free self-audit →</a>
@@ -704,24 +251,20 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>GlowStrm, LLC · Richmond, VA · Black woman-owned · © 2026</p>
-    </footer>
+    <footer><p>© 2025–2026 GlowStrm™, LLC. All rights reserved.</p>
+        <p style="margin-top:8px;">GlowStrm™ is a trademark of GlowStrm, LLC. Unauthorized reproduction, distribution, or use of any content, tools, or materials on this site is strictly prohibited.</p>
+        <p style="margin-top:8px;">Richmond, VA · Black woman-owned</p></footer>
+
 <script>
     document.querySelectorAll('.accordion-trigger').forEach(trigger => {
         trigger.addEventListener('click', () => {
             const item = trigger.closest('.accordion-item');
             const isOpen = item.classList.contains('open');
-
-            // Close all
             document.querySelectorAll('.accordion-item').forEach(i => {
                 i.classList.remove('open');
                 i.querySelector('.accordion-trigger').setAttribute('aria-expanded', 'false');
                 i.querySelector('.accordion-icon').textContent = '+';
             });
-
-            // Open clicked if it was closed
             if (!isOpen) {
                 item.classList.add('open');
                 trigger.setAttribute('aria-expanded', 'true');
