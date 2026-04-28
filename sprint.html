@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Message Architecture Sprint — GlowStrm</title>
+  <title>Message Architecture™ Sprint — GlowStrm</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -35,12 +35,15 @@
     .nav-cta a { color: var(--dark) !important; background-color: var(--gold); padding: 12px 24px; border-radius: 4px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background-color 0.3s ease; min-height: 52px; display: flex; align-items: center; }
     .nav-cta a:hover { background-color: #f5d88a; }
     main { padding-top: 0; }
+
+    /* HERO */
     .hero { background-color: var(--surface); padding: clamp(88px, 12vw, 120px) clamp(24px, 6vw, 80px); border-bottom: 1px solid var(--border); animation: fadeUp 0.8s ease-out; }
     .hero-content { max-width: 880px; margin: 0 auto; }
     .eyebrow { font-family: 'Source Sans 3', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
     .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 6vw, 64px); font-weight: 300; line-height: 1.2; color: var(--cream); margin-bottom: 24px; }
-    .subhead { font-family: 'Cormorant Garamond', serif; font-size: clamp(20px, 3vw, 28px); font-weight: 300; font-style: italic; color: var(--muted); line-height: 1.4; margin-bottom: 20px; max-width: 700px; }
-    .best-for { font-family: 'Source Sans 3', sans-serif; font-size: 15px; font-weight: 300; color: var(--muted); line-height: 1.7; max-width: 620px; margin-bottom: 32px; }
+    .hero h1 em { font-style: italic; color: var(--rose); }
+    .subhead { font-family: 'Cormorant Garamond', serif; font-size: clamp(20px, 3vw, 26px); font-weight: 300; font-style: italic; color: var(--muted); line-height: 1.5; margin-bottom: 20px; max-width: 700px; }
+    .best-for { font-family: 'Source Sans 3', sans-serif; font-size: 15px; font-weight: 300; color: var(--muted); line-height: 1.8; max-width: 640px; margin-bottom: 32px; }
     .meta-dots { font-size: 14px; color: var(--muted); margin-bottom: 8px; display: flex; gap: 16px; flex-wrap: wrap; }
     .meta-dots span { display: flex; align-items: center; }
     .meta-dots span:not(:last-child)::after { content: '·'; margin-left: 16px; color: var(--border-hi); }
@@ -51,29 +54,102 @@
     .btn-gold:hover { background-color: #f5d88a; }
     .btn-ghost { background-color: transparent; color: var(--muted); border: 1px solid var(--border-hi); }
     .btn-ghost:hover { color: var(--gold); border-color: var(--gold); }
-    section { padding: clamp(88px, 12vw, 120px) clamp(24px, 6vw, 80px); border-bottom: 1px solid var(--border); animation: fadeUp 0.8s ease-out; }
+
+    /* SECTIONS */
+    section { padding: clamp(72px, 10vw, 100px) clamp(24px, 6vw, 80px); border-bottom: 1px solid var(--border); animation: fadeUp 0.8s ease-out; }
     section:nth-child(even) { background-color: rgba(33, 26, 54, 0.5); }
     .section-content { max-width: 880px; margin: 0 auto; }
-    section h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 5vw, 48px); font-weight: 300; color: var(--cream); margin-bottom: 32px; line-height: 1.3; }
+    section h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 5vw, 48px); font-weight: 300; color: var(--cream); margin-bottom: 28px; line-height: 1.3; }
+    section h2 em { font-style: italic; color: var(--rose); }
     section p { font-size: 16px; line-height: 1.8; color: var(--cream); margin-bottom: 20px; }
     section p:last-of-type { margin-bottom: 0; }
     section ul { list-style: none; margin-top: 20px; }
     section li { font-size: 16px; line-height: 1.8; color: var(--cream); margin-bottom: 16px; padding-left: 24px; position: relative; }
     section li::before { content: '→'; position: absolute; left: 0; color: var(--gold); }
-    .brief-components { margin-top: 24px; padding: 0; list-style: none; }
-    .brief-components li { font-size: 15px; line-height: 1.8; color: var(--muted); margin-bottom: 0; padding: 14px 0 14px 24px; border-bottom: 1px solid var(--border); position: relative; }
-    .brief-components li:last-child { border-bottom: none; }
-    .brief-components li::before { content: '✦'; position: absolute; left: 0; color: var(--coral); font-size: 11px; top: 18px; }
-    .brief-components li strong { color: var(--cream); font-weight: 600; }
-    .two-col-list { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 32px; }
-    .two-col-list h3 { font-family: 'Source Sans 3', sans-serif; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); margin-bottom: 16px; }
-    .two-col-list ul { margin-top: 0; }
+
+    /* BLUEPRINT TWO-COL */
+    .blueprint-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 32px; }
+    .bp-col { padding: 28px 24px; }
+    .bp-col.without { background: rgba(255,255,255,0.03); border-top: 3px solid rgba(255,255,255,0.15); }
+    .bp-col.with    { background: rgba(119,78,206,0.1);  border-top: 3px solid var(--violet); }
+    .bp-col-label { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 10px; }
+    .bp-col.without .bp-col-label { color: rgba(255,255,255,0.35); }
+    .bp-col.with .bp-col-label    { color: var(--violet); }
+    .bp-col h3 { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 400; color: var(--cream); margin-bottom: 10px; line-height: 1.3; }
+    .bp-col p  { font-size: 14.5px; color: var(--muted); line-height: 1.7; margin: 0; }
+
+    /* COMPARE TABLE */
+    .compare-table { width: 100%; border-collapse: collapse; margin-top: 32px; }
+    .compare-table th { font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; padding: 10px 16px; text-align: left; }
+    .th-no  { background: rgba(255,255,255,0.04); color: var(--muted); border-right: 1px solid var(--border); width: 50%; }
+    .th-yes { background: var(--violet); color: #fff; width: 50%; }
+    .compare-table td { padding: 12px 16px; font-size: 14.5px; font-weight: 300; vertical-align: top; line-height: 1.6; }
+    .compare-table tr:nth-child(even) .td-no  { background: rgba(255,255,255,0.02); }
+    .compare-table tr:nth-child(even) .td-yes { background: rgba(119,78,206,0.08); }
+    .td-no  { color: var(--muted); border-right: 1px solid var(--border); }
+    .td-yes { color: var(--cream); }
+
+    /* DELIVERABLES */
+    .deliverables { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 24px; }
+    .del-tier { grid-column: 1 / -1; font-size: 9px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); padding: 10px 0 6px; border-bottom: 1px solid var(--border); margin-bottom: 2px; }
+    .del-tier.foundation { color: var(--violet); }
+    .del-item { display: flex; gap: 14px; padding: 18px 16px; background: rgba(255,255,255,0.03); border-top: 2px solid var(--rose); }
+    .del-item:nth-child(3)  { border-top-color: var(--plum); }
+    .del-item:nth-child(4)  { border-top-color: var(--violet); }
+    .del-item:nth-child(6)  { border-top-color: var(--gold); }
+    .del-item:nth-child(7)  { border-top-color: var(--coral); }
+    .del-item:nth-child(8)  { border-top-color: var(--rose); }
+    .del-item:nth-child(9)  { grid-column: 1 / -1; background: rgba(119,78,206,0.08); border-top-color: var(--plum); }
+    .del-n { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; color: rgba(255,255,255,0.15); line-height: 1; flex-shrink: 0; min-width: 28px; padding-top: 2px; }
+    .del-n.found { color: rgba(119,78,206,0.5); }
+    .del-title { font-size: 13px; font-weight: 600; color: var(--cream); margin-bottom: 4px; letter-spacing: 0.02em; }
+    .del-body  { font-size: 13px; font-weight: 300; color: var(--muted); line-height: 1.6; }
+
+    /* SOUNDS LIKE YOU */
+    .sounds-like { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 24px; }
+    .sl-item { font-size: 14.5px; font-weight: 300; color: var(--cream); padding: 14px 16px 14px 28px; background: rgba(255,255,255,0.03); border-left: 2px solid var(--rose); line-height: 1.6; position: relative; }
+
+    /* FIT */
     .fit-bridge { font-size: 16px; line-height: 1.8; color: var(--muted); font-style: italic; margin-bottom: 32px; padding: 20px 24px; background: var(--surface); border-left: 3px solid var(--border-hi); }
+    .two-col-list { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 32px; }
+    .two-col-list h3 { font-family: 'Source Sans 3', sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); margin-bottom: 16px; }
+    .two-col-list ul { margin-top: 0; }
+
     footer { background-color: var(--surface); border-top: 1px solid var(--border); padding: 48px clamp(24px, 6vw, 80px); text-align: center; }
     footer p { font-size: 14px; color: var(--muted); line-height: 1.8; }
     footer a { color: var(--gold); text-decoration: none; }
     footer a:hover { text-decoration: underline; }
-    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* PULL QUOTE */
+    .pull-quote { border-left: 3px solid var(--rose); background: rgba(187,64,114,0.06); padding: 28px 32px; margin: 40px 0 0; }
+    .pull-quote blockquote { font-family: 'Cormorant Garamond', serif; font-size: clamp(20px, 2.5vw, 26px); font-style: italic; font-weight: 300; color: var(--cream); line-height: 1.55; margin-bottom: 14px; }
+    .pull-quote cite { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rose); font-style: normal; display: block; }
+
+    /* SPRINT PLUS / AI SECTION */
+    .ai-band { background: linear-gradient(135deg, #2a1d4a 0%, #1e1535 100%); border-top: 1px solid var(--plum); border-bottom: 1px solid var(--plum); }
+    .ai-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .ai-tag { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 6px 14px; border: 1px solid rgba(230,182,92,0.3); color: var(--gold); background: rgba(230,182,92,0.06); border-radius: 2px; }
+
+    /* ENGAGEMENT COMPARISON */
+    .engagement-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+    .eng-card { border: 1px solid var(--border); border-top: 3px solid var(--violet); padding: 32px 28px; }
+    .eng-card.plus { border-top-color: var(--rose); background: rgba(187,64,114,0.06); }
+    .eng-name { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 12px; }
+    .eng-card:not(.plus) .eng-name { color: var(--violet); }
+    .eng-card.plus .eng-name { color: var(--rose); }
+    .eng-price { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 300; color: var(--cream); line-height: 1; margin-bottom: 6px; }
+    .eng-note { font-size: 12px; color: var(--muted); font-style: italic; margin-bottom: 20px; line-height: 1.5; }
+    .eng-card:not(.plus) .eng-note { color: var(--violet); }
+    .eng-card.plus .eng-note { color: var(--rose); }
+    .eng-feat { font-size: 14px; font-weight: 300; color: var(--cream); padding: 7px 0 7px 14px; border-left: 2px solid var(--border-hi); margin-bottom: 5px; line-height: 1.45; }
+    .eng-card.plus .eng-feat { border-left-color: rgba(187,64,114,0.4); }
+    .founding-footnote { margin-top: 20px; padding: 16px 20px; background: rgba(119,78,206,0.08); border-left: 3px solid var(--violet); font-size: 13px; font-weight: 300; color: var(--muted); line-height: 1.7; }
+    .founding-footnote strong { color: var(--cream); font-weight: 600; }
+
+    @media (max-width: 640px) {
+      .engagement-grid { grid-template-columns: 1fr; }
+    }
+
     @media (max-width: 640px) {
       nav { flex-direction: column; height: auto; padding: 16px clamp(24px, 6vw, 80px); gap: 16px; }
       nav .nav-links { flex-direction: column; gap: 12px; width: 100%; }
@@ -81,6 +157,10 @@
       .meta-dots span:not(:last-child)::after { display: none; }
       .hero-cta-buttons { flex-direction: column; }
       .hero-cta-buttons .btn { width: 100%; justify-content: center; }
+      .blueprint-cols { grid-template-columns: 1fr; }
+      .deliverables { grid-template-columns: 1fr; }
+      .del-item:nth-child(9) { grid-column: 1; }
+      .sounds-like { grid-template-columns: 1fr; }
       .two-col-list { grid-template-columns: 1fr; gap: 32px; }
     }
   </style>
@@ -103,76 +183,181 @@
   </nav>
 
   <main>
+
+    <!-- HERO -->
     <section class="hero">
       <div class="hero-content">
-        <div class="eyebrow">Message Architecture Sprint</div>
-        <h1>The foundation before everything else.</h1>
-        <p class="subhead">A structured, two-week engagement to establish clarity and alignment around what you're saying — before you scale content or design.</p>
-        <p class="best-for">Best for founders and leaders with a real initiative on the line: a launch, repositioning, board-facing shift, funding ask, or public-facing change that needs clarity before execution.</p>
+        <div class="eyebrow">Message Architecture™ Brief</div>
+        <h1>The blueprint behind every<br><em>brand that works.</em></h1>
+        <p class="subhead">Most businesses never get access to the framework behind great communications. GlowStrm built Message Architecture™ to change that.</p>
+        <p class="best-for">A two-week sprint that organizes your core message, audience, and voice into one clear, repeatable system — built specifically for small businesses doing the work of a whole team.</p>
         <div class="meta-dots">
           <span>$2,500 — Founding Client Rate ★</span>
           <span>Fixed fee</span>
           <span>2 weeks</span>
-          <span>Four clients per quarter</span>
+          <span>4 clients per quarter</span>
         </div>
         <div class="founding-note">
-          ★ Founding client rate. This rate closes when the first cohort is full — the sprint then moves to $10,000. This is not a discount; it is a real window for founders who are ready now.
+          ★ This is not a discount — it is a real window. When the founding cohort fills, the sprint moves to its market rate of $10,000, which reflects standard brand strategy pricing ($8K–$12K for comparable work). If you're ready now, the rate is open. When the cohort is full, it closes.
         </div>
         <div class="hero-cta-buttons">
-          <a href="mailto:northnode@glowstrm.com?subject=Message Architecture Sprint Inquiry" class="btn btn-gold">Inquire about availability</a>
+          <a href="mailto:northnode@glowstrm.com?subject=Blueprint" class="btn btn-gold">Get Your Blueprint</a>
           <a href="self-audit.html" class="btn btn-ghost">Not sure it's a fit? Take the self-audit →</a>
         </div>
       </div>
     </section>
 
+    <!-- THE PROBLEM -->
     <section>
       <div class="section-content">
-        <h2>What the sprint is</h2>
-        <p>Most people come to the sprint when they've rewritten the same thing so many times that changing the words isn't working anymore. The problem isn't the copy; it's the structure underneath it.</p>
-        <p>Most communications support starts at the output layer — the copy, the campaign, the content calendar. The sprint starts earlier.</p>
-        <p>At the question: what are you actually trying to say, and to whom, and why does it matter that they hear it this way?</p>
-        <p>That's not a writing question; it's a clarity question. And clarity is the work.</p>
+        <h2>Two people building a house.<br>Only one has a <em>blueprint.</em></h2>
+
+        <p>The first person starts with the kitchen — it felt urgent. Then a bedroom. A bathroom. Each room is beautiful. But the hallways don't connect, the plumbing fights the layout, and guests can't figure out how to get from the front door to anywhere useful.</p>
+        <p>The second person spent time with an architect first. Before a single nail, they mapped the structure: load-bearing walls, traffic flow, what the house needed to do. The build went faster. Every decision had a reason. The house works — invisibly and elegantly.</p>
+        <p style="color:var(--muted);font-style:italic;">Your communications should work the same way.</p>
+
+        <div class="blueprint-cols">
+          <div class="bp-col without">
+            <div class="bp-col-label">Without a blueprint</div>
+            <h3>Building rooms as you go</h3>
+            <p>Each caption, bio, proposal, and pitch email sounds like it was written by a different person. No underlying structure tells every piece of content what job it has to do.</p>
+          </div>
+          <div class="bp-col with">
+            <div class="bp-col-label">With a blueprint</div>
+            <h3>Every word knows where it lives</h3>
+            <p>Your caption, website, and proposal all pull from the same framework. The right people find you; they already understand what you do before you say a word.</p>
+          </div>
+        </div>
+
+        <div class="pull-quote">
+          <blockquote>The campaigns you admire, the websites that convert, the brands that speak directly to you — none of that started with a copywriter. It started where strategists built the framework first.</blockquote>
+          <cite>The pre-work large organizations fund and small businesses never see</cite>
+        </div>
+
+        <table class="compare-table" style="margin-top:24px;">
+          <thead>
+            <tr>
+              <th class="th-no">Without Message Architecture™</th>
+              <th class="th-yes">With Message Architecture™</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="td-no">Rewriting the website every few months because it "doesn't feel right"</td>
+              <td class="td-yes">A site that holds because it's built on a position, not a mood</td>
+            </tr>
+            <tr>
+              <td class="td-no">Sounding different on social than in proposals than in person</td>
+              <td class="td-yes">Consistent voice across every touchpoint, without thinking about it</td>
+            </tr>
+            <tr>
+              <td class="td-no">Hours on every caption — still doesn't feel done</td>
+              <td class="td-yes">Faster content because the framework answers the questions first</td>
+            </tr>
+            <tr>
+              <td class="td-no">Best clients say "I didn't know you did that" after years of following you</td>
+              <td class="td-yes">The right clients find you and already understand what you do</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
+    <!-- WHAT YOU LEAVE WITH -->
     <section>
       <div class="section-content">
-        <h2>What you leave with</h2>
-        <p>At the end of the sprint, you have a Message Architecture Brief: a working document that goes underneath all the content, campaigns, and communications you'll ever make.</p>
-        <p>It names:</p>
-        <ul class="brief-components">
-          <li><strong>Your audience's reality</strong> — who you're talking to, what they believe before they encounter you, and what needs to shift for the message to land</li>
-          <li><strong>Your positioning</strong> — what you are, what you are not, and why that distinction matters to the people you're trying to reach</li>
-          <li><strong>Your message hierarchy</strong> — what to lead with, what follows, and what supports it across different rooms and formats</li>
-          <li><strong>Your language guardrails</strong> — phrases to use, phrases to retire, and how the message should sound when you're not in the room</li>
-          <li><strong>Your application guidance</strong> — how to use the Brief across the homepage, decks, emails, vendor briefs, and presentations</li>
-        </ul>
-        <p style="margin-top:32px;">It is the foundation before your content.</p>
-        <p>This document should change how you communicate for years. If it doesn't, the sprint wasn't done right.</p>
+        <h2>Seven deliverables. One document.<br><em>A blueprint that holds.</em></h2>
+        <p>Every architect charges for the blueprint before a single nail goes in. Not because the paper is expensive, but because everything built without a blueprint is guesswork. The Message Architecture™ Brief is that document for your communications: the foundation that makes the website copy work, the pitch land, the caption do its job.</p>
+        <p>The work is done with you. Not handed off to a team you'll never meet.</p>
+
+        <div class="deliverables" style="margin-top:32px;">
+          <div class="del-tier foundation">— Foundation</div>
+          <div class="del-item">
+            <div class="del-n found">01</div>
+            <div>
+              <div class="del-title">Core Message Statement</div>
+              <div class="del-body">The one thing your audience must understand first, clear enough to survive a game of telephone.</div>
+            </div>
+          </div>
+          <div class="del-item">
+            <div class="del-n found">02</div>
+            <div>
+              <div class="del-title">Audience Insight Map</div>
+              <div class="del-body">Who you're talking to, what they believe before, and what they need to believe after.</div>
+            </div>
+          </div>
+          <div class="del-item">
+            <div class="del-n found">03</div>
+            <div>
+              <div class="del-title">Message Hierarchy</div>
+              <div class="del-body">Primary messages and proof organized so the most important thing always leads.</div>
+            </div>
+          </div>
+
+          <div class="del-tier" style="margin-top:8px;">— Execution</div>
+          <div class="del-item">
+            <div class="del-n">04</div>
+            <div>
+              <div class="del-title">Language Guardrails</div>
+              <div class="del-body">Phrases to use and retire. Documented for anyone writing on your behalf.</div>
+            </div>
+          </div>
+          <div class="del-item">
+            <div class="del-n">05</div>
+            <div>
+              <div class="del-title">Voice Characteristics</div>
+              <div class="del-body">How your message sounds, with examples, so contractors write on-brand every time.</div>
+            </div>
+          </div>
+          <div class="del-item">
+            <div class="del-n">06</div>
+            <div>
+              <div class="del-title">Application Guidance</div>
+              <div class="del-body">How to use the Brief across content, campaigns, and vendor briefs.</div>
+            </div>
+          </div>
+          <div class="del-item">
+            <div class="del-n">07</div>
+            <div>
+              <div class="del-title">The Living Brief</div>
+              <div class="del-body">A working document with a version log. Revisited as your work changes. Not filed away when the sprint ends.</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- WHO THIS IS FOR -->
     <section>
       <div class="section-content">
-        <h2>This sprint is for specific people.</h2>
-        <p class="fit-bridge">If you have a real initiative — a launch, a repositioning, a high-stakes presentation, a major ask, and you can feel the message wobbling, this is the room it belongs in.</p>
+        <h2>Doing the work of a whole team?<br>The Message Architecture™ Brief <em>focuses it.</em></h2>
+        <p>When you don't have a team to gut-check your messaging, the framework does that job.</p>
+
+        <div class="sounds-like" style="margin-top:24px;margin-bottom:36px;">
+          <div class="sl-item">You've rewritten your website more than twice — and it still doesn't feel right.</div>
+          <div class="sl-item">Your best clients say "I didn't know you did that" after years of following you.</div>
+          <div class="sl-item">Your captions, proposals, and bios sound like different people wrote them.</div>
+          <div class="sl-item">You know your work is excellent — but you can't make it sound that way on paper.</div>
+        </div>
+
+        <p class="fit-bridge">The salon owner building a brand in a crowded market. The yoga instructor whose classes are full but whose website doesn't say why. The consultant whose proposals keep getting passed over. The boutique agency that's grown past scrappy but hasn't updated how it talks about itself. The small business owner doing everything before noon. This work is for people doing real things — at every size.</p>
+
         <div class="two-col-list">
           <div>
             <h3>Good fit</h3>
             <ul>
-              <li>Messaging complexity is slowing progress or stalling decisions</li>
+              <li>Messaging inconsistency is slowing progress or stalling decisions</li>
               <li>Different audiences are hearing different versions of what you do</li>
-              <li>Language carries political, reputational, or organizational risk</li>
               <li>You need a durable foundation — not a draft, not talking points</li>
-              <li>Decision-makers are present and ready to engage</li>
-              <li>You have a specific initiative, shift, or moment that requires clarity before you move</li>
+              <li>You have a specific launch, shift, or moment that requires clarity before you move</li>
+              <li>You're ready to do the work, not just talk about it</li>
             </ul>
           </div>
           <div>
-            <h3>Not the right fit? Start here instead.</h3>
+            <h3>Not the right fit? Start here.</h3>
             <ul>
               <li><a href="messaging-audit.html" style="color:var(--coral);">The Messaging Audit — $197</a> — quick feedback on one existing piece</li>
-              <li><a href="self-audit.html" style="color:var(--coral);">Where's the Gap? Self-Audit — Free</a> — find your gaps before you commit to anything</li>
+              <li><a href="self-audit.html" style="color:var(--coral);">Where's the Gap? Self-Audit — Free</a> — find your gaps before you commit</li>
               <li><a href="workshop.html" style="color:var(--coral);">Where's the Gap? Workshop</a> — a facilitated session before a full engagement</li>
             </ul>
           </div>
@@ -180,23 +365,84 @@
       </div>
     </section>
 
-    <section>
+    <!-- WHAT COMES AFTER: SPRINT PLUS + AI -->
+    <section class="ai-band">
       <div class="section-content">
-        <h2>Four clients per quarter.</h2>
-        <p>This is not scarcity marketing; it is a real constraint and a real commitment. You work with Sharéa — not a team she assembled; that requires capacity. Four clients per quarter is what that looks like in practice.</p>
-        <p style="margin-top: 16px;">Reach out to confirm current availability and timing.</p>
-        <div style="margin-top: 40px;">
-          <a href="mailto:northnode@glowstrm.com?subject=Message Architecture Sprint Inquiry" class="btn btn-gold">Inquire about availability</a>
-          <p style="margin-top: 16px; font-size: 14px; color: var(--muted);">If it's not a fit, she'll say so directly.</p>
+        <h2>The Brief is the foundation.<br><em>Sprint Plus</em> is what you build on it.</h2>
+        <p>Once your Message Architecture™ Brief exists, it becomes the operating system for everything you communicate. Sprint Plus clients don't just walk away with the Brief — they walk away with a custom AI communications tool built directly from it.</p>
+        <p>Not a generic AI. Not ChatGPT with a prompt. Something that carries your voice, your positioning, and your language guardrails into every piece of content you create after the sprint ends.</p>
+        <p><strong>One person. One tool. The content of a team that actually sounds like you.</strong></p>
+        <div class="ai-tags">
+          <span class="ai-tag">Brief-powered AI tool</span>
+          <span class="ai-tag">Your voice. Your guardrails.</span>
+          <span class="ai-tag">One month governance support included</span>
+          <span class="ai-tag">Option to continue as a retainer client</span>
         </div>
       </div>
     </section>
+
+    <!-- ENGAGEMENT COMPARISON -->
+    <section>
+      <div class="section-content">
+        <h2>Choose your engagement.<br>Both start with the <em>same foundation.</em></h2>
+        <p>The sprint is the entry. Sprint Plus is the infrastructure. The difference is what you're holding at the end.</p>
+
+        <div class="engagement-grid">
+          <div class="eng-card">
+            <div class="eng-name">Message Architecture™ Sprint</div>
+            <div class="eng-price">$2,500<span style="font-size:16px;font-weight:300;color:var(--muted);">*</span></div>
+            <div class="eng-note">Founding client rate</div>
+            <div class="eng-feat">All seven Brief deliverables</div>
+            <div class="eng-feat">Two-week engagement</div>
+            <div class="eng-feat">Sharéa in the room — not a hand-off</div>
+            <div class="eng-feat">Living Brief with version log</div>
+            <div class="eng-feat">Application guidance for your team &amp; vendors</div>
+            <div style="margin-top:24px;">
+              <a href="mailto:northnode@glowstrm.com?subject=Blueprint" class="btn btn-ghost" style="font-size:13px;padding:10px 20px;min-height:auto;">Claim your spot →</a>
+            </div>
+          </div>
+          <div class="eng-card plus">
+            <div class="eng-name">Sprint Plus Premium</div>
+            <div class="eng-price" style="font-size:38px;">$3,500<span style="font-size:18px;font-weight:300;color:var(--muted);">–4,500</span></div>
+            <div class="eng-note">Everything in the Sprint, plus:</div>
+            <div class="eng-feat">All seven Brief deliverables</div>
+            <div class="eng-feat">Custom AI tool built from your Brief</div>
+            <div class="eng-feat">Trained on your voice &amp; guardrails</div>
+            <div class="eng-feat">One month of governance support</div>
+            <div class="eng-feat">Option to continue as a retainer client</div>
+            <div style="margin-top:24px;">
+              <a href="mailto:northnode@glowstrm.com?subject=Sprint Plus" class="btn btn-gold" style="font-size:13px;padding:10px 20px;min-height:auto;">Inquire about Sprint Plus →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="founding-footnote">
+          <strong>*Founding client rate.</strong> This is not a discount — it is a real window. When the founding cohort fills, the Sprint moves to its market rate of <strong>$10,000</strong>, which reflects standard brand strategy pricing ($8K–$12K for comparable work). If you're ready now, the rate is open. When the cohort is full, it closes.
+        </div>
+      </div>
+    </section>
+
+    <!-- CAPACITY + FINAL CTA -->
+    <section>
+      <div class="section-content">
+        <h2>Four clients per quarter.<br><em>This is what that commitment looks like.</em></h2>
+        <p>This is not scarcity marketing. It is a real constraint. You work with Sharéa — not a team she assembled. Four clients per quarter is what that looks like in practice.</p>
+        <p style="color:var(--muted);">Email <a href="mailto:northnode@glowstrm.com?subject=Blueprint" style="color:var(--gold);">northnode@glowstrm.com</a> with the subject line <strong style="color:var(--cream);">"Blueprint"</strong> to claim your founding client spot — or visit the link below to see if there's availability.</p>
+        <div style="margin-top: 40px;display:flex;gap:16px;flex-wrap:wrap;">
+          <a href="mailto:northnode@glowstrm.com?subject=Blueprint" class="btn btn-gold">Get Your Blueprint</a>
+          <a href="self-audit.html" class="btn btn-ghost">Take the self-audit first →</a>
+        </div>
+        <p style="margin-top: 16px; font-size: 14px; color: var(--muted);">If it's not a fit, she'll say so directly.</p>
+      </div>
+    </section>
+
   </main>
 
   <footer>
     <p>© 2025–2026 GlowStrm™, LLC. All rights reserved.</p>
-        <p style="margin-top:8px;">GlowStrm™ is a trademark of GlowStrm, LLC. Unauthorized reproduction, distribution, or use of any content, tools, or materials on this site is strictly prohibited.</p>
-        <p style="margin-top:8px;">Richmond, VA · Black woman-owned</p>
+    <p style="margin-top:8px;">GlowStrm™ and Message Architecture™ are trademarks of GlowStrm, LLC. Unauthorized reproduction, distribution, or use of any content, tools, or materials on this site is strictly prohibited.</p>
+    <p style="margin-top:8px;">Richmond, VA · Black woman-owned</p>
   </footer>
+
 </body>
 </html>
