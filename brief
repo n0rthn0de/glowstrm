@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Message Architecture™ Brief — GlowStrm</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --dark:      #271F41;
+    --surface:   #211a36;
+    --card:      #1e1830;
+    --violet:    #774ECE;
+    --rose:      #BB4072;
+    --plum:      #783E8D;
+    --coral:     #FB896D;
+    --gold:      #E6B65C;
+    --cream:     #F5F2EC;
+    --muted:     #9C96AE;
+    --border:    #362d52;
+    --border-hi: #453b62;
+    --gradient:  linear-gradient(90deg, #BB4072, #783E8D, #774ECE, #FB896D);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--dark); color: var(--cream); font-family: 'Source Sans 3', sans-serif; font-weight: 300; line-height: 1.6; }
+  .gradient-bar { width: 100%; height: 3px; background: var(--gradient); }
+
+  /* ── MINIMAL NAV ── */
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 20px clamp(24px, 6vw, 80px); border-bottom: 1px solid var(--border); }
+  .nav-wordmark { font-family: 'Source Sans 3', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
+  .nav-back { font-family: 'Source Sans 3', sans-serif; font-size: 13px; font-weight: 400; color: var(--muted); text-decoration: none; letter-spacing: 0.04em; transition: color 0.2s; }
+  .nav-back:hover { color: var(--cream); }
+
+  .container { max-width: 860px; margin: 0 auto; padding: 0 clamp(24px, 6vw, 80px); }
+  .section { padding: 72px 0; border-bottom: 1px solid var(--border); }
+
+  /* ── HERO ── */
+  .hero { background: var(--surface); padding: clamp(72px, 10vw, 100px) clamp(24px, 6vw, 80px); border-bottom: 1px solid var(--border); }
+  .hero-content { max-width: 860px; margin: 0 auto; }
+  .eyebrow { font-family: 'Source Sans 3', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--rose); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+  .eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: var(--rose); }
+  .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(40px, 7vw, 68px); font-weight: 300; line-height: 1.08; color: var(--cream); margin-bottom: 20px; letter-spacing: -0.01em; }
+  .hero h1 em { font-style: italic; color: var(--rose); }
+  .hero-sub { font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2.5vw, 23px); font-style: italic; font-weight: 300; color: var(--muted); line-height: 1.55; margin-bottom: 12px; max-width: 600px; }
+  .hero-who { font-size: 14px; font-weight: 300; color: var(--muted); max-width: 560px; line-height: 1.7; margin-bottom: 32px; }
+  .meta-row { display: flex; flex-wrap: wrap; gap: 24px; margin-bottom: 8px; }
+  .meta-item { font-size: 13px; font-weight: 400; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; display: flex; align-items: center; gap: 8px; }
+  .meta-item::before { content: ''; display: inline-block; width: 4px; height: 4px; border-radius: 50%; background: var(--coral); flex-shrink: 0; }
+  .founding-bar { font-size: 13px; font-weight: 300; color: var(--gold); line-height: 1.6; margin-top: 16px; margin-bottom: 28px; padding: 12px 16px; border-left: 2px solid var(--gold); background: rgba(230,182,92,0.06); max-width: 580px; }
+  .btn { display: inline-flex; align-items: center; font-family: 'Source Sans 3', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 15px 36px; border: none; cursor: pointer; text-decoration: none; transition: all 0.25s ease; min-height: 52px; }
+  .btn-gold { background: var(--gold); color: var(--dark); }
+  .btn-gold:hover { background: #edc46a; transform: translateY(-1px); }
+  .btn-ghost { background: transparent; color: var(--muted); border: 1px solid var(--border); }
+  .btn-ghost:hover { border-color: var(--border-hi); color: var(--cream); }
+  .btn-group { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  /* ── SECTION LABELS ── */
+  .sec-eye { font-family: 'Source Sans 3', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--violet); margin-bottom: 20px; }
+  .sec-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 4vw, 40px); font-weight: 300; color: var(--cream); margin-bottom: 20px; line-height: 1.2; }
+  .sec-title em { font-style: italic; color: var(--plum); }
+  .body-text { font-size: 16px; font-weight: 300; color: var(--muted); line-height: 1.8; margin-bottom: 16px; }
+  .body-text:last-child { margin-bottom: 0; }
+  .body-text strong { color: var(--cream); font-weight: 400; }
+
+  /* ── BLUEPRINT TWO-COL ── */
+  .bp-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 28px; }
+  .bp-col { padding: 24px 22px; }
+  .bp-col.without { background: rgba(255,255,255,0.03); border-top: 3px solid rgba(255,255,255,0.12); }
+  .bp-col.with    { background: rgba(119,78,206,0.08); border-top: 3px solid var(--violet); }
+  .bp-lbl { font-size: 9px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 8px; }
+  .bp-col.without .bp-lbl { color: rgba(255,255,255,0.3); }
+  .bp-col.with .bp-lbl    { color: var(--violet); }
+  .bp-col h3 { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 400; color: var(--cream); margin-bottom: 8px; line-height: 1.3; }
+  .bp-col p  { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+  /* ── PULL QUOTE ── */
+  .pull-quote { border-left: 3px solid var(--rose); background: rgba(187,64,114,0.06); padding: 24px 28px; margin-top: 32px; }
+  .pull-quote blockquote { font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2.5vw, 23px); font-style: italic; font-weight: 300; color: var(--cream); line-height: 1.5; margin-bottom: 10px; }
+  .pull-quote cite { font-size: 9.5px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rose); font-style: normal; display: block; }
+
+  /* ── COMPARE TABLE ── */
+  .compare { width: 100%; border-collapse: collapse; margin-top: 28px; }
+  .compare th { font-size: 9px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; padding: 10px 14px; text-align: left; }
+  .th-no  { background: rgba(255,255,255,0.04); color: var(--muted); border-right: 1px solid var(--border); width: 50%; }
+  .th-yes { background: var(--violet); color: #fff; width: 50%; }
+  .compare td { padding: 11px 14px; font-size: 14px; font-weight: 300; vertical-align: top; line-height: 1.6; }
+  .compare tr:nth-child(even) .td-no  { background: rgba(255,255,255,0.02); }
+  .compare tr:nth-child(even) .td-yes { background: rgba(119,78,206,0.08); }
+  .td-no  { color: var(--muted); border-right: 1px solid var(--border); }
+  .td-yes { color: var(--cream); }
+
+  /* ── SOUNDS LIKE YOU ── */
+  .sl-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 20px; margin-bottom: 24px; }
+  .sl-item { font-size: 14px; font-weight: 300; color: var(--cream); padding: 12px 14px 12px 20px; background: rgba(255,255,255,0.03); border-left: 2px solid var(--rose); line-height: 1.6; }
+
+  /* ── DELIVERABLES ── */
+  .del-tier { font-size: 9px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 8px 0 6px; border-bottom: 1px solid var(--border); margin-bottom: 2px; }
+  .del-tier.foundation { color: var(--violet); }
+  .del-tier.execution  { color: var(--muted); margin-top: 8px; }
+  .del-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 0; }
+  .del-item { display: flex; gap: 12px; padding: 14px 13px; background: rgba(255,255,255,0.03); border-top: 2px solid var(--rose); }
+  .del-item.f { border-top-color: var(--violet); background: rgba(119,78,206,0.06); }
+  .del-item.f:nth-child(2) { border-top-color: var(--plum); }
+  .del-item.f:nth-child(3) { border-top-color: var(--rose); }
+  .del-item.e:nth-child(2) { border-top-color: var(--gold); }
+  .del-item.e:nth-child(3) { border-top-color: var(--coral); }
+  .del-item.e:nth-child(4) { border-top-color: var(--rose); grid-column: 1 / -1; background: rgba(255,255,255,0.02); }
+  .del-n { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 300; color: rgba(255,255,255,0.12); line-height: 1; flex-shrink: 0; min-width: 24px; padding-top: 1px; }
+  .del-n.f { color: rgba(119,78,206,0.45); }
+  .del-title { font-size: 12px; font-weight: 600; color: var(--cream); margin-bottom: 3px; }
+  .del-body  { font-size: 12px; font-weight: 300; color: var(--muted); line-height: 1.55; }
+
+  /* ── PRICING ── */
+  .pricing-box { display: flex; gap: 24px; margin-top: 24px; padding: 24px 22px; border: 1px solid var(--border); border-top: 3px solid var(--rose); background: rgba(187,64,114,0.04); }
+  .price-col { flex-shrink: 0; min-width: 140px; }
+  .price-eye { font-size: 9px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rose); margin-bottom: 8px; }
+  .price-num { font-family: 'Cormorant Garamond', serif; font-size: 52px; font-weight: 300; color: var(--cream); line-height: 1; margin-bottom: 8px; }
+  .price-note { font-size: 12px; color: var(--muted); font-style: italic; line-height: 1.65; }
+  .price-note strong { color: var(--cream); font-style: normal; font-weight: 600; }
+  .price-right { flex: 1; border-left: 1px solid var(--border); padding-left: 22px; }
+  .price-right-lbl { font-size: 9px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--violet); margin-bottom: 12px; }
+  .price-feat { font-size: 13px; font-weight: 300; color: var(--cream); padding: 4px 0 4px 10px; border-left: 2px solid var(--border-hi); margin-bottom: 4px; line-height: 1.4; }
+
+  /* ── CTA BAND ── */
+  .cta-band { background: var(--surface); border-top: 1px solid var(--border); padding: clamp(52px, 8vw, 80px) clamp(24px, 6vw, 80px); }
+  .cta-content { max-width: 860px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 32px; flex-wrap: wrap; }
+  .cta-band h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 4vw, 42px); font-weight: 300; color: var(--cream); line-height: 1.2; margin-bottom: 8px; }
+  .cta-band h2 em { font-style: italic; color: var(--rose); }
+  .cta-detail { font-size: 13px; font-weight: 300; color: var(--muted); line-height: 1.6; }
+  .cta-detail a { color: var(--gold); text-decoration: none; }
+
+  /* ── FOOTER ── */
+  footer { padding: 28px clamp(24px, 6vw, 80px); border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  .footer-note { font-size: 11px; font-weight: 300; color: var(--border-hi); letter-spacing: 0.04em; line-height: 1.8; }
+  .footer-tagline { font-size: 11px; font-weight: 300; color: var(--border-hi); letter-spacing: 0.1em; font-style: italic; }
+
+  @media (max-width: 640px) {
+    .bp-cols  { grid-template-columns: 1fr; }
+    .sl-grid  { grid-template-columns: 1fr; }
+    .del-grid { grid-template-columns: 1fr; }
+    .del-item.e:nth-child(4) { grid-column: 1; }
+    .pricing-box { flex-direction: column; }
+    .price-right { border-left: none; border-top: 1px solid var(--border); padding-left: 0; padding-top: 16px; }
+    .cta-content { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<div class="gradient-bar"></div>
+
+<nav>
+  <a href="index.html" class="nav-wordmark">GlowStrm</a>
+  <a href="sprint.html" class="nav-back">See the full sprint →</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <div class="eyebrow">Message Architecture™ for Small Business Owners &amp; Solo Operators</div>
+    <h1>The blueprint behind every<br><em>brand that works.</em></h1>
+    <p class="hero-sub">Most businesses never get access to the framework behind great communications. GlowStrm built Message Architecture™ to change that.</p>
+    <p class="hero-who">A two-week sprint that organizes your core message, audience, and voice into one clear, repeatable system — built specifically for small businesses doing the work of a whole team.</p>
+    <div class="meta-row">
+      <span class="meta-item">$2,500 Founding Rate</span>
+      <span class="meta-item">2-week engagement</span>
+      <span class="meta-item">4 clients per quarter</span>
+    </div>
+    <div class="founding-bar">
+      This is not a discount — it is a real window. When the founding cohort fills, the rate moves to $10,000, which reflects standard brand strategy pricing ($8K–$12K for comparable work).
+    </div>
+    <div class="btn-group">
+      <a href="mailto:northnode@glowstrm.com?subject=Blueprint" class="btn btn-gold">Get Your Blueprint</a>
+      <a href="sprint.html" class="btn btn-ghost">See the full sprint →</a>
+    </div>
+  </div>
+</div>
+
+<!-- THE PROBLEM -->
+<section class="section">
+  <div class="container">
+    <div class="sec-eye">The Problem</div>
+    <h2 class="sec-title">Two people building a house.<br>Only one has a <em>blueprint.</em></h2>
+    <p class="body-text">The first person starts with the kitchen — it felt urgent. Then a bedroom. A bathroom. Each room is beautiful. But the hallways don't connect, the plumbing fights the layout, and guests can't figure out how to get from the front door to anywhere useful.</p>
+    <p class="body-text">The second person spent time with an architect first. Before a single nail, they mapped the structure: load-bearing walls, traffic flow, what the house needed to do. The build went faster. Every decision had a reason. <strong>Your communications should work the same way.</strong></p>
+
+    <div class="bp-cols">
+      <div class="bp-col without">
+        <div class="bp-lbl">Without a blueprint</div>
+        <h3>Building rooms as you go</h3>
+        <p>Each caption, bio, proposal, and pitch email sounds like it was written by a different person. No underlying structure tells every piece of content what job it has to do.</p>
+      </div>
+      <div class="bp-col with">
+        <div class="bp-lbl">With a blueprint</div>
+        <h3>Every word knows where it lives</h3>
+        <p>Your caption, website, and proposal all pull from the same framework. The right people find you; they already understand what you do before you say a word.</p>
+      </div>
+    </div>
+
+    <div class="pull-quote">
+      <blockquote>The campaigns you admire, the websites that convert, the brands that speak directly to you — none of that started with a copywriter. It started where strategists built the framework first.</blockquote>
+      <cite>The pre-work large organizations fund and small businesses never see</cite>
+    </div>
+
+    <table class="compare">
+      <thead>
+        <tr>
+          <th class="th-no">Without Message Architecture™</th>
+          <th class="th-yes">With Message Architecture™</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-no">Rewriting the website every few months because it "doesn't feel right"</td>
+          <td class="td-yes">A site that holds because it's built on a position, not a mood</td>
+        </tr>
+        <tr>
+          <td class="td-no">Sounding different on social than in proposals than in person</td>
+          <td class="td-yes">Consistent voice across every touchpoint, without thinking about it</td>
+        </tr>
+        <tr>
+          <td class="td-no">Hours on every caption — still doesn't feel done</td>
+          <td class="td-yes">Faster content because the framework answers the questions first</td>
+        </tr>
+        <tr>
+          <td class="td-no">Best clients say "I didn't know you did that" after years of following you</td>
+          <td class="td-yes">The right clients find you and already understand what you do</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- WHO THIS IS FOR -->
+<section class="section" style="background:var(--surface);">
+  <div class="container">
+    <div class="sec-eye">Who This Is For</div>
+    <h2 class="sec-title">Doing the work of a whole team?<br>The Message Architecture™ Brief <em>focuses it.</em></h2>
+
+    <div class="sl-grid">
+      <div class="sl-item">You've rewritten your website more than twice — and it still doesn't feel right.</div>
+      <div class="sl-item">Your best clients say "I didn't know you did that" after years of following you.</div>
+      <div class="sl-item">Your captions, proposals, and bios sound like different people wrote them.</div>
+      <div class="sl-item">You know your work is excellent — but you can't make it sound that way on paper.</div>
+    </div>
+
+    <p class="body-text">The salon owner building a brand in a crowded market. The yoga instructor whose classes are full but whose website doesn't say why. The consultant whose proposals keep getting passed over. The boutique agency that's grown past scrappy but hasn't updated how it talks about itself. The small business owner doing everything before noon. <strong>This work is for people doing real things — at every size.</strong></p>
+    <p class="body-text">When you don't have a team to gut-check your messaging, the framework does that job.</p>
+  </div>
+</section>
+
+<!-- DELIVERABLES -->
+<section class="section">
+  <div class="container">
+    <div class="sec-eye">What You Walk Away With</div>
+    <h2 class="sec-title">Seven deliverables. One document.<br><em>A blueprint that holds.</em></h2>
+    <p class="body-text">Every architect charges for the blueprint before a single nail goes in. Not because the paper is expensive, but because everything built without a blueprint is guesswork. The Message Architecture™ Brief is that document for your communications: the foundation that makes the website copy work, the pitch land, the caption do its job. The work is done with you. Not handed off to a team you'll never meet.</p>
+
+    <div style="margin-top: 24px;">
+      <div class="del-tier foundation">— Foundation</div>
+      <div class="del-grid">
+        <div class="del-item f">
+          <div class="del-n f">01</div>
+          <div><div class="del-title">Core Message Statement</div><div class="del-body">The one thing your audience must understand first, clear enough to survive a game of telephone.</div></div>
+        </div>
+        <div class="del-item f">
+          <div class="del-n f">02</div>
+          <div><div class="del-title">Audience Insight Map</div><div class="del-body">Who you're talking to, what they believe before, and what they need to believe after.</div></div>
+        </div>
+        <div class="del-item f">
+          <div class="del-n f">03</div>
+          <div><div class="del-title">Message Hierarchy</div><div class="del-body">Primary messages and proof organized so the most important thing always leads.</div></div>
+        </div>
+      </div>
+
+      <div class="del-tier execution">— Execution</div>
+      <div class="del-grid">
+        <div class="del-item e">
+          <div class="del-n">04</div>
+          <div><div class="del-title">Language Guardrails</div><div class="del-body">Phrases to use and retire. Documented for anyone writing on your behalf.</div></div>
+        </div>
+        <div class="del-item e">
+          <div class="del-n">05</div>
+          <div><div class="del-title">Voice Characteristics</div><div class="del-body">How your message sounds, with examples, so contractors write on-brand every time.</div></div>
+        </div>
+        <div class="del-item e">
+          <div class="del-n">06</div>
+          <div><div class="del-title">Application Guidance</div><div class="del-body">How to use the Brief across content, campaigns, and vendor briefs.</div></div>
+        </div>
+        <div class="del-item e">
+          <div class="del-n">07</div>
+          <div><div class="del-title">The Living Brief</div><div class="del-body">A working document with a version log. Revisited as your work changes. Not filed away when the sprint ends.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section" style="background:var(--surface);">
+  <div class="container">
+    <div class="sec-eye">Your Blueprint Starts Here</div>
+    <h2 class="sec-title">The Brief. Two weeks.<br><em>Everything holds after.</em></h2>
+
+    <div class="pricing-box">
+      <div class="price-col">
+        <div class="price-eye">Founding Client Rate</div>
+        <div class="price-num">$2,500</div>
+        <div class="price-note">
+          Not a discount — a real window.<br>
+          <strong>4 clients per quarter.</strong><br>
+          After cohort fills: <strong>$10,000</strong><br>
+          ($8K–$12K is standard for comparable<br>brand strategy work).
+        </div>
+      </div>
+      <div class="price-right">
+        <div class="price-right-lbl">What's included</div>
+        <div class="price-feat">All seven Brief deliverables</div>
+        <div class="price-feat">Two-week engagement — Sharéa in the room</div>
+        <div class="price-feat">Living document with version log</div>
+        <div class="price-feat">Application guidance for your team &amp; vendors</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-band">
+  <div class="cta-content">
+    <div>
+      <h2>Get the blueprint.<br><em>Build everything on it.</em></h2>
+      <p class="cta-detail">
+        Email <a href="mailto:northnode@glowstrm.com?subject=Blueprint">northnode@glowstrm.com</a> with subject line <strong style="color:var(--cream);">"Blueprint"</strong> to claim your spot.<br>
+        Or <a href="sprint.html">visit the sprint page</a> to see the full framework, Sprint Plus, and more.
+      </p>
+    </div>
+    <a href="mailto:northnode@glowstrm.com?subject=Blueprint" class="btn btn-gold">Get Your Blueprint</a>
+  </div>
+</div>
+
+<footer>
+  <span class="footer-note">© 2025–2026 GlowStrm™, LLC. All rights reserved. · GlowStrm™ and Message Architecture™ are trademarks of GlowStrm, LLC.</span>
+  <span class="footer-tagline">What grows, glows.</span>
+</footer>
+
+</body>
+</html>
