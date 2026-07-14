@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capabilities · GlowStrm™ | Public-Sector &amp; Contract Communications</title>
+<meta name="description" content="GlowStrm, LLC — strategic communications for the public sector. Virginia eVA-registered, Black woman-owned. Message strategy, public information, editorial, and training. NAICS 541613. Richmond, VA; virtual worldwide." />
+<link rel="canonical" href="https://glowstrm.com/capabilities.html" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="GlowStrm" />
+<meta property="og:title" content="GlowStrm™ Capabilities · Public-Sector &amp; Contract Communications" />
+<meta property="og:description" content="Strategic communications, public information, editorial, and training for government and prime-contractor buyers. eVA-registered, Black woman-owned. NAICS 541613." />
+<meta property="og:url" content="https://glowstrm.com/capabilities.html" />
+<meta property="og:image" content="https://glowstrm.com/glowstrm-share.png" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["ProfessionalService", "OnlineBusiness"],
+  "name": "GlowStrm, LLC",
+  "alternateName": "GlowStrm",
+  "url": "https://glowstrm.com/capabilities.html",
+  "logo": "https://glowstrm.com/glowstrm-mark.svg",
+  "description": "GlowStrm, LLC is a Virginia strategic communications firm serving government and mission-driven organizations — strategic communications, Message Architecture™, public information, editorial, and training. Virginia eVA-registered; Black woman-owned. NAICS 541613.",
+  "slogan": "What grows, glows.",
+  "email": "northnode@glowstrm.com",
+  "telephone": "+1-804-753-7570",
+  "founder": { "@type": "Person", "name": "Sharéa Harris", "jobTitle": "Founder & Principal" },
+  "areaServed": [
+    { "@type": "State", "name": "Virginia" },
+    { "@type": "Country", "name": "United States" }
+  ],
+  "address": { "@type": "PostalAddress", "addressLocality": "Richmond", "addressRegion": "VA", "addressCountry": "US" },
+  "naics": ["541613", "541820", "541611", "611430"],
+  "knowsAbout": [
+    "Strategic communications",
+    "Message Architecture",
+    "Public information",
+    "Community engagement",
+    "Editorial and plain-language services",
+    "Communications training",
+    "Federal and DoD communications",
+    "Government contracting"
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --dark:      #271F41;
+    --violet:    #774ECE;
+    --rose:      #BB4072;
+    --plum:      #783E8D;
+    --coral:     #FB896D;
+    --gold:      #E6B65C;
+    --cream:     #F5F2EC;
+    --muted:     #9C96AE;
+    --border:    #362d52;
+    --border-hi: #453b62;
+    --gradient:  linear-gradient(90deg, #BB4072, #783E8D, #774ECE, #FB896D);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--dark); color: var(--cream); font-family: 'Source Sans 3', sans-serif; font-weight: 300; line-height: 1.6; }
+  .gradient-bar { width: 100%; height: 3px; background: var(--gradient); }
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 24px clamp(24px, 6vw, 80px); border-bottom: 1px solid var(--border); position: sticky; top: 0; background: var(--dark); z-index: 99; }
+  .nav-wordmark { font-family: 'Source Sans 3', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--cream); text-decoration: none; }
+  .nav-links { display: flex; gap: 32px; align-items: center; }
+  .nav-link { font-size: 13px; font-weight: 400; color: var(--muted); text-decoration: none; letter-spacing: 0.04em; transition: color 0.2s; }
+  .nav-link:hover { color: var(--cream); }
+  .nav-link-cta { font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dark); background: var(--gold); padding: 10px 20px; text-decoration: none; transition: background 0.2s; }
+  .nav-link-cta:hover { background: #edc46a; }
+  .container { max-width: 880px; margin: 0 auto; padding: 0 clamp(24px, 6vw, 80px); }
+  .section { padding: 72px 0; border-bottom: 1px solid var(--border); }
+  .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 24px; }
+  .gradient-rule { width: 64px; height: 2px; background: var(--gradient); margin-bottom: 32px; }
+  .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 5vw, 44px); font-weight: 300; line-height: 1.1; color: var(--cream); margin-bottom: 20px; letter-spacing: -0.01em; }
+  .section-title em { color: var(--coral); font-style: italic; }
+  .section-body { font-size: 16px; font-weight: 300; line-height: 1.8; color: var(--muted); max-width: 620px; }
+  .section-body strong { color: var(--cream); font-weight: 400; }
+  /* hero */
+  .hero { padding: 80px 0 64px; border-bottom: 1px solid var(--border); }
+  .hero-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 24px; display: flex; align-items: center; gap: 12px; }
+  .hero-eyebrow::before { content: ''; display: block; width: 32px; height: 2px; background: var(--gradient); }
+  .hero-headline { font-family: 'Cormorant Garamond', serif; font-size: clamp(44px, 8vw, 72px); font-weight: 300; line-height: 1.02; color: var(--cream); margin-bottom: 20px; letter-spacing: -0.02em; }
+  .hero-headline em { color: var(--coral); font-style: italic; }
+  .hero-body { font-size: 17px; font-weight: 300; line-height: 1.8; color: var(--muted); max-width: 620px; margin-bottom: 28px; }
+  .hero-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+  .tag { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cream); border: 1px solid var(--border-hi); padding: 6px 14px; }
+  .tag.gold { color: var(--gold); border-color: rgba(230,182,92,0.4); }
+  /* snapshot */
+  .snap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--border); margin-top: 8px; }
+  .snap-cell { padding: 22px 24px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .snap-cell:nth-child(3n) { border-right: none; }
+  .snap-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+  .snap-value { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 400; color: var(--cream); line-height: 1.25; }
+  .snap-value small { display: block; font-family: 'Source Sans 3', sans-serif; font-size: 12px; color: var(--muted); font-weight: 300; margin-top: 4px; }
+  /* competencies */
+  .comp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 40px; border: 1px solid var(--border); }
+  .comp { padding: 28px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .comp:nth-child(2n) { border-right: none; }
+  .comp:nth-last-child(-n+2) { border-bottom: none; }
+  .comp-title { font-size: 14px; font-weight: 600; color: var(--cream); letter-spacing: 0.04em; margin-bottom: 8px; }
+  .comp-body { font-size: 14px; font-weight: 300; color: var(--muted); line-height: 1.7; }
+  /* code tables */
+  .codes { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 36px; }
+  .code-block h3 { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+  .code-row { display: grid; grid-template-columns: 88px 1fr; gap: 14px; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 13.5px; }
+  .code-row:last-child { border-bottom: none; }
+  .code-num { font-family: 'Cormorant Garamond', serif; font-size: 16px; color: var(--cream); font-weight: 500; }
+  .code-desc { color: var(--muted); line-height: 1.5; }
+  .code-lead { color: var(--gold); font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-top: 3px; }
+  /* diff / credentials list */
+  .creds { list-style: none; margin-top: 28px; display: flex; flex-direction: column; gap: 16px; }
+  .creds li { display: flex; gap: 14px; align-items: flex-start; font-size: 15px; font-weight: 300; color: var(--muted); line-height: 1.6; }
+  .creds li > span:first-child { flex: 0 0 8px; width: 8px; height: 8px; margin-top: 9px; background: var(--gradient); }
+  .creds li > span:last-child { flex: 1; }
+  .creds strong { color: var(--cream); font-weight: 400; }
+  /* CTA */
+  .cta-card { border: 1px solid var(--border-hi); padding: 40px; margin-top: 8px; }
+  .btn { display: inline-flex; align-items: center; font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 14px 32px; text-decoration: none; transition: all 0.25s ease; }
+  .btn-gold { background: var(--gold); color: var(--dark); }
+  .btn-gold:hover { background: #edc46a; }
+  .btn-ghost { background: transparent; color: var(--muted); border: 1px solid var(--border); }
+  .btn-ghost:hover { border-color: var(--border-hi); color: var(--cream); }
+  .btn-group { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+  .fillable { color: var(--coral); font-style: italic; }
+  /* footer */
+  footer { padding: 40px clamp(24px, 6vw, 80px); border-top: 1px solid var(--border); }
+  .footer-legal { font-size: 12px; font-weight: 300; color: var(--border-hi); line-height: 1.9; }
+  .footer-legal strong { font-weight: 600; color: var(--muted); display: block; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 6px; }
+  .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border); }
+  .footer-links { display: flex; gap: 24px; }
+  .footer-link { font-size: 12px; font-weight: 300; color: var(--border-hi); text-decoration: none; letter-spacing: 0.04em; transition: color 0.2s; }
+  .footer-link:hover { color: var(--muted); }
+  @media (max-width: 720px) {
+    .snap { grid-template-columns: 1fr 1fr; }
+    .snap-cell:nth-child(3n) { border-right: 1px solid var(--border); }
+    .snap-cell:nth-child(2n) { border-right: none; }
+    .comp-grid, .codes { grid-template-columns: 1fr; }
+    .comp { border-right: none; }
+    .footer-bottom { flex-direction: column; align-items: flex-start; }
+    .nav-links { gap: 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="gradient-bar"></div>
+<nav>
+  <a href="index.html" class="nav-wordmark">GlowStrm</a>
+  <div class="nav-links">
+    <a href="index.html#work" class="nav-link">Work</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="index.html#services" class="nav-link">Services</a>
+    <a href="sprint.html" class="nav-link">Sprint</a>
+    <a href="index.html#contact" class="nav-link">Contact</a>
+    <a href="self-audit.html" class="nav-link-cta">Find your gap →</a>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="container">
+    <p class="hero-eyebrow">Public Sector &amp; Contract Services</p>
+    <h1 class="hero-headline">Capabilities.</h1>
+    <p class="hero-body">
+      GlowStrm is a strategic communications firm — we do the <strong>message-clarity work</strong>
+      that has to happen before content, campaigns, or public engagement. For government and
+      prime-contractor buyers, that means clearer public information, aligned teams, and
+      plain-language communication that reaches the people it's meant for.
+    </p>
+    <div class="hero-tags">
+      <span class="tag gold">Virginia eVA-registered</span>
+      <span class="tag">Black woman-owned</span>
+      <span class="tag">NAICS 541613</span>
+      <span class="tag">Richmond, VA · Virtual worldwide</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── SNAPSHOT ── -->
+<section class="section">
+  <div class="container">
+    <p class="eyebrow">At a glance</p>
+    <div class="snap">
+      <div class="snap-cell"><div class="snap-label">Legal name</div><div class="snap-value">GlowStrm, LLC<small>Virginia LLC</small></div></div>
+      <div class="snap-cell"><div class="snap-label">Location</div><div class="snap-value">Richmond, VA<small>Virtual, worldwide</small></div></div>
+      <div class="snap-cell"><div class="snap-label">Primary NAICS</div><div class="snap-value">541613<small>Marketing Consulting Services</small></div></div>
+      <div class="snap-cell"><div class="snap-label">Registrations</div><div class="snap-value">eVA<small>SAM.gov — in process</small></div></div>
+      <div class="snap-cell"><div class="snap-label">UEI / CAGE</div><div class="snap-value">In process<small>Federal SAM registration pending</small></div></div>
+      <div class="snap-cell"><div class="snap-label">Ownership</div><div class="snap-value">Black woman-owned<small>SWaM certification in process — not yet issued</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CORE COMPETENCIES ── -->
+<section class="section">
+  <div class="container">
+    <p class="eyebrow">Core competencies</p>
+    <h2 class="section-title">What we do <em>for agencies and primes.</em></h2>
+    <div class="comp-grid">
+      <div class="comp">
+        <p class="comp-title">Strategic Communications &amp; Message Architecture™</p>
+        <p class="comp-body">Communications strategy, positioning, and a durable message system a whole department or program can run on.</p>
+      </div>
+      <div class="comp">
+        <p class="comp-title">Public Information &amp; Community Engagement</p>
+        <p class="comp-body">Public-facing messaging, announcements, and engagement materials that land with the communities they're meant to reach.</p>
+      </div>
+      <div class="comp">
+        <p class="comp-title">Editorial &amp; Plain-Language</p>
+        <p class="comp-body">Editing, rewriting, and plain-language conversion of reports, notices, and program materials so they're clear to every reader.</p>
+      </div>
+      <div class="comp">
+        <p class="comp-title">Training &amp; Workshops</p>
+        <p class="comp-body">Instructor-led, non-technical workshops that align teams on one message before they rewrite, brief, or launch.</p>
+      </div>
+      <div class="comp">
+        <p class="comp-title">Federal &amp; DoD Communications</p>
+        <p class="comp-body">StratComm program design, PRSA-based measurement, SharePoint architecture, and Power Automate dashboards — proven on active federal work.</p>
+      </div>
+      <div class="comp">
+        <p class="comp-title">AI-Integrated Editorial Systems</p>
+        <p class="comp-body">Human-reviewed, AI-assisted editorial workflows and prompt design that speed drafting without sacrificing accuracy or voice.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CODES ── -->
+<section class="section">
+  <div class="container">
+    <p class="eyebrow">Procurement codes</p>
+    <h2 class="section-title">How to <em>find and buy</em> us.</h2>
+    <div class="codes">
+      <div class="code-block">
+        <h3>Virginia eVA · NIGP</h3>
+        <div class="code-row"><span class="code-num">918-26</span><span class="code-desc">Communications: Public Relations Consulting<span class="code-lead">Lead positioning</span></span></div>
+        <div class="code-row"><span class="code-num">915-73</span><span class="code-desc">Public Information Services (incl. press releases)</span></div>
+        <div class="code-row"><span class="code-num">918-76</span><span class="code-desc">Marketing Consulting</span></div>
+        <div class="code-row"><span class="code-num">918-75</span><span class="code-desc">Management Consulting</span></div>
+        <div class="code-row"><span class="code-num">915-03</span><span class="code-desc">Advertising / Public Relations</span></div>
+        <div class="code-row"><span class="code-num">924-60</span><span class="code-desc">Not-for-credit seminars &amp; workshops</span></div>
+      </div>
+      <div class="code-block">
+        <h3>Federal · NAICS</h3>
+        <div class="code-row"><span class="code-num">541613</span><span class="code-desc">Marketing Consulting Services<span class="code-lead">Primary</span></span></div>
+        <div class="code-row"><span class="code-num">541820</span><span class="code-desc">Public Relations Agencies</span></div>
+        <div class="code-row"><span class="code-num">541611</span><span class="code-desc">Administrative &amp; General Management Consulting</span></div>
+        <div class="code-row"><span class="code-num">611430</span><span class="code-desc">Professional &amp; Management Development Training</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHY GLOWSTRM ── -->
+<section class="section">
+  <div class="container">
+    <p class="eyebrow">Why GlowStrm</p>
+    <div class="gradient-rule"></div>
+    <ul class="creds">
+      <li><span></span><span><strong>15+ years, one through-line.</strong> Sharéa Harris — M.F.A. (Poetry, summa cum laude), PRSA Strategic Communications Certificate, CRLA Level III Master Tutor — has spent fifteen years across federal agencies, universities, and studios making clarity repeatable.</span></li>
+      <li><span></span><span><strong>Active federal-contract experience.</strong> Currently leads strategic communications on an active DoD / DCPAS engagement — program design, PRSA-based measurement, editorial QA of sensitive federal content, and a live measurement dashboard.</span></li>
+      <li><span></span><span><strong>A proprietary method.</strong> Message Architecture™ (Excavate → Anchor → Orient) — a repeatable framework, not one-off copywriting.</span></li>
+      <li><span></span><span><strong>Black woman-owned.</strong> A Black woman-owned Virginia firm, structured to move quickly on focused engagements.</span></li>
+      <li><span></span><span><strong>Delivered virtually, worldwide.</strong> Richmond-based, working with clients and agencies anywhere.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ── PAST PERFORMANCE ── -->
+<section class="section">
+  <div class="container">
+    <p class="eyebrow">Past performance</p>
+    <h2 class="section-title">Proven <em>where it counts.</em></h2>
+    <p class="section-body" style="margin-bottom:8px;">GlowStrm, LLC was formed in 2026; the engagements below reflect the directly relevant experience of its principal, Sharéa Harris. Full references available on request.</p>
+    <ul class="creds">
+      <li><span></span><span><strong>Federal strategic communications — DoD / DCPAS.</strong> As Sr. Communications Strategist (via Applied Development LLC, 2024–present): authored governing strategic communications plans, audience persona frameworks, and content standards; led PRSA-based measurement, editorial QA of sensitive workforce content, SharePoint architecture, and a live measurement dashboard.</span></li>
+      <li><span></span><span><strong>Higher-education marketing &amp; brand.</strong> Marketing content specialist at UMBC — marketing copy across undergraduate, graduate, and global programs; brand ambassador and style steward.</span></li>
+      <li><span></span><span><strong>Editorial &amp; brand voice.</strong> Contributing writer/editor on the NAACP Image Award–nominated documentary "This Is My Black"; brand voice and web copy for Lenoir-Rhyne University's Equity &amp; Diversity Institute.</span></li>
+      <li><span></span><span><strong>Communications instruction &amp; leadership.</strong> Writing Specialist at the U.S. Naval Academy (+90% Writing Center engagement; On-the-Spot Award) and adjunct associate professor at the University of Maryland, Baltimore.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section class="section" style="border-bottom:none;">
+  <div class="container">
+    <div class="cta-card">
+      <p class="eyebrow">Contracting &amp; procurement</p>
+      <h2 class="section-title" style="margin-bottom:16px;">Let's talk about the <em>work ahead.</em></h2>
+      <p class="section-body" style="margin-bottom:8px;">
+        For solicitations, capability statements, teaming, or subcontracting — reach out directly and
+        we'll respond promptly with what you need.
+      </p>
+      <div class="btn-group">
+        <a href="mailto:northnode@glowstrm.com?subject=GlowStrm%20Capabilities%20%2F%20Procurement" class="btn btn-gold">Contact for procurement</a>
+        <a href="GlowStrm_Capability_Statement.pdf" class="btn btn-ghost" download>Download capability statement (PDF)</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-legal">
+    <strong>GlowStrm™, LLC</strong>
+    © 2025–2026 GlowStrm™, LLC. All rights reserved.<br>
+    GlowStrm™ and Message Architecture™ are trademarks of GlowStrm, LLC. Unauthorized reproduction, distribution, or use of any content, tools, or materials on this site is strictly prohibited.<br>
+    Richmond, VA · Black woman-owned
+  </div>
+  <div class="footer-bottom">
+    <span style="font-family:'Source Sans 3',sans-serif; font-size:11px; color:var(--border-hi); letter-spacing:0.06em;">What grows, glows.</span>
+    <div class="footer-links">
+      <a href="index.html#work" class="footer-link">Work</a>
+      <a href="about.html" class="footer-link">About</a>
+      <a href="sprint.html" class="footer-link">Sprint</a>
+      <a href="capabilities.html" class="footer-link">Capabilities</a>
+      <a href="index.html#contact" class="footer-link">Contact</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
