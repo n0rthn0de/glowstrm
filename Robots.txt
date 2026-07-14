@@ -1,0 +1,7 @@
+# robots.txt for glowstrm.com
+# Allow all well-behaved crawlers full access.
+User-agent: *
+Allow: /
+
+# Point crawlers (and AI answer engines) to the sitemap.
+Sitemap: https://glowstrm.com/sitemap.xml
