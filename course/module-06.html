@@ -1,0 +1,163 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="noindex, nofollow"><title>What Web Accessibility Is · GlowStrm Pathway</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Source+Sans+3:ital,wght@0,400;0,600;0,700&display=swap" rel="stylesheet"><style>
+
+:root{--charcoal:#271F41;--cream:#F8F4EE;--rose:#BB4072;--plum:#783E8D;--violet:#774ECE;--coral:#FB896D;--gold:#E6B65C;--text:#1A1528;--mid:#4A4260;--muted:#8B82A7;--lt1:#F5F3F9;--lt2:#EDE9F5;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Source Sans 3',system-ui,sans-serif;}
+*{box-sizing:border-box;}body{margin:0;background:var(--lt1);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.7;}
+.topbar{background:var(--charcoal);color:#fff;padding:16px 24px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px;}
+.mark{font-family:var(--serif);font-size:20px;font-weight:600;color:#fff;text-decoration:none;}
+.mark span{color:var(--gold);}
+.lbl{font-size:10px;text-transform:uppercase;letter-spacing:.16em;opacity:.55;}
+.wrap{max-width:760px;margin:0 auto;background:#fff;padding:36px 34px 48px;min-height:70vh;}
+.crumb{font-size:12px;color:var(--muted);margin:0 0 18px;}
+.kick{font-size:11px;font-weight:700;color:var(--plum);text-transform:uppercase;letter-spacing:.2em;margin:0 0 6px;}
+h1{font-family:var(--serif);font-size:34px;font-weight:600;color:var(--charcoal);margin:0;line-height:1.12;}
+h2{font-family:var(--serif);font-size:24px;font-weight:600;color:var(--charcoal);}
+h3{font-family:var(--serif);font-size:21px;font-weight:600;color:var(--charcoal);margin:26px 0 6px;}
+.rule{width:52px;height:2px;background:var(--gold);border:0;margin:16px 0 20px;}
+p{margin:0 0 14px;color:var(--text);}
+ul{margin:0 0 14px;padding-left:22px;}
+li{margin:4px 0;}
+li::marker{color:var(--coral);}
+a{color:var(--plum);}
+a:hover{color:var(--rose);}
+strong{color:var(--charcoal);}
+.todo{background:#FDF3F0;border-left:3px solid var(--coral);padding:10px 14px;margin:14px 0;font-size:14px;color:var(--mid);}
+.act{background:var(--cream);border-top:3px solid var(--gold);border-radius:0 0 8px 8px;padding:18px 20px;margin:24px 0;}
+.act .ak{font-size:11px;font-weight:700;color:var(--plum);text-transform:uppercase;letter-spacing:.16em;margin:0 0 6px;}
+.act p{font-size:15px;color:var(--mid);}
+.btn{display:inline-block;background:var(--charcoal);color:#fff;border:0;padding:11px 18px;border-radius:7px;font-family:var(--sans);font-weight:600;font-size:14px;cursor:pointer;text-decoration:none;}
+.btn:hover{background:var(--plum);color:#fff;}
+.btn.gold{background:var(--gold);color:var(--charcoal);}
+.fallback{font-size:12.5px;color:var(--muted);margin-top:8px;}
+.quiz{background:var(--lt1);border-radius:10px;padding:20px 22px;margin:26px 0;}
+.qhint{font-size:13.5px;color:var(--muted);}
+.qq{margin:16px 0;}
+.qt{font-weight:600;color:var(--charcoal);margin-bottom:6px;}
+.opt{display:block;padding:7px 10px;border:1px solid var(--lt2);border-radius:7px;margin:5px 0;cursor:pointer;background:#fff;font-size:14.5px;}
+.opt:hover{border-color:var(--plum);}
+.fb{font-size:14px;font-weight:600;margin:6px 0 0;}
+.fb.ok{color:#0F6E56;}
+.fb.no{color:var(--rose);}
+.pn{display:flex;justify-content:space-between;margin:36px 0 0;border-top:1px solid var(--lt2);padding-top:18px;font-size:14.5px;}
+.navlink{text-decoration:none;font-weight:600;}
+footer{background:var(--charcoal);color:#fff;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+.wm{font-family:var(--serif);font-size:15px;}
+.tl{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:14px;}
+.gatebox{background:var(--cream);border-top:3px solid var(--gold);padding:26px;border-radius:0 0 10px 10px;}
+.gk{font-size:11px;font-weight:700;color:var(--plum);text-transform:uppercase;letter-spacing:.2em;margin:0 0 4px;}
+.passrow{display:flex;gap:8px;margin:12px 0 4px;}
+.passrow input{flex:1;max-width:240px;padding:10px 12px;border:1px solid var(--lt2);border-radius:7px;font-size:15px;}
+.parts{display:grid;gap:14px;margin:22px 0;}
+.pc{border:1px solid var(--lt2);border-left:4px solid var(--gold);border-radius:0 8px 8px 0;padding:16px 20px;background:#fff;}
+.pc h2{margin:0 0 2px;font-size:21px;}
+.pc .ps{font-size:13px;color:var(--muted);margin:0 0 8px;}
+.pc a.ml{display:block;font-size:14.5px;padding:3px 0;text-decoration:none;}
+.pc.locked{border-left-color:var(--plum);background:#FBF9FE;}
+.lock{font-size:11px;color:var(--plum);font-weight:700;text-transform:uppercase;letter-spacing:.1em;}
+@media(max-width:640px){.wrap{padding:26px 18px;}h1{font-size:27px;}}
+
+</style></head><body>
+<div class="topbar"><a class="mark" href="/course/index.html">Glow<span>Strm</span></a><span class="lbl">The Web Accessibility Contractor Pathway</span></div>
+<main class="wrap">
+<div class="gatebox" id="gate" hidden><p class="gk">This part is gated</p><h2>One step first, traveler</h2><p>Everything past the Checkpoint opens with a passcode Sharéa texts you personally once you've declared your pace. If you've got it, enter it below. If not, head to the <a href="/course/checkpoint.html">Checkpoint</a> — it takes ten minutes.</p><div class="passrow"><input type="password" id="passin" placeholder="passcode" aria-label="passcode"><button class="btn" onclick="tryPass()">Open</button></div><p class="fb" id="passfb" hidden></p></div>
+<div id="content">
+<p class="crumb">The Pathway · Part B · Module 6</p>
+<p class="kick">PART B · CONCEPT · ~45 MINUTES</p>
+<h1>What Web Accessibility Is</h1>
+<hr class="rule">
+<p>By the end of this lesson you’ll be able to explain what web accessibility is in plain language, name the people it serves, and describe the standard the whole field is measured against. No technical background needed. Take about 45 minutes.</p>
+<h3>The simplest definition</h3>
+<p>Web accessibility means building websites, apps, and digital documents so that people with disabilities can use them — perceive the content, move through it, understand it, and act on it — just like anyone else. That’s the whole idea. Everything else in this course is detail hanging off that one sentence.</p>
+<p>Here’s the picture that makes it stick. Imagine a building with a beautiful entrance — and only stairs. It technically “works.” But anyone who can’t climb stairs is quietly shut out. Now add a ramp, an elevator, an automatic door, and the same building works for everyone. Web accessibility is that ramp — built into the code instead of the concrete. Your job is to build the ramp, or to find where it’s missing and say so.</p>
+<h3>What it actually covers</h3>
+<p>Accessibility touches almost every part of a digital experience. You don’t need to memorize this — just get a feel for the range:</p>
+<p>Images have alt text — a short written description software can read aloud.</p>
+<p>Videos have captions and transcripts, so people who are deaf or hard of hearing get the full content.</p>
+<p>Everything works with a keyboard alone — no mouse required.</p>
+<p>Text has strong color contrast, so people with low vision or color blindness can read it.</p>
+<p>Forms have clear labels and helpful error messages.</p>
+<p>Content has logical structure — real headings, sensible reading order.</p>
+<p>None of these are exotic. They’re small, learnable, fixable things. That’s the good news at the heart of this work: most barriers are ordinary, and most are removable.</p>
+<h3>Who relies on it</h3>
+<p>Roughly one in four U.S. adults lives with some kind of disability, and many of those affect how a person uses digital content. You’re building for:</p>
+<p>People who are blind or have low vision — who use screen readers or magnifiers and depend on alt text, real headings, and keyboard navigation.</p>
+<p>People who are deaf or hard of hearing — who rely on captions and transcripts.</p>
+<p>People with motor or mobility disabilities — who navigate by keyboard, voice, or switches instead of a mouse.</p>
+<p>People with cognitive and learning disabilities — who need clear language, predictable layouts, and good error messages. One of the largest groups, and one automated tools serve especially badly — part of why human practitioners matter.</p>
+<h3>It helps everyone — the curb-cut effect</h3>
+<p>Captions let you follow a video on a muted phone. High contrast helps anyone reading in bright sunlight. Clear structure helps everyone find what they need. The ramps cut into sidewalk corners for wheelchair users ended up helping parents with strollers and travelers with luggage — built for some, better for all. Worth remembering when you talk to clients: you’re not asking them to do a favor for a small group; you’re helping them build something that works better for everybody.</p>
+<h3>The standard behind it all: WCAG</h3>
+<p>You’ll hear four letters constantly: WCAG — the Web Content Accessibility Guidelines, published by the W3C, the body that sets the rules for the web. WCAG is organized around four plain-English principles. Content should be:</p>
+<p>Perceivable — people can take the information in.</p>
+<p>Operable — people can use the controls and navigation.</p>
+<p>Understandable — content and behavior make sense.</p>
+<p>Robust — it works reliably with assistive technologies.</p>
+<p>Those spell POUR. When someone says a site needs to meet “WCAG 2.1 AA,” they mean the AA conformance level — the line most laws and contracts require. You’ll learn it properly in Part C; for now, just know WCAG is the ruler everyone measures against.</p>
+<h3>Why it matters</h3>
+<p>Three reasons, and you’ll use all three with clients. First, human dignity and equal access: the web is how we apply for jobs, see doctors, bank, learn, and connect — when it’s inaccessible, an entire population is shut out of ordinary life, and removing those barriers is the real point. Second, it’s the law: the ADA, Section 508, and Europe’s Accessibility Act all require it, and lawsuits are rising. Third, it’s better for business: accessible sites reach more customers, rank better, and signal respect for all users. Lead with the first reason — the rest follow from it.</p>
+<h3>Quick recap</h3>
+<p>Web accessibility means building digital things people with disabilities can actually use — the ramp, built into the code.</p>
+<p>It serves blind/low-vision, deaf/hard-of-hearing, motor, and cognitive/learning users — and quietly helps everyone.</p>
+<p>WCAG is the international standard; remember POUR. It matters for dignity first, then law, then business.</p>
+<h3>What’s next</h3>
+<p>Reading about a screen reader is abstract; seeing one used is unforgettable. Module 7 makes it real with short, captioned videos.</p><section class="quiz"><h3>Check yourself</h3><p class="qhint">Pick an answer for each — you'll see right away how you did. This is for you; nothing is recorded.</p>
+<div class="qq" data-q="module-06-0" data-c="1"><p class="qt">1. What does web accessibility mean?</p>
+<label class="opt"><input type="radio" name="module-06-0" value="0"> <span>A. Making websites load quickly on slow internet connections.</span></label>
+<label class="opt"><input type="radio" name="module-06-0" value="1"> <span>B. Building digital content that people with disabilities can use like anyone else.</span></label>
+<label class="opt"><input type="radio" name="module-06-0" value="2"> <span>C. Making a site available in multiple languages.</span></label>
+<label class="opt"><input type="radio" name="module-06-0" value="3"> <span>D. Making websites free to use without a subscription.</span></label>
+<p class="fb" hidden></p></div>
+<div class="qq" data-q="module-06-1" data-c="0"><p class="qt">2. Which pair names two of the four groups who rely on accessibility?</p>
+<label class="opt"><input type="radio" name="module-06-1" value="0"> <span>A. Blind/low-vision users and deaf/hard-of-hearing users.</span></label>
+<label class="opt"><input type="radio" name="module-06-1" value="1"> <span>B. First-time internet users and mobile-only users.</span></label>
+<label class="opt"><input type="radio" name="module-06-1" value="2"> <span>C. International users and users on older browsers.</span></label>
+<label class="opt"><input type="radio" name="module-06-1" value="3"> <span>D. Gamers and social-media users.</span></label>
+<p class="fb" hidden></p></div>
+<div class="qq" data-q="module-06-2" data-c="1"><p class="qt">3. What does the “curb-cut effect” describe?</p>
+<label class="opt"><input type="radio" name="module-06-2" value="0"> <span>A. Budget cuts agencies make to accessibility programs.</span></label>
+<label class="opt"><input type="radio" name="module-06-2" value="1"> <span>B. Features built for people with disabilities that end up helping everyone.</span></label>
+<label class="opt"><input type="radio" name="module-06-2" value="2"> <span>C. Removing content until a site passes an automated checker.</span></label>
+<label class="opt"><input type="radio" name="module-06-2" value="3"> <span>D. The traffic drop-off an inaccessible site suffers.</span></label>
+<p class="fb" hidden></p></div>
+<div class="qq" data-q="module-06-3" data-c="2"><p class="qt">4. What does WCAG stand for, and what are the four POUR principles?</p>
+<label class="opt"><input type="radio" name="module-06-3" value="0"> <span>A. Web Compliance and Accessibility Guide; Plan, Organize, Update, Review.</span></label>
+<label class="opt"><input type="radio" name="module-06-3" value="1"> <span>B. Website Code Accessibility Grades; Perceivable, Open, Usable, Reliable.</span></label>
+<label class="opt"><input type="radio" name="module-06-3" value="2"> <span>C. Web Content Accessibility Guidelines; Perceivable, Operable, Understandable, Robust.</span></label>
+<label class="opt"><input type="radio" name="module-06-3" value="3"> <span>D. World Council on Accessibility Governance; Public, Open, Universal, Required.</span></label>
+<p class="fb" hidden></p></div>
+<div class="qq" data-q="module-06-4" data-c="2"><p class="qt">5. Which reason should you lead with when explaining why accessibility matters?</p>
+<label class="opt"><input type="radio" name="module-06-4" value="0"> <span>A. The law — fear of lawsuits moves clients fastest.</span></label>
+<label class="opt"><input type="radio" name="module-06-4" value="1"> <span>B. The business case — reach and revenue are what clients care about.</span></label>
+<label class="opt"><input type="radio" name="module-06-4" value="2"> <span>C. Human dignity and equal access — it’s the real point; law and business follow from it.</span></label>
+<label class="opt"><input type="radio" name="module-06-4" value="3"> <span>D. SEO — accessible sites rank higher in search.</span></label>
+<p class="fb" hidden></p></div>
+</section>
+<nav class="pn"><a class="navlink" href="/course/lantern-a.html">← Lanterns: End of Part A</a><a class="navlink" href="/course/module-07.html">Module 7 →</a></nav>
+</div>
+</main>
+<footer><span class="wm">GlowStrm, LLC</span><span class="tl">What grows, glows.</span></footer>
+<script>
+
+var PASS="whatgrows";
+(function(){
+  if(document.body.dataset.gated==="1"){
+    var ok=localStorage.getItem("gsPathwayPass")===PASS;
+    if(!ok){document.getElementById("gate").hidden=false;document.getElementById("content").style.display="none";}
+  }
+})();
+function tryPass(){
+  var v=document.getElementById("passin").value.trim().toLowerCase();
+  var fb=document.getElementById("passfb");
+  if(v===PASS){localStorage.setItem("gsPathwayPass",PASS);location.reload();}
+  else{fb.hidden=false;fb.textContent="That\u2019s not it \u2014 check the text from Shar\u00e9a, or visit the Checkpoint.";fb.className="fb no";}
+}
+document.addEventListener("change",function(e){
+  if(e.target.type!=="radio")return;
+  var qq=e.target.closest(".qq");if(!qq)return;
+  var fb=qq.querySelector(".fb");var c=parseInt(qq.dataset.c,10);
+  var v=parseInt(e.target.value,10);
+  fb.hidden=false;
+  if(v===c){fb.textContent="Right. Keep moving, traveler.";fb.className="fb ok";}
+  else{fb.textContent="Not quite \u2014 look back at the lesson and try again.";fb.className="fb no";}
+});
+
+</script></body></html>
