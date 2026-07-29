@@ -1,0 +1,140 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="noindex, nofollow"><title>Foundation: Learn the Rules · GlowStrm Pathway</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Source+Sans+3:ital,wght@0,400;0,600;0,700&display=swap" rel="stylesheet"><style>
+
+:root{--charcoal:#271F41;--cream:#F8F4EE;--rose:#BB4072;--plum:#783E8D;--violet:#774ECE;--coral:#FB896D;--gold:#E6B65C;--text:#1A1528;--mid:#4A4260;--muted:#8B82A7;--lt1:#F5F3F9;--lt2:#EDE9F5;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Source Sans 3',system-ui,sans-serif;}
+*{box-sizing:border-box;}body{margin:0;background:var(--lt1);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.7;}
+.topbar{background:var(--charcoal);color:#fff;padding:16px 24px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px;}
+.mark{font-family:var(--serif);font-size:20px;font-weight:600;color:#fff;text-decoration:none;}
+.mark span{color:var(--gold);}
+.lbl{font-size:10px;text-transform:uppercase;letter-spacing:.16em;opacity:.55;}
+.wrap{max-width:760px;margin:0 auto;background:#fff;padding:36px 34px 48px;min-height:70vh;}
+.crumb{font-size:12px;color:var(--muted);margin:0 0 18px;}
+.kick{font-size:11px;font-weight:700;color:var(--plum);text-transform:uppercase;letter-spacing:.2em;margin:0 0 6px;}
+h1{font-family:var(--serif);font-size:34px;font-weight:600;color:var(--charcoal);margin:0;line-height:1.12;}
+h2{font-family:var(--serif);font-size:24px;font-weight:600;color:var(--charcoal);}
+h3{font-family:var(--serif);font-size:21px;font-weight:600;color:var(--charcoal);margin:26px 0 6px;}
+.rule{width:52px;height:2px;background:var(--gold);border:0;margin:16px 0 20px;}
+p{margin:0 0 14px;color:var(--text);}
+ul{margin:0 0 14px;padding-left:22px;}
+li{margin:4px 0;}
+li::marker{color:var(--coral);}
+a{color:var(--plum);}
+a:hover{color:var(--rose);}
+strong{color:var(--charcoal);}
+.todo{background:#FDF3F0;border-left:3px solid var(--coral);padding:10px 14px;margin:14px 0;font-size:14px;color:var(--mid);}
+.act{background:var(--cream);border-top:3px solid var(--gold);border-radius:0 0 8px 8px;padding:18px 20px;margin:24px 0;}
+.act .ak{font-size:11px;font-weight:700;color:var(--plum);text-transform:uppercase;letter-spacing:.16em;margin:0 0 6px;}
+.act p{font-size:15px;color:var(--mid);}
+.btn{display:inline-block;background:var(--charcoal);color:#fff;border:0;padding:11px 18px;border-radius:7px;font-family:var(--sans);font-weight:600;font-size:14px;cursor:pointer;text-decoration:none;}
+.btn:hover{background:var(--plum);color:#fff;}
+.btn.gold{background:var(--gold);color:var(--charcoal);}
+.fallback{font-size:12.5px;color:var(--muted);margin-top:8px;}
+.quiz{background:var(--lt1);border-radius:10px;padding:20px 22px;margin:26px 0;}
+.qhint{font-size:13.5px;color:var(--muted);}
+.qq{margin:16px 0;}
+.qt{font-weight:600;color:var(--charcoal);margin-bottom:6px;}
+.opt{display:block;padding:7px 10px;border:1px solid var(--lt2);border-radius:7px;margin:5px 0;cursor:pointer;background:#fff;font-size:14.5px;}
+.opt:hover{border-color:var(--plum);}
+.fb{font-size:14px;font-weight:600;margin:6px 0 0;}
+.fb.ok{color:#0F6E56;}
+.fb.no{color:var(--rose);}
+.pn{display:flex;justify-content:space-between;margin:36px 0 0;border-top:1px solid var(--lt2);padding-top:18px;font-size:14.5px;}
+.navlink{text-decoration:none;font-weight:600;}
+footer{background:var(--charcoal);color:#fff;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+.wm{font-family:var(--serif);font-size:15px;}
+.tl{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:14px;}
+.gatebox{background:var(--cream);border-top:3px solid var(--gold);padding:26px;border-radius:0 0 10px 10px;}
+.gk{font-size:11px;font-weight:700;color:var(--plum);text-transform:uppercase;letter-spacing:.2em;margin:0 0 4px;}
+.passrow{display:flex;gap:8px;margin:12px 0 4px;}
+.passrow input{flex:1;max-width:240px;padding:10px 12px;border:1px solid var(--lt2);border-radius:7px;font-size:15px;}
+.parts{display:grid;gap:14px;margin:22px 0;}
+.pc{border:1px solid var(--lt2);border-left:4px solid var(--gold);border-radius:0 8px 8px 0;padding:16px 20px;background:#fff;}
+.pc h2{margin:0 0 2px;font-size:21px;}
+.pc .ps{font-size:13px;color:var(--muted);margin:0 0 8px;}
+.pc a.ml{display:block;font-size:14.5px;padding:3px 0;text-decoration:none;}
+.pc.locked{border-left-color:var(--plum);background:#FBF9FE;}
+.lock{font-size:11px;color:var(--plum);font-weight:700;text-transform:uppercase;letter-spacing:.1em;}
+@media(max-width:640px){.wrap{padding:26px 18px;}h1{font-size:27px;}}
+
+</style></head><body data-gated="1">
+<div class="topbar"><a class="mark" href="index.html">Glow<span>Strm</span></a><span class="lbl">The Web Accessibility Contractor Pathway</span></div>
+<main class="wrap">
+<div class="gatebox" id="gate" hidden><p class="gk">This part is gated</p><h2>One step first, traveler</h2><p>Everything past the Checkpoint opens with a passcode Sharéa texts you personally once you've declared your pace. If you've got it, enter it below. If not, head to the <a href="checkpoint.html">Checkpoint</a> — it takes ten minutes.</p><div class="passrow"><input type="password" id="passin" placeholder="passcode" aria-label="passcode"><button class="btn" onclick="tryPass()">Open</button></div><p class="fb" id="passfb" hidden></p></div>
+<div id="content">
+<p class="crumb">The Pathway · Part C · Module 8</p>
+<p class="kick">PART C · FOUNDATION · ~20 HOURS (PLAN 2–4 WEEKS)</p>
+<h1>Foundation: Learn the Rules</h1>
+<hr class="rule">
+<p>This is where the real coursework begins. Now you learn the rules everyone in this field is measured against — the standard called WCAG — properly, from the people who wrote it.</p>
+<h3>What you’re doing in this module</h3>
+<p>You’re completing one free foundations course: the W3C’s “Introduction to Web Accessibility,” the most respected starting point in the field. Plan about 20 hours of focused work over two to four weeks.</p>
+<p>Take it here: W3C “Introduction to Web Accessibility” (W3Cx on edX) → <a href="https://www.edx.org/learn/web-accessibility/the-world-wide-web-consortium-w3c-introduction-to-web-accessibility" target="_blank" rel="noopener">https://www.edx.org/learn/web-accessibility/the-world-wide-web-consortium-w3c-introduction-to-web-accessibility</a>  ·  details at <a href="https://www.w3.org/WAI/courses/foundations-course/" target="_blank" rel="noopener">https://www.w3.org/WAI/courses/foundations-course/</a></p>
+<p>The course is free to audit. For about $99 you can add a verified certificate — and we recommend it: it’s your first real, uploadable credential, and the proof you’ll submit here. Check the current price on edX before you pay.</p>
+<h3>What you’ll actually learn</h3>
+<p>The four POUR principles in depth — Perceivable, Operable, Understandable, Robust.</p>
+<p>What WCAG “success criteria” are, and how to read one.</p>
+<p>The conformance levels — A, AA, AAA — and why “WCAG 2.1 AA” is the line.</p>
+<p>How disabilities, barriers, and accessibility features connect.</p>
+<p>You don’t need to memorize the standard — you need to open it, find the relevant criterion, and understand what it asks. That’s the foundation of every audit you’ll do.</p>
+<h3>A word on pace</h3>
+<p>Twenty hours sounds like a lot until you divide it. Five hours a week finishes it in about a month; ten a week, in two. Put it on your calendar like an appointment — a steady hour most days beats one heroic weekend. Optional and free: Section508.gov (<a href="https://www.section508.gov" target="_blank" rel="noopener">https://www.section508.gov</a>) grounds the standard in the U.S. legal context you’ll work in.</p>
+<p>Quick recap</p>
+<p>Complete the free W3C course — about 20 hours.</p>
+<p>Learn WCAG properly: POUR, success criteria, A/AA/AAA.</p>
+<p>Upload your certificate (the ~$99 verified one is worth it) to complete the module.</p>
+<h3>What’s next</h3>
+<p>With the foundation in hand, Module 9 is your first paid service — the audit — and the free federal certification that lets you do it.</p><section class="quiz"><h3>Check yourself</h3><p class="qhint">Pick an answer for each — you'll see right away how you did. This is for you; nothing is recorded.</p>
+<div class="qq" data-q="module-08-0" data-c="1"><p class="qt">1. What do the four letters in WCAG stand for, and who publishes it?</p>
+<label class="opt"><input type="radio" name="module-08-0" value="0"> <span>A. Web Compliance Accessibility Grades — published by DHS.</span></label>
+<label class="opt"><input type="radio" name="module-08-0" value="1"> <span>B. Web Content Accessibility Guidelines — published by the W3C.</span></label>
+<label class="opt"><input type="radio" name="module-08-0" value="2"> <span>C. World Content Access Guide — published by the U.S. Access Board.</span></label>
+<label class="opt"><input type="radio" name="module-08-0" value="3"> <span>D. Website Certification and Grading — published by the IAAP.</span></label>
+<p class="fb" hidden></p></div>
+<div class="qq" data-q="module-08-1" data-c="2"><p class="qt">2. Name the four POUR principles.</p>
+<label class="opt"><input type="radio" name="module-08-1" value="0"> <span>A. Plan, Organize, Understand, Review.</span></label>
+<label class="opt"><input type="radio" name="module-08-1" value="1"> <span>B. Perceivable, Organized, Universal, Readable.</span></label>
+<label class="opt"><input type="radio" name="module-08-1" value="2"> <span>C. Perceivable, Operable, Understandable, Robust.</span></label>
+<label class="opt"><input type="radio" name="module-08-1" value="3"> <span>D. Practical, Open, Usable, Repeatable.</span></label>
+<p class="fb" hidden></p></div>
+<div class="qq" data-q="module-08-2" data-c="1"><p class="qt">3. Which conformance level do most laws and contracts require?</p>
+<label class="opt"><input type="radio" name="module-08-2" value="0"> <span>A. Level A — the minimum.</span></label>
+<label class="opt"><input type="radio" name="module-08-2" value="1"> <span>B. Level AA (WCAG 2.1 AA).</span></label>
+<label class="opt"><input type="radio" name="module-08-2" value="2"> <span>C. Level AAA — the maximum.</span></label>
+<label class="opt"><input type="radio" name="module-08-2" value="3"> <span>D. None — each contract invents its own level.</span></label>
+<p class="fb" hidden></p></div>
+<div class="qq" data-q="module-08-3" data-c="2"><p class="qt">4. What proof completes this module?</p>
+<label class="opt"><input type="radio" name="module-08-3" value="0"> <span>A. A screenshot of the final lesson page.</span></label>
+<label class="opt"><input type="radio" name="module-08-3" value="1"> <span>B. A self-reported checkbox.</span></label>
+<label class="opt"><input type="radio" name="module-08-3" value="2"> <span>C. Your W3C / W3Cx course-completion certificate.</span></label>
+<label class="opt"><input type="radio" name="module-08-3" value="3"> <span>D. A 500-word reflection essay.</span></label>
+<p class="fb" hidden></p></div>
+</section><div class="act"><p class="ak">Submit your proof</p><p>When you've earned it, email your certificate (attach the file or paste the verification link). This is what completes the module.</p><a class="btn" href="mailto:course@glowstrm.com?subject=Certificate%20%E2%80%94%20Module%208%20%28W3C%29&body=Attached/linked%20is%20my%20proof%20for%20this%20module.%0A%0AName%3A%0A">Email your certificate</a><p class="fallback">Button not working? Email course@glowstrm.com with the subject "Certificate — Module 8 (W3C)".</p></div>
+<nav class="pn"><a class="navlink" href="checkpoint.html">← Checkpoint</a><a class="navlink" href="module-09.html">Module 9 →</a></nav>
+</div>
+</main>
+<footer><span class="wm">GlowStrm, LLC</span><span class="tl">What grows, glows.</span></footer>
+<script>
+
+var PASS="whatgrows";
+(function(){
+  if(document.body.dataset.gated==="1"){
+    var ok=localStorage.getItem("gsPathwayPass")===PASS;
+    if(!ok){document.getElementById("gate").hidden=false;document.getElementById("content").style.display="none";}
+  }
+})();
+function tryPass(){
+  var v=document.getElementById("passin").value.trim().toLowerCase();
+  var fb=document.getElementById("passfb");
+  if(v===PASS){localStorage.setItem("gsPathwayPass",PASS);location.reload();}
+  else{fb.hidden=false;fb.textContent="That\u2019s not it \u2014 check the text from Shar\u00e9a, or visit the Checkpoint.";fb.className="fb no";}
+}
+document.addEventListener("change",function(e){
+  if(e.target.type!=="radio")return;
+  var qq=e.target.closest(".qq");if(!qq)return;
+  var fb=qq.querySelector(".fb");var c=parseInt(qq.dataset.c,10);
+  var v=parseInt(e.target.value,10);
+  fb.hidden=false;
+  if(v===c){fb.textContent="Right. Keep moving, traveler.";fb.className="fb ok";}
+  else{fb.textContent="Not quite \u2014 look back at the lesson and try again.";fb.className="fb no";}
+});
+
+</script></body></html>
