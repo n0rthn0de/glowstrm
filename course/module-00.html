@@ -1,0 +1,214 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="noindex, nofollow"><title>Welcome: Why You’re Here · GlowStrm Pathway</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Source+Sans+3:ital,wght@0,400;0,600;0,700&display=swap" rel="stylesheet"><style>:root{--charcoal:#271F41;--cream:#F8F4EE;--rose:#BB4072;--plum:#783E8D;--violet:#774ECE;--coral:#FB896D;--gold:#E6B65C;--text:#1A1528;--mid:#4A4260;--muted:#8B82A7;--lt1:#F5F3F9;--lt2:#EDE9F5;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Source Sans 3',system-ui,sans-serif}
+*{box-sizing:border-box}body{margin:0;background:var(--lt1);color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.75}
+.pbar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--gold);z-index:99}
+.topbar{background:var(--charcoal);color:#fff;padding:14px 24px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px}
+.mark{font-family:var(--serif);font-size:20px;font-weight:600;color:#fff;text-decoration:none}.mark span{color:var(--gold)}
+.lbl{font-size:10px;text-transform:uppercase;letter-spacing:.16em;opacity:.5}
+.rail{display:flex;gap:5px;justify-content:center;flex-wrap:wrap;background:#201936;padding:10px 16px}
+.rn{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#cfc7e0;background:#2e2550;text-decoration:none}
+.rn:hover{background:var(--plum);color:#fff}
+.rn.cur{background:var(--gold);color:var(--charcoal)}
+.wrap{max-width:780px;margin:0 auto;background:#fff;padding:0 0 48px;min-height:70vh}
+.hero{background:var(--cream);padding:34px 34px 26px;display:flex;gap:20px;align-items:flex-start;border-bottom:3px solid var(--gold)}
+.hnum{flex:0 0 64px;height:64px;border-radius:50%;background:var(--charcoal);color:var(--gold);font-family:var(--serif);font-size:30px;font-weight:600;display:flex;align-items:center;justify-content:center}
+.hmeta{flex:1}
+.kick{font-size:11px;font-weight:700;color:var(--plum);text-transform:uppercase;letter-spacing:.2em;margin:0 0 6px}
+h1{font-family:var(--serif);font-size:36px;font-weight:600;color:var(--charcoal);margin:0 0 10px;line-height:1.1}
+.badges{display:flex;gap:7px;flex-wrap:wrap}
+.badge{font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:.08em}
+.b1{background:#EDE9F5;color:var(--plum)}.b2{background:#FDF3F0;color:#993C1D}.b3{background:#FAEEDA;color:#854F0B}
+.wrap>*:not(.hero):not(.pn):not(.gatebox),#content>*:not(.hero):not(.pn){margin-left:34px;margin-right:34px}
+h2{font-family:var(--serif);font-size:25px;font-weight:600;color:var(--charcoal)}
+.sh{font-family:var(--serif);font-size:24px;font-weight:600;color:var(--charcoal);margin:32px 0 8px;padding-left:12px;border-left:3px solid var(--gold)}
+p{margin:0 0 15px}
+.lead2{font-size:19px;color:var(--charcoal);font-weight:600;line-height:1.6;margin:18px 0}
+ul.bl{margin:0 0 16px;padding-left:0;list-style:none}
+ul.bl li{position:relative;padding:5px 0 5px 26px}
+ul.bl li:before{content:"";position:absolute;left:6px;top:14px;width:7px;height:7px;border-radius:50%;background:var(--coral)}
+a{color:var(--plum)}a:hover{color:var(--rose)}
+strong{color:var(--charcoal)}
+.stats{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0}
+.stat{flex:1;min-width:150px;background:var(--charcoal);border-radius:10px;padding:16px 18px}
+.sv{display:block;font-family:var(--serif);font-size:27px;font-weight:600;color:var(--gold);line-height:1.1}
+.sl{display:block;font-size:12.5px;color:#cfc7e0;margin-top:4px;line-height:1.4}
+.recap{background:var(--cream);border-radius:10px;padding:18px 22px;margin:26px 0;border-left:4px solid var(--gold)}
+.rk{font-size:12px;font-weight:700;color:var(--plum);text-transform:uppercase;letter-spacing:.14em;margin:0 0 8px}
+.ic{margin-right:5px}
+.rl p{position:relative;padding-left:24px;margin:0 0 8px;font-size:15.5px;color:var(--mid)}
+.rl p:before{content:"✓";position:absolute;left:0;color:var(--violet);font-weight:700}
+.rescards{display:grid;gap:10px;margin:16px 0}
+.rescard{display:block;border:1px solid var(--lt2);border-left:3px solid var(--violet);border-radius:0 8px 8px 0;padding:13px 16px;text-decoration:none;background:#fff}
+.rescard:hover{border-color:var(--plum);border-left-color:var(--plum);background:#FCFBFE}
+.rc-t{display:block;font-weight:600;color:var(--charcoal);font-size:15.5px}
+.rc-n{display:block;font-size:13.5px;color:var(--muted);margin-top:2px}
+.rc-go{display:inline-block;font-size:12px;font-weight:700;color:var(--plum);margin-top:6px;text-transform:uppercase;letter-spacing:.06em}
+.chk{background:#FBF9FE;border:1px solid var(--lt2);border-radius:10px;padding:18px 22px;margin:24px 0}
+.ck{font-size:12px;font-weight:700;color:var(--plum);text-transform:uppercase;letter-spacing:.14em;margin:0 0 10px}
+.ci-intro{font-size:15px;color:var(--mid);margin:0 0 10px}
+.ci{display:flex;gap:11px;align-items:flex-start;padding:7px 0;cursor:pointer;font-size:15.5px}
+.ci input{width:19px;height:19px;accent-color:var(--violet);margin-top:3px;flex:0 0 19px;cursor:pointer}
+.ci input:checked+span{color:var(--muted);text-decoration:line-through}
+.vid{margin:22px 0}
+.vframe{position:relative;padding-bottom:56.25%;height:0;border-radius:10px;overflow:hidden;background:var(--charcoal)}
+.vframe iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+.vcap{font-size:13.5px;color:var(--muted);margin-top:8px}
+.vcard{display:flex;gap:14px;align-items:center;border:1px solid var(--lt2);border-radius:10px;padding:14px 16px;text-decoration:none;background:#fff;margin:12px 0}
+.vcard:hover{border-color:var(--plum);background:#FCFBFE}
+.vplay{flex:0 0 46px;height:46px;border-radius:50%;background:var(--rose);position:relative}
+.vplay:after{content:"";position:absolute;left:18px;top:14px;border-left:14px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent}
+.vc-t{display:block;font-weight:600;color:var(--charcoal);font-size:15.5px}
+.vc-n{display:block;font-size:13.5px;color:var(--muted);margin-top:2px}
+.quiz{background:var(--lt1);border-radius:12px;padding:22px 24px;margin:30px 0}
+.qk{font-size:12px;font-weight:700;color:var(--plum);text-transform:uppercase;letter-spacing:.14em;margin:0 0 4px}
+.qhint{font-size:14px;color:var(--muted);margin-bottom:14px}
+.qq{margin:18px 0}
+.qt{font-weight:600;color:var(--charcoal);margin-bottom:8px;font-size:16px}
+.opt{display:block;padding:9px 13px;border:1px solid var(--lt2);border-radius:8px;margin:6px 0;cursor:pointer;background:#fff;font-size:15px}
+.opt:hover{border-color:var(--plum)}
+.opt b{color:var(--plum);margin-right:3px}
+.fb{font-size:14.5px;font-weight:600;margin:8px 0 0}
+.fb.ok{color:#0F6E56}.fb.no{color:var(--rose)}
+.act{background:var(--cream);border-top:3px solid var(--gold);border-radius:0 0 10px 10px;padding:20px 22px;margin:26px 0}
+.act.big{border-top-width:5px}
+.ak{font-size:12px;font-weight:700;color:var(--plum);text-transform:uppercase;letter-spacing:.14em;margin:0 0 6px}
+.act p{font-size:15.5px;color:var(--mid)}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.btn{display:inline-block;background:var(--charcoal);color:#fff;border:0;padding:12px 20px;border-radius:8px;font-family:var(--sans);font-weight:700;font-size:14.5px;cursor:pointer;text-decoration:none}
+.btn:hover{background:var(--plum);color:#fff}
+.btn.gold{background:var(--gold);color:var(--charcoal)}
+.btn.gold:hover{background:#d9a744;color:var(--charcoal)}
+.fallback{font-size:13px;color:var(--muted);margin-top:10px}
+.next{border-left:3px solid var(--coral);background:#FDF3F0;border-radius:0 8px 8px 0;padding:14px 18px;margin:26px 0}
+.nk{font-size:12px;font-weight:700;color:#993C1D;text-transform:uppercase;letter-spacing:.14em;margin:0 0 4px}
+.next p{margin:0;font-size:15.5px;color:var(--mid)}
+.todo{background:#FDF3F0;border-left:3px solid var(--coral);padding:11px 15px;margin:16px 0;font-size:14.5px;color:var(--mid)}
+.pn{display:flex;justify-content:space-between;margin:38px 34px 0;border-top:1px solid var(--lt2);padding-top:20px;font-size:15px;gap:12px}
+.navlink{text-decoration:none;font-weight:700}
+footer{background:var(--charcoal);color:#fff;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.wm{font-family:var(--serif);font-size:15px}
+.tl{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:14px}
+.gatebox{background:var(--cream);border-top:4px solid var(--gold);padding:30px 34px;margin:0}
+.gk{font-size:11px;font-weight:700;color:var(--plum);text-transform:uppercase;letter-spacing:.2em;margin:0 0 4px}
+.passrow{display:flex;gap:9px;margin:14px 0 4px;flex-wrap:wrap}
+.passrow input{flex:1;min-width:180px;max-width:260px;padding:11px 13px;border:1px solid var(--lt2);border-radius:8px;font-size:16px}
+.parts{display:grid;gap:16px;margin:24px 0}
+.pc{border:1px solid var(--lt2);border-left:4px solid var(--gold);border-radius:0 10px 10px 0;padding:20px 22px;background:#fff}
+.pc.mid{border-left-color:var(--coral)}
+.pc.locked{border-left-color:var(--plum);background:#FBF9FE}
+.pc h2{margin:0 0 2px;font-size:22px}
+.ps{font-size:13.5px;color:var(--muted);margin:0 0 12px}
+.lock{display:inline-block;font-size:10.5px;color:var(--plum);font-weight:700;text-transform:uppercase;letter-spacing:.1em;background:#EDE9F5;padding:3px 9px;border-radius:20px;margin-bottom:6px}
+.mlist{display:grid;gap:2px}
+.ml{display:flex;gap:12px;align-items:center;padding:8px 10px;border-radius:7px;text-decoration:none}
+.ml:hover{background:var(--cream)}
+.mn{flex:0 0 30px;height:30px;border-radius:50%;background:var(--lt2);color:var(--plum);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+.ml:hover .mn{background:var(--gold);color:var(--charcoal)}
+.mt{font-size:15.5px;color:var(--charcoal)}
+@media(max-width:680px){.wrap>*:not(.hero):not(.pn):not(.gatebox),#content>*:not(.hero):not(.pn){margin-left:18px;margin-right:18px}.hero{padding:24px 18px 20px;gap:14px}.hnum{flex:0 0 50px;height:50px;font-size:24px}h1{font-size:27px}.pn{margin-left:18px;margin-right:18px}.stats{flex-direction:column}}
+
+.fig{margin:26px 0;padding:0}
+.svgfit{width:100%;height:auto;display:block;background:#fff;border:1px solid #EDE9F5;border-radius:12px}
+.fig figcaption{font-size:13.5px;color:#8B82A7;margin-top:9px;font-style:italic}
+.pill4,.pill3,.pill2{display:grid;gap:12px;margin:24px 0}
+.pill4{grid-template-columns:repeat(2,1fr)}
+.pill3{grid-template-columns:repeat(3,1fr)}
+.pill2{grid-template-columns:repeat(2,1fr)}
+.pill{background:#F8F4EE;border-radius:10px;padding:16px 18px;border-left:3px solid #E6B65C}
+.pill.vio{border-left-color:#774ECE}
+.pill.gld{border-left-color:#E6B65C}
+.pi{display:block;font-size:22px;color:#783E8D;line-height:1;margin-bottom:7px}
+.pt{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;font-weight:600;color:#271F41;margin-bottom:3px}
+.pd{display:block;font-size:14px;color:#4A4260;line-height:1.5}
+.pq{margin:28px 0;padding:20px 26px;background:#271F41;border-radius:12px}
+.pq p{font-family:'Cormorant Garamond',Georgia,serif;font-size:25px;font-style:italic;color:#fff;margin:0 0 8px;line-height:1.35}
+.pq cite{font-style:normal;font-size:12px;font-weight:700;color:#E6B65C;letter-spacing:.14em;text-transform:uppercase}
+@media(max-width:680px){.pill4,.pill3,.pill2{grid-template-columns:1fr}}
+</style></head><body>
+<div class="pbar" id="pbar"></div>
+<div class="topbar"><a class="mark" href="/course/index.html">Glow<span>Strm</span></a><span class="lbl">The Web Accessibility Contractor Pathway</span></div>
+<nav class="rail" aria-label="Course progress">
+<a class="rn cur" href="/course/module-00.html" title="0">0</a>
+<a class="rn" href="/course/module-01.html" title="1">1</a>
+<a class="rn" href="/course/module-02.html" title="2">2</a>
+<a class="rn" href="/course/module-03.html" title="3">3</a>
+<a class="rn" href="/course/module-04.html" title="4">4</a>
+<a class="rn" href="/course/module-05.html" title="5">5</a>
+<a class="rn" href="/course/lantern-a.html" title="✦">✦</a>
+<a class="rn" href="/course/module-06.html" title="6">6</a>
+<a class="rn" href="/course/module-07.html" title="7">7</a>
+<a class="rn" href="/course/lantern-b.html" title="✦">✦</a>
+<a class="rn" href="/course/checkpoint.html" title="▸">▸</a>
+<a class="rn" href="/course/module-08.html" title="8">8</a>
+<a class="rn" href="/course/module-09.html" title="9">9</a>
+<a class="rn" href="/course/module-10.html" title="10">10</a>
+<a class="rn" href="/course/module-11.html" title="11">11</a>
+<a class="rn" href="/course/lantern-c.html" title="✦">✦</a>
+<a class="rn" href="/course/module-12.html" title="12">12</a>
+<a class="rn" href="/course/lantern-d.html" title="✦">✦</a>
+</nav>
+<main class="wrap">
+<div class="gatebox" id="gate" hidden><p class="gk">This part is gated</p><h2>One step first, traveler</h2><p>Everything past the Checkpoint opens with a passcode Sharéa texts you personally, once you've declared your pace. If you have it, enter it below. If not, head to the <a href="/course/checkpoint.html">Checkpoint</a> — it takes ten minutes.</p><div class="passrow"><input type="password" id="passin" placeholder="passcode" aria-label="passcode"><button class="btn" onclick="tryPass()">Open the road</button></div><p class="fb" id="passfb" hidden></p></div>
+<div id="content">
+<header class="hero"><div class="hnum">0</div><div class="hmeta"><p class="kick">Part A</p><h1>Welcome: Why You’re Here</h1><div class="badges"><span class="badge b1">PART A</span><span class="badge b2">Orientation</span><span class="badge b3">~20 minutes</span></div></div></header>
+<figure class="fig"><svg viewBox="0 0 760 195" role="img" aria-labelledby="rmT rmD" class="svgfit">
+<title id="rmT">The path ahead</title><desc id="rmD">Five stages: Part A the opportunity and your business, Part B understanding the work, a Checkpoint you choose to pass, Part C the credentialing path, and Part D paid work you own.</desc>
+<text x="30" y="26" font-family="system-ui" font-size="11" font-weight="700" letter-spacing="2" fill="#783E8D">THE PATH YOU ARE ON</text>
+<line x1="30" y1="38" x2="82" y2="38" stroke="#E6B65C" stroke-width="2"/>
+<line x1="70" y1="86" x2="700" y2="86" stroke="#EDE9F5" stroke-width="3"/>
+<circle cx="90" cy="86" r="22" fill="#E6B65C"/><text x="90" y="93" text-anchor="middle" font-family="Georgia,serif" font-size="17" font-weight="600" fill="#271F41">A</text>
+<text x="90" y="132" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="700" fill="#271F41">The opportunity</text>
+<text x="90" y="149" text-anchor="middle" font-family="system-ui" font-size="11" fill="#8B82A7">modules 0–5 · open</text>
+<circle cx="255" cy="86" r="22" fill="#E6B65C"/><text x="255" y="93" text-anchor="middle" font-family="Georgia,serif" font-size="17" font-weight="600" fill="#271F41">B</text>
+<text x="255" y="132" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="700" fill="#271F41">The work, made real</text>
+<text x="255" y="149" text-anchor="middle" font-family="system-ui" font-size="11" fill="#8B82A7">modules 6–7 · open</text>
+<polygon points="380,64 402,86 380,108 358,86" fill="#FB896D"/>
+<text x="380" y="132" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="700" fill="#271F41">Checkpoint</text>
+<text x="380" y="149" text-anchor="middle" font-family="system-ui" font-size="11" fill="#8B82A7">you choose to go on</text>
+<circle cx="520" cy="86" r="22" fill="#783E8D"/><text x="520" y="93" text-anchor="middle" font-family="Georgia,serif" font-size="17" font-weight="600" fill="#ffffff">C</text>
+<text x="520" y="132" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="700" fill="#271F41">Credentials</text>
+<text x="520" y="149" text-anchor="middle" font-family="system-ui" font-size="11" fill="#8B82A7">modules 8–11 · gated</text>
+<circle cx="670" cy="86" r="22" fill="#774ECE"/><text x="670" y="93" text-anchor="middle" font-family="Georgia,serif" font-size="17" font-weight="600" fill="#ffffff">D</text>
+<text x="670" y="132" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="700" fill="#271F41">Paid work</text>
+<text x="670" y="149" text-anchor="middle" font-family="system-ui" font-size="11" fill="#8B82A7">module 12 · yours</text>
+</svg><figcaption>Free and open through the Checkpoint. Everything after it, you unlock by choosing to.</figcaption></figure><p>Welcome. Before anything else, I want to tell you why this exists — and why I’m in it with you, not just pointing the way.</p>
+<h3 class="sh">My story — why I’m here</h3>
+<p>I’m Sharéa Harris, and I started GlowStrm. Before this, I spent more than thirteen years in academia — leading college classrooms, supporting faculty, building expertise. When I made my pivot into communications, I landed in the right place at the right time with the right skills. One of my first projects was building a Section 508 accessibility library for my employer — articles, workshops, and the marketing around them — working side by side with the 508 specialists who fact-checked every piece. That project changed what I could see.</p>
+<p>Because here’s what I noticed, working that closely with accessibility specialists: their careers were built on trainings and certifications, not degree programs. The door into this field was easier to open than almost any I’d seen — and the rewards on the other side were real. You are compensated well to do work that benefits the broader society, in ways I specifically care about. I want communication to be accessible to everyone, and this industry opens that door wider than ever. That’s when it clicked: a credential anyone willing to do the work can earn is a real lever — for me, and for the people around me.</p>
+<p>And I’m walking this path myself — the same courses, the same certifications, the same hours. Partly because it sits at an intersection I don’t take for granted: work that aligns with my values, pays well, and leaves room for a life. Opportunities at that intersection don’t come around often. Partly because it’s steady, meaningful work I can hold while GlowStrm builds toward larger opportunities — and the market for this work, here and internationally, is primed and ready to pay. But mostly because of this: I wouldn’t ask you to walk a road I wasn’t walking first. When you hit a wall — a confusing module, a hard week, a question at midnight — I’ll know exactly what that means, because I’ll have been there too. And I’ll know how to help.</p>
+<p>I also want to be honest about who I built this for. I know what the workplace feels like right now — demoralizing is not too strong a word. I know what it’s like to work hard and still not make enough to cover your basic needs. I know the feeling of being stuck — tolerating things you shouldn’t have to, because you’re not sure the next job would pay enough, never mind whether it would fulfill you. That feeling costs more than money, and I’ve battled it myself. This course is my answer to it. I want you to be able to pay for your kids’ college, take the vacation, buy the home, build the savings, own the property. I want you to have enough. I believe we’re on our way.</p>
+<p>So here is what I want for you, plainly: a pathway to financial security — the beginning of work that elevates you, funds your dreams and your needs, and lets you build the life you deserve. This is the first step. Let’s do it together and figure it all out.</p>
+<p>One more thing, said as plainly as I know how: I’m offering this to you because I trust you and I love you. I believe this can be a solution for what we’re all going through right now. And if it doesn’t feel like a fit, that is completely okay — no hard feelings, ever. I just want you to know I’m thinking about you, and the door is open.</p>
+<h3 class="sh">The frame, stated plainly</h3>
+<div class="pill4">
+<div class="pill"><span class="pi">⌂</span><span class="pt">Work from home</span><span class="pd">Remote-first, for clients anywhere</span></div>
+<div class="pill"><span class="pi">↗</span><span class="pt">Pays above average</span><span class="pd">$85–100+ an hour once credentialed</span></div>
+<div class="pill"><span class="pi">§</span><span class="pt">Protected by law</span><span class="pd">Demand created by legislation, not mood</span></div>
+<div class="pill"><span class="pi">◆</span><span class="pt">You own it</span><span class="pd">Your business, your clients, your rates</span></div>
+</div>
+<p>This is a path to ownership, not a job posting. It’s designed as a route to viable, credentialed, remote careers for Black women seeking upward mobility — work you can build from home, that pays above average, that’s protected by law, and that you own as your own business.</p>
+<p>It’s a strong position for a specific reason: this field rewards a credential you can earn over a network you may have to inherit. The certifications on this path are open to anyone willing to do the work, and they carry real weight with clients and federal agencies. That makes this a genuine lever for economic mobility — not charity. Opportunity and ownership.</p>
+<p>Here’s how GlowStrm fits. GlowStrm operates as a consulting collective: a hub where Black women professionals collaborate to take on contracts none of us could land alone. You build your own business; GlowStrm helps fill it with real work. You’ll see exactly how that works by the end of this first part of the course.</p>
+<h3 class="sh">The honest version of the commitment</h3>
+<blockquote class="pq"><p>I wouldn’t ask you to walk a road I wasn’t walking first.</p><cite>Sharéa</cite></blockquote>
+<p>I’m not going to undersell this. The early lessons are short and easy. The credentialing work later is real — one of the courses runs about twenty hours, and the one after it runs longer. It’s all free to start, but it costs time and focus over a few weeks. People who finish aren’t the most talented; they’re the ones who decide to keep showing up. You don’t have to do it all at once, and you won’t do it alone — we’ll set a pace that fits your life.</p>
+<p>That’s the whole picture. If it sounds like something you want, check the box and let’s begin.</p>
+<div class="next"><p class="nk">What's next</p>
+<p>Next, we ground all of this in numbers — what the work actually pays and why the demand is durable — so your decision to keep going is made with eyes open.</p>
+</div>
+<nav class="pn"><a class="navlink" href="/course/index.html">← Course home</a><a class="navlink nx" href="/course/module-01.html">Module 1 →</a></nav>
+</div>
+</main>
+<footer><span class="wm">GlowStrm, LLC</span><span class="tl">What grows, glows.</span></footer>
+<script>var PASS="whatgrows";
+(function(){if(document.body.dataset.gated==="1"&&localStorage.getItem("gsPass")!==PASS){document.getElementById("gate").hidden=false;document.getElementById("content").style.display="none";}})();
+function tryPass(){var v=document.getElementById("passin").value.trim().toLowerCase(),f=document.getElementById("passfb");
+if(v===PASS){localStorage.setItem("gsPass",PASS);location.reload();}else{f.hidden=false;f.textContent="That’s not it — check the text from Sharéa, or visit the Checkpoint.";f.className="fb no";}}
+document.addEventListener("change",function(e){
+ if(e.target.type==="radio"){var q=e.target.closest(".qq");if(!q)return;var f=q.querySelector(".fb");f.hidden=false;
+  if(parseInt(e.target.value,10)===parseInt(q.dataset.c,10)){f.textContent="Right. Keep moving, traveler.";f.className="fb ok";}
+  else{f.textContent="Not quite — look back at the lesson and try again.";f.className="fb no";}}
+ if(e.target.dataset&&e.target.dataset.ck){localStorage.setItem("gsck_"+e.target.dataset.ck,e.target.checked?"1":"");}
+});
+document.querySelectorAll("[data-ck]").forEach(function(b){if(localStorage.getItem("gsck_"+b.dataset.ck)==="1")b.checked=true;});
+window.addEventListener("scroll",function(){var h=document.documentElement,p=(h.scrollTop)/(h.scrollHeight-h.clientHeight)*100;document.getElementById("pbar").style.width=Math.min(p,100)+"%";});
+</script></body></html>
