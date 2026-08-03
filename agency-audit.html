@@ -443,8 +443,8 @@
     <h3 class="service-rec-title" id="service-title"></h3>
     <p class="service-rec-body" id="service-body"></p>
     <div class="cta-row">
-      <a href="https://glowstrm.com/sprint.html" target="_blank" rel="noopener" class="btn btn-gold" id="service-cta">Explore this →</a>
-      <a href="https://glowstrm.com" target="_blank" rel="noopener" class="btn btn-outline">Work with GlowStrm →</a>
+      <a href="https://glowstrm.com/institutions.html" class="btn btn-gold" id="service-cta">Explore this →</a>
+      <a href="mailto:northnode@glowstrm.com?subject=Where%27s%20the%20Gap%3F%20%E2%80%94%20The%20Exchange" class="btn btn-outline">Email Sharéa →</a>
     </div>
   </div>
   <button class="restart-link" onclick="restart()">Start over</button>
@@ -583,18 +583,24 @@ const dimensionMeta = {
     weak:    "Right now the message goes out but nothing comes back. Let's design the conversation in." }
 };
 const serviceRecs = {
-  exigence: { title: "Message Architecture Sprint", link: "https://glowstrm.com/sprint.html",
-    body: "Your mandate — the reason your institution communicates — is the foundation of every message. The Message Architecture Sprint is a working intensive that starts exactly here: naming the problem your program solves and building your messaging infrastructure out from that truth, so the whole team says it the same way." },
-  audience: { title: "Message Architecture Sprint", link: "https://glowstrm.com/sprint.html",
-    body: "Your message isn't landing because it hasn't been mapped to its rooms. The Message Architecture Sprint builds your audience map from the ground up — who your stakeholders are, what they value, how they decide, and what your institution needs to say to be heard by each of them." },
-  voice: { title: "Where's the Gap? Workshop", link: "https://glowstrm.com",
-    body: "When a voice splinters across departments, you fix it in the room, together. The Where's the Gap? Workshop is a facilitated session for teams whose message has drifted apart — we find the gaps and rebuild one institutional voice everyone can carry." },
-  fractal: { title: "Message Architecture Sprint", link: "https://glowstrm.com/sprint.html",
-    body: "A scattered message across your materials isn't a design problem — it's a clarity problem. The Message Architecture Sprint finds the one true sentence that holds all your communications together, from the strategic plan to the social post." },
-  mode: { title: "Thought Doula Session", link: "https://glowstrm.com",
-    body: "Sometimes an institution is carrying a message that isn't on the page yet. A Thought Doula session is a listening-first consultation for leaders and teams — bring what you have and we'll shape what it actually wants to be, and move from broadcasting to dialogue." },
-  multiple: { title: "Where's the Gap? Workshop", link: "https://glowstrm.com",
-    body: "The gaps are real and there's more than one. That's normal for a growing institution. The Where's the Gap? Workshop is the comprehensive entry point — we identify the primary gap, name the pattern across your team, and build a clear path forward. This is where it begins." }
+  exigence: { title: "Message Architecture\u2122 Build", link: "https://glowstrm.com/institutions.html#build",
+    ctaLabel: "See the Build \u2192",
+    body: "Your mandate, the reason your institution communicates at all, is the foundation every message sits on, and right now your own team does not say it the same way twice. There is no benchmark to take yet, because a benchmark measures the distance between what you mean and what your audiences hear, and the first half of that has not been settled. The Message Architecture\u2122 Build settles it. It is the document your whole institution writes from, and it begins with a core message statement clear enough to survive being repeated by someone who does not work in communications. Because the Build is scoped to what your institution actually needs, the next step is a conversation with Shar\u00e9a rather than a price tag." },
+  audience: { title: "Baseline Read", link: "https://glowstrm.com/institutions.html#baseline",
+    ctaLabel: "Start with the Baseline Read \u2192",
+    body: "Your message may not be landing because it has never been mapped to its rooms, and the fastest way to know is to look at who is actually receiving it. The Baseline Read finds which audiences are hearing a different version than you think they are. You have just told us what you believe is happening. The Baseline Read tells you what is actually true, before you spend a dollar building for the wrong room." },
+  voice: { title: "Departmental Workshop", link: "https://glowstrm.com/institutions.html#workshop",
+    ctaLabel: "See the Workshop \u2192",
+    body: "When a voice splinters across departments, you fix it in the room, together. The Departmental Workshop is a live working session built on your own communications rather than a generic curriculum, so the people who write on your behalf leave with one institutional voice they can actually carry. This one does not require a benchmark first. It is a door you can walk through on its own." },
+  fractal: { title: "Baseline Read", link: "https://glowstrm.com/institutions.html#baseline",
+    ctaLabel: "Start with the Baseline Read \u2192",
+    body: "A scattered message across your materials is a clarity problem, not a design problem, and the first step is seeing the scatter laid out in one place. The Baseline Read inventories what your institution is saying across its channels and shows where the thread breaks. You have just told us what you believe is happening. The Baseline Read tells you what is actually true, and it becomes the benchmark you measure the fix against later." },
+  mode: { title: "Let\u2019s talk about this one", link: "mailto:northnode@glowstrm.com?subject=Where%27s%20the%20Gap%3F%20%E2%80%94%20The%20Exchange",
+    ctaLabel: "Email Shar\u00e9a \u2192",
+    body: "This gap is the one that does not come off a menu. An institution that only broadcasts has no way to hear what came back, and the fix depends entirely on what you are already able to listen with. Send Shar\u00e9a a note about what your institution is putting out and what, if anything, returns. She will tell you honestly whether there is a service here for it." },
+  multiple: { title: "Baseline Read", link: "https://glowstrm.com/institutions.html#baseline",
+    ctaLabel: "Start with the Baseline Read \u2192",
+    body: "The gaps are real and there is more than one, which is ordinary for an institution of any size. That is exactly why the first move is measurement rather than repair. You have just told us what you believe is happening. The Baseline Read tells you what is actually true, so the work that follows is aimed at the gap that turns out to matter most instead of the one that felt loudest today." }
 };
 // ═══════════════════════════════════════════
 // STATE
@@ -782,7 +788,7 @@ function showResults(skipCaptureNote) {
   document.getElementById('service-title').textContent = rec.title;
   document.getElementById('service-body').textContent = rec.body;
   const cta = document.getElementById('service-cta');
-  cta.textContent = 'Explore the ' + rec.title + ' →';
+  cta.textContent = rec.ctaLabel || ('Explore the ' + rec.title + ' →');
   cta.setAttribute('href', rec.link);
   showScreen('screen-results');
   setTimeout(() => {
@@ -798,4 +804,4 @@ function restart() {
 }
 </script>
 </body>
-</html> 
+</html>
