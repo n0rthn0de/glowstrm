@@ -123,6 +123,13 @@ footer{background:var(--charcoal);color:#fff;padding:20px 24px;display:flex;just
 .pq p{font-family:'Cormorant Garamond',Georgia,serif;font-size:25px;font-style:italic;color:#fff;margin:0 0 8px;line-height:1.35}
 .pq cite{font-style:normal;font-size:12px;font-weight:700;color:#E6B65C;letter-spacing:.14em;text-transform:uppercase}
 @media(max-width:680px){.pill4,.pill3,.pill2{grid-template-columns:1fr}}
+.seq{counter-reset:seq;list-style:none;margin:20px 0;padding:0}
+.seq li{counter-increment:seq;position:relative;padding:10px 0 10px 46px;font-size:15.5px;line-height:1.6;border-bottom:1px solid var(--lt2)}
+.seq li:last-child{border-bottom:0}
+.seq li::before{content:counter(seq);position:absolute;left:0;top:9px;width:28px;height:28px;border-radius:50%;background:var(--gold);color:var(--charcoal);font-family:var(--serif);font-weight:700;font-size:15px;line-height:28px;text-align:center}
+.bul{list-style:none;margin:18px 0;padding:0}
+.bul li{position:relative;padding:7px 0 7px 24px;font-size:15.5px;line-height:1.6}
+.bul li::before{content:"";position:absolute;left:2px;top:16px;width:7px;height:7px;border-radius:50%;background:var(--gold)}
 </style></head><body>
 <div class="pbar" id="pbar"></div>
 <div class="topbar"><a class="mark" href="/course/index.html">Glow<span>Strm</span></a><span class="lbl">The Web Accessibility Contractor Pathway</span></div>
@@ -137,12 +144,17 @@ footer{background:var(--charcoal);color:#fff;padding:20px 24px;display:flex;just
 <p>You can technically work as a “sole proprietor” with no formal setup — but then there’s no wall: you and the business are legally the same. Most people on this path start as a single-member LLC for exactly that liability protection. It’s a common, sensible starting point — but whether it’s right for you is a question for your own research and, ideally, a professional.</p>
 <h3 class="sh">The general sequence</h3>
 <p>Here’s the order of operations almost every state follows. Learn it here, then do each step on your state’s portal:</p>
-<p>Pick a business name and check it’s available in your state.</p>
-<p>Choose a structure (most start as a single-member LLC).</p>
-<p>File your formation paperwork with your state’s Secretary of State (filing fees commonly range from about $50 to $500).</p>
-<p>Appoint a registered agent — who receives official mail for the business (you, or a paid service so your home address stays private).</p>
-<p>Get a free EIN (your federal tax ID) from the IRS.</p>
-<p>Open a separate business bank account.</p>
+<ol class="seq" role="list">
+<li>Pick a business name and check it’s available in your state.</li>
+<li>Choose a structure (most start as a single-member LLC).</li>
+<li>Appoint a registered agent — the person or service that accepts legal notices for your business. Required in 48 states and DC; New York and West Virginia work differently.</li>
+<li>Decide what address the business uses — and think hard before that address is your house.</li>
+<li>File your formation paperwork with your state’s Secretary of State (filing fees commonly range from about $50 to $500).</li>
+<li>Get a free EIN (your federal tax ID) from the IRS.</li>
+<li>Open a separate business bank account.</li>
+</ol>
+<div class="todo"><strong>Why that order.</strong> Steps 1 through 4 are all <em>inputs</em> to step 5 — your name, your registered agent, and your business address every one of them go on the formation form itself. Decide them before you sit down to file, not while you are staring at the field. And steps 6 and 7 need step 5 finished first: the IRS wants a formed entity, and the bank wants both the formation certificate and the EIN.</div>
+
 <h3 class="sh">Naming it — this matters more here than in most fields</h3>
 
 <p class="lead2">In accessibility work, your name is a search term.</p>
@@ -156,11 +168,10 @@ footer{background:var(--charcoal);color:#fff;padding:20px 24px;display:flex;just
 <div class="pill4">
 <div class="pill"><span class="pi">⌕</span><span class="pt">It contains a keyword</span><span class="pd">“Accessibility,” “access,” “document,” or “digital” — something a buyer would actually type into a search box.</span></div>
 <div class="pill"><span class="pi">☏</span><span class="pt">It survives a phone call</span><span class="pd">If you have to spell it every single time, that is a tax you pay forever. Say it out loud before you commit.</span></div>
-<div class="pill vio"><span class="pt">It leaves you room</span><span class="pd">“PDF Remediation LLC” searches well and traps you. You will grow into audits, training, and consulting — the name should come along.</span></div>
-<div class="pill gld"><span class="pt">It sorts early</span><span class="pd">Vendor lists and bid tabulations are alphabetical. Early letters get seen first. Small edge, free.</span></div>
+<div class="pill vio"><span class="pi">↗</span><span class="pt">It leaves you room</span><span class="pd">“PDF Remediation LLC” searches well and traps you. You will grow into audits, training, and consulting — the name should come along.</span></div>
+<div class="pill gld"><span class="pi">≡</span><span class="pt">It sorts early</span><span class="pd">Vendor lists and bid tabulations are alphabetical. Early letters get seen first. Small edge, free.</span></div>
+<div class="pill" style="grid-column:1/-1"><span class="pi">§</span><span class="pt">It sounds like a business, not a hobby</span><span class="pd">You will put this on invoices, contracts, and federal registrations. It should look at home there.</span></div>
 </div>
-
-<p>The fifth: <strong>it sounds like a business, not a hobby.</strong> You will put this on invoices, contracts, and federal registrations. It should look at home there.</p>
 
 <h3 class="sh">Check it in this order — before you fall in love</h3>
 
@@ -197,7 +208,7 @@ footer{background:var(--charcoal);color:#fff;padding:20px 24px;display:flex;just
 <p class="ci" style="cursor:default"><span aria-hidden="true" style="color:var(--rose);font-weight:700;flex:0 0 auto">✕</span> <span><strong>It sorts at G.</strong> Middle of every alphabetical vendor list.</span></p>
 </div>
 
-<p>I spell my company name out loud on nearly every call I take. That is a real cost and I have paid it for years.</p>
+<p>I spell my company name out loud on nearly every call I take. That is a real cost, and I will be paying it for years.</p>
 
 <h3 class="sh">The missing vowels are the thesis</h3>
 
@@ -231,8 +242,8 @@ footer{background:var(--charcoal);color:#fff;padding:20px 24px;display:flex;just
 
 <div class="pill4">
 <div class="pill"><span class="pi">⌕</span><span class="pt">We keyword-load everything but the name</span><span class="pd">eVA profile, SWaM description, SAM registration, capability statement, website copy. The searchable words live there, deliberately.</span></div>
-<div class="pill vio"><span class="pt">Nothing collides with us</span><span class="pd">There are dozens of firms called some arrangement of Access, Ability, and Solutions. They blur together. We are confused with no one, ever.</span></div>
-<div class="pill gld"><span class="pt">It left room to become this</span><span class="pd">GlowStrm went from strategic communications into accessibility without changing a single legal document. “PDF Remediation LLC” could never have launched this service line.</span></div>
+<div class="pill vio"><span class="pi">✦</span><span class="pt">Nothing collides with us</span><span class="pd">There are dozens of firms called some arrangement of Access, Ability, and Solutions. They blur together. We are confused with no one, ever.</span></div>
+<div class="pill gld"><span class="pi">↗</span><span class="pt">It left room to become this</span><span class="pd">GlowStrm went from strategic communications into accessibility without changing a single legal document. “PDF Remediation LLC” could never have launched this service line.</span></div>
 <div class="pill"><span class="pi">◈</span><span class="pt">Our pipeline runs on relationships</span><span class="pd">Most of our work arrives through a person, not a search box. A name matters less when somebody is making the introduction.</span></div>
 </div>
 
@@ -240,11 +251,19 @@ footer{background:var(--charcoal);color:#fff;padding:20px 24px;display:flex;just
 
 <p>Here is the honest asymmetry, and I want to name it plainly rather than dress it up.</p>
 
-<p><strong>I was solving a different problem than you are.</strong> I named GlowStrm as a brand, by someone who builds brands for a living, for a company that sells through relationships I had already spent years making. I could afford to spend the search box, because I was not using it.</p>
+<p><strong>GlowStrm the company is new. GlowStrm the practice is not.</strong> We filed in February — but this is the fourth LLC I have opened for communications strategy work, each of the earlier ones built while I was working full-time. What went into this one is twenty years of doing the job, carried over from the other three.</p>
 
-<p>You are starting with no procurement history, no vendor relationships, and no reason for a buyer to know your name. <strong>The search box is the asset you have and I did not need.</strong> Spending it would cost you far more than it cost me.</p>
+<p>So what pushes this business forward is expertise I already had before the paperwork existed. That is the real difference between where I am standing and where you are standing. Not time in business. Not a pipeline.</p>
 
-<p>So the advice above stands, and I stand outside it. Both of those are true, and the reason is the same: a name is a trade, and which trade is right depends entirely on where you are standing when you make it.</p>
+<p><strong>You are entering an industry you do not have the expertise in yet.</strong> That is not a flaw, it is a starting position — and it changes what your name has to do for you, because right now the name has to do work that your reputation cannot do yet.</p>
+
+<h3 class="sh">My first business was called WaywOrd Services</h3>
+
+<p>Writing, editing, and some coaching for clients. Look at what that name is doing: the word <em>Word</em> is sitting right inside it. I was just getting started, nobody knew me, and it mattered enormously that the business name spoke for itself. The name had to make the introduction, because I could not.</p>
+
+<p>Four businesses later, given the services I offer now, <strong>the brand is more of the concern than the name.</strong> I have enough standing that GlowStrm can be a brand rather than a description — and enough practice that explaining it costs me nothing.</p>
+
+<p>So none of this was ever do-as-I-say-not-as-I-do. <strong>It is a sequence, and you are standing at the front of it.</strong> Name your first business so it speaks for itself. Do the work. Build the reputation that lets a name stop explaining and start signalling. Then name your fourth one whatever you like.</p>
 
 <div class="pq"><p>Break a rule on purpose and it is a strategy. Break it by accident and it is a bill you pay for years.</p><cite>Sharéa · GlowStrm</cite></div>
 
@@ -254,6 +273,49 @@ footer{background:var(--charcoal);color:#fff;padding:20px 24px;display:flex;just
 <p>The name matters less than the first contract you deliver.</p>
 <p>Nobody has ever lost accessibility work over a business name. Pick something clear, searchable, and sayable — then go do the work. You can operate under a different trade name later if you outgrow it.</p>
 <p>Do not let this step be the reason you are still not registered three months from now.</p>
+</div></div>
+
+<h3 class="sh">Where your business lives</h3>
+
+<p>This is the step people skip, and it is the one that is hardest to undo. Filing puts an address into a public database. Changing it later means amended filings, updated registrations, and a paper trail of both.</p>
+
+<p><strong>You are actually supplying two addresses, and in most states both are public.</strong></p>
+
+<div class="pill4">
+<div class="pill"><span class="pi">⚖</span><span class="pt">The registered agent address</span><span class="pd">Where legal notices and service of process are delivered. Must be a physical street address in the state — no PO boxes — with someone available during business hours.</span></div>
+<div class="pill vio"><span class="pi">⌂</span><span class="pt">The principal office address</span><span class="pd">Where the business is located. Appears on your formation paperwork, and later on registrations, bids, invoices, and contracts.</span></div>
+</div>
+
+<p>Terminology shifts by state — you may see <em>statutory agent</em>, <em>resident agent</em>, or <em>agent for service of process</em>. Same role.</p>
+
+<h3 class="sh">Why not your house</h3>
+
+<p>You can absolutely use your home, and plenty of people do. Here is what you are accepting when you do:</p>
+
+<ul class="bul" role="list">
+<li><strong>It becomes public.</strong> Anyone can search your state’s business registry and find where you live. Clients, strangers, anyone who reads a bid tabulation.</li>
+<li><strong>Service of process arrives there.</strong> If your business is ever sued, someone comes to your door to hand you papers — possibly in front of family or neighbours.</li>
+<li><strong>Being your own agent ties you to the address</strong> during business hours. That is a real constraint on a job you took partly for the flexibility.</li>
+<li><strong>Your lease, HOA, or local zoning may restrict it</strong> — worth reading before you file rather than after.</li>
+<li><strong>It reads differently on a government bid.</strong> Fair or not, a residential address next to a commercial one on the same evaluation sheet is a difference an evaluator notices.</li>
+</ul>
+
+<h3 class="sh">What people actually use instead</h3>
+
+<div class="pill4">
+<div class="pill"><span class="pi">⚿</span><span class="pt">A commercial registered agent</span><span class="pd">Roughly $50–150 a year. They accept legal mail, scan it to you, and their address goes on the public record instead of yours. The cheapest privacy you will ever buy.</span></div>
+<div class="pill gld"><span class="pi">✉</span><span class="pt">A virtual office or mailbox</span><span class="pd">A real street address you can use as your business address, usually with mail scanning and forwarding. Some include meeting space you can book when a client wants to sit down.</span></div>
+<div class="pill vio"><span class="pi">◈</span><span class="pt">A coworking membership</span><span class="pd">More expensive, but you get a business address plus somewhere to actually work and meet people. Worth it if isolation is a risk for you.</span></div>
+<div class="pill" style="grid-column:1/-1"><span class="pi">⌂</span><span class="pt">Your home, deliberately</span><span class="pd">A legitimate choice if you have read the list above and accepted it — most commonly paired with a commercial registered agent, so at least the legal-notice address is not your front door.</span></div>
+</div>
+
+<div class="todo">Four things to verify before you commit. <strong>A PO box will not work</strong> as a registered agent address anywhere. <strong>Not every virtual address is accepted</strong> — some states scrutinise commercial mail addresses, so confirm before you file. <strong>Some banks refuse virtual addresses</strong> for business account opening, so ask yours first. And <strong>you will need to sign USPS Form 1583</strong> for any commercial mail-receiving service to handle your mail.</div>
+
+<p><strong>Whatever you choose, the mail has to actually reach you.</strong> Missing a service-of-process notice because it sat unread in a forwarding queue can result in a default judgment — losing a case you never knew existed. If you use a service, turn on the notifications and read them.</p>
+
+<div class="recap"><p class="rk"><span class="ic">◈</span> What I did</p><div class="rl">
+<p>GlowStrm uses a virtual office. My home address is not on the public record, legal mail goes somewhere that is reliably staffed, and there is a room I can book when a client wants to meet in person.</p>
+<p>It costs a small amount every year and I have never once regretted it.</p>
 </div></div>
 
 <h3 class="sh">Resources</h3><div class="rescards">
