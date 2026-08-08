@@ -15,18 +15,34 @@
 
 <!--
   ═══════════════════════════════════════════════════════════════════════
-  DRAFT · NOT DEPLOYED · built 2026-08-03
+  DRAFT · NOT DEPLOYED · built 2026-08-03 · pricing model revised 2026-08-04
+
+  PRICING MODEL — DECIDED 2026-08-04 (Sharéa, after a Constellation Council read):
+   · Services with counted hours show a FLOOR: "Starting at $X · priced to scope."
+     Baseline Read starts at $7,920 (22 hrs × $360). Progress Read starts at
+     $4,320 (12 hrs × $360). Audit stays no-cost.
+   · Services whose shape varies too much are PRICED TO SCOPE with no figure:
+     Message Architecture™ Build and the Departmental Workshop.
+   · All published ceilings removed. No ranges anywhere on this page.
+   · Rationale: a floor is a written commitment, so only publish one where the
+     arithmetic supports it. A named gap is credible; a guessed number is not.
 
   UNCONFIRMED ITEMS — do not publish until Sharéa signs off:
    1. FILENAME. institutions.html is a placeholder. The naming question
       (agencies vs. government vs. public sector vs. institutions) is
       still open and decides the URL she says out loud on calls.
-   2. WORKSHOP PRICE. $8,640 is derived (24 hrs × $360) but not confirmed.
-      index.html JSON-LD still carries the old 3500 and is NOT changed here.
-   3. BASELINE READ ceiling of $11,520 crosses common direct-buy limits.
-      Deliberate, discussed, but worth a second look before publish.
-   4. MAB price is intentionally open pending the Rev 03 process-map
-      questions (Phase One boundary; second live session).
+   2. WORKSHOP PRICE. The old $8,640 (24 hrs × $360) is REMOVED from this page.
+      It was never confirmed, and it contradicted the $1,500 half-day rate on
+      the workshop sheet in build_sheets.py. That conflict is still unresolved —
+      it is now hidden rather than fixed. index.html JSON-LD still carries 3500.
+   3. LIVE CONTRADICTION. glowstrm.com/sprint currently states "Institutional
+      and public-sector engagements start at $7,500." That is below the $7,920
+      floor published here. Two public pages will disagree until that line
+      changes. NOT edited from this sandbox — the live site is ahead of this
+      working tree, so that edit has to happen against the real source.
+   4. MAB scope is still open pending the Rev 03 process-map questions
+      (Phase One boundary; second live session). Pricing to scope removes the
+      urgency but does not answer them.
    5. NAV. No other page links here yet. Adding the link touches public
       pages, which was not authorized. Her call.
 
@@ -112,7 +128,8 @@
   .item-body strong { color: var(--cream); font-weight: 400; }
   .item-deliv { font-size: 13px; color: var(--muted); line-height: 1.7; margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border); max-width: 520px; }
   .item-deliv span { color: var(--gold); font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; display: block; margin-bottom: 7px; }
-  .item-price { text-align: right; min-width: 172px; }
+  .item-price { text-align: right; min-width: 172px; max-width: 208px; }
+  .price-lead { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
   .price-fig { font-family: 'Cormorant Garamond', serif; font-size: 27px; font-weight: 400; color: var(--cream); line-height: 1.15; white-space: nowrap; }
   .price-fig.open { font-size: 19px; font-style: italic; color: var(--coral); white-space: normal; line-height: 1.4; }
   .price-fig.free { color: var(--gold); }
@@ -272,8 +289,10 @@
     <div class="gradient-rule"></div>
     <h2 class="section-title">What you can <em>buy</em>.</h2>
     <p class="section-body" style="margin-bottom:40px;">
-      Every price below is built from counted hours at a single rate. Nothing here is priced backward
-      from a purchasing threshold.
+      Every figure below is built from counted hours at a single rate. Nothing here is priced backward
+      from a purchasing threshold. Where a service shows a starting figure, that is a floor and not an
+      estimate. Where it says priced to scope, the shape of the work varies too much to name a floor
+      honestly, so we quote it after a conversation.
     </p>
 
     <div class="item" id="audit">
@@ -307,8 +326,9 @@
         </p>
       </div>
       <div class="item-price">
-        <div class="price-fig">$7,920 – $11,520</div>
-        <p class="price-note">Scoped at intake.<br>See how the range works below.</p>
+        <div class="price-lead">Starting at</div>
+        <div class="price-fig">$7,920</div>
+        <p class="price-note">Priced to scope.<br>See how pricing works below.</p>
       </div>
     </div>
 
@@ -329,8 +349,8 @@
         </p>
       </div>
       <div class="item-price">
-        <div class="price-fig open">Scoped to institutional need</div>
-        <p class="price-note">Quoted after intake, at the same hourly rate as every service on this page.</p>
+        <div class="price-fig open">Priced to scope</div>
+        <p class="price-note">Quoted after intake, at the same hourly rate as every service on this page. The Build is sized to how many offices write on your behalf, so it is scoped with you rather than assumed.</p>
       </div>
       <div class="deliv-grid">
         <div class="dl-group">Foundation</div>
@@ -361,8 +381,9 @@
         </p>
       </div>
       <div class="item-price">
-        <div class="price-fig">$4,320 – $6,480</div>
-        <p class="price-note">Requires a prior Baseline Read</p>
+        <div class="price-lead">Starting at</div>
+        <div class="price-fig">$4,320</div>
+        <p class="price-note">Priced to scope.<br>Requires a prior Baseline Read.</p>
       </div>
     </div>
 
@@ -381,20 +402,25 @@
         </p>
       </div>
       <div class="item-price">
-        <div class="price-fig">From $8,640</div>
-        <p class="price-note">Scope and price move together with department need</p>
+        <div class="price-fig open">Priced to scope</div>
+        <p class="price-note">A workshop is sized by team size, how much material we read beforehand, and time in the room. Quoted after a short conversation.</p>
       </div>
     </div>
 
     <div class="explain">
-      <div class="explain-label">How the range works</div>
+      <div class="explain-label">How pricing works</div>
       <p class="explain-body">
-        Where a service shows a range, the rate is identical at both ends. What changes is how many
-        hours the work takes, and that depends almost entirely on the condition of what you hand over
-        at intake. <strong>An institution that arrives organized lands at the bottom of the
-        range.</strong> One that hands over scattered materials across a dozen owners with no
-        inventory lands nearer the top, because reconstructing that record is real hours. You are
-        told which end you are tracking toward before the work begins, not after.
+        Every engagement is quoted at the same hourly rate. The only thing that moves is how many hours
+        the work takes, and that depends almost entirely on the condition of what you hand over at
+        intake. <strong>An institution that arrives organized starts at the floor.</strong> One that
+        hands over scattered materials across a dozen owners with no inventory takes more hours,
+        because reconstructing that record is real work. Where a service shows a starting figure, that
+        is the floor for an institution that arrives organized, not an average.
+      </p>
+      <p class="explain-body" style="margin-top:14px;">
+        You get the number in writing before the work begins, not after. Because the rate never
+        changes, <strong>a scope change and a price change are the same conversation</strong>. There
+        are no change orders and no hourly surprises.
       </p>
     </div>
   </div>
