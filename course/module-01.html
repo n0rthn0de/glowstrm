@@ -123,36 +123,93 @@ footer{background:var(--charcoal);color:#fff;padding:20px 24px;display:flex;just
 .pq p{font-family:'Cormorant Garamond',Georgia,serif;font-size:25px;font-style:italic;color:#fff;margin:0 0 8px;line-height:1.35}
 .pq cite{font-style:normal;font-size:12px;font-weight:700;color:#E6B65C;letter-spacing:.14em;text-transform:uppercase}
 @media(max-width:680px){.pill4,.pill3,.pill2{grid-template-columns:1fr}}
+.bul{list-style:none;margin:18px 0;padding:0}
+.bul li{position:relative;padding:7px 0 7px 24px;font-size:15.5px;line-height:1.6}
+.bul li::before{content:"";position:absolute;left:2px;top:16px;width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.band{display:flex;align-items:center;gap:11px;margin:38px 0 16px;padding:12px 17px;border-radius:9px;background:var(--plum)}
+.band h2{margin:0;font-family:var(--serif);font-size:21px;font-weight:600;color:#fff;line-height:1.25}
+.band .bi{font-size:18px;color:#fff;opacity:.85;flex:0 0 auto}
+.band.violet{background:var(--violet)} .band.rose{background:var(--rose)} .band.char{background:var(--charcoal)}
+.band.gold{background:var(--gold)} .band.gold h2,.band.gold .bi{color:var(--charcoal)}
+.toc{background:#fff;border:1px solid var(--lt2);border-left:4px solid var(--plum);border-radius:0 10px 10px 0;padding:15px 19px;margin:22px 0}
+.toc p{font-size:12px;font-weight:700;color:var(--plum);text-transform:uppercase;letter-spacing:.14em;margin:0 0 9px}
+.toc ol{margin:0;padding-left:19px}
+.toc li{font-size:15px;padding:3px 0}
+.toc a{color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--lt2)}
+.toc a:hover{color:var(--plum);border-bottom-color:var(--plum)}
+.src{background:#F6F3FB;border-left:3px solid #8B82A7;border-radius:0 8px 8px 0;padding:14px 18px;margin:28px 0}
+.srck{font-size:11px;font-weight:700;color:#4A4260;text-transform:uppercase;letter-spacing:.14em;margin:0 0 8px}
+.src p{font-size:12.5px;color:#4A4260;line-height:1.55;margin:0 0 7px}
+.src p:last-child{margin:0}
+.src a{color:#783E8D}
 </style></head><body>
 <div class="pbar" id="pbar"></div>
 <div class="topbar"><a class="mark" href="/course/index.html">Glow<span>Strm</span></a><span class="lbl">The Web Accessibility Contractor Pathway</span></div>
-<nav class="rail" aria-label="Course progress"><a class="rn" href="/course/module-00.html" title="0">0</a><a class="rn cur" href="/course/module-01.html" title="1">1</a><a class="rn" href="/course/module-02.html" title="2">2</a><a class="rn" href="/course/module-03.html" title="3">3</a><a class="rn" href="/course/module-04.html" title="4">4</a><a class="rn" href="/course/module-05.html" title="5">5</a><a class="rn" href="/course/lantern-a.html" title="✦">✦</a><a class="rn" href="/course/module-06.html" title="6">6</a><a class="rn" href="/course/module-07.html" title="7">7</a><a class="rn" href="/course/module-08.html" title="8">8</a><a class="rn" href="/course/lantern-b.html" title="✦">✦</a><a class="rn" href="/course/checkpoint.html" title="▸">▸</a><a class="rn" href="/course/module-09.html" title="9">9</a><a class="rn" href="/course/module-10.html" title="10">10</a><a class="rn" href="/course/module-11.html" title="11">11</a><a class="rn" href="/course/lantern-c.html" title="✦">✦</a><a class="rn" href="/course/module-12.html" title="12">12</a><a class="rn" href="/course/lantern-d.html" title="✦">✦</a><a class="rn" href="/course/horizon.html" title="The Horizon">◆</a></nav>
+<nav class="rail" aria-label="Course progress"><a class="rn" href="/course/module-00.html" title="0">0</a><a class="rn cur" href="/course/module-01.html" title="1">1</a><a class="rn" href="/course/module-02.html" title="2">2</a><a class="rn" href="/course/module-03.html" title="3">3</a><a class="rn" href="/course/module-04.html" title="4">4</a><a class="rn" href="/course/module-05.html" title="5">5</a><a class="rn" href="/course/lantern-a.html" title="✦">✦</a><a class="rn" href="/course/module-06.html" title="6">6</a><a class="rn" href="/course/module-07.html" title="7">7</a><a class="rn" href="/course/module-08.html" title="8">8</a><a class="rn" href="/course/lantern-b.html" title="✦">✦</a><a class="rn" href="/course/checkpoint.html" title="▸">▸</a><a class="rn" href="/course/horizon.html" title="The Horizon">◆</a><a class="rn" href="/course/module-09.html" title="9">9</a><a class="rn" href="/course/module-10.html" title="10">10</a><a class="rn" href="/course/module-11.html" title="11">11</a><a class="rn" href="/course/lantern-c.html" title="✦">✦</a><a class="rn" href="/course/module-12.html" title="12">12</a><a class="rn" href="/course/lantern-d.html" title="✦">✦</a></nav>
 <main class="wrap">
 <div class="gatebox" id="gate" hidden><p class="gk">This part is gated</p><h2>One step first, traveler</h2><p>Everything past the Checkpoint opens with a passcode Sharéa texts you personally, once you've declared your pace. If you have it, enter it below. If not, head to the <a href="/course/checkpoint.html">Checkpoint</a> — it takes ten minutes.</p><div class="passrow"><input type="password" id="passin" placeholder="passcode" aria-label="passcode"><button class="btn" onclick="tryPass()">Open the road</button></div><p class="fb" id="passfb" hidden></p></div>
 <div id="content">
 <header class="hero"><div class="hnum">1</div><div class="hmeta"><p class="kick">Part A</p><h1>The Economic Case</h1><div class="badges"><span class="badge b1">PART A</span><span class="badge b2">Motivation</span><span class="badge b3">~30 minutes</span></div></div></header>
-<div class="stats"><div class="stat"><span class="sv">$91,584</span><span class="sl">average specialist salary</span></div><div class="stat"><span class="sv">$37–85</span><span class="sl">per hour, freelance</span></div><div class="stat"><span class="sv">$100+</span><span class="sl">per hour, credentialed experts</span></div></div><p>Motivation that lasts is built on facts, not hype. So here are the numbers behind this work, plainly. Decide with your eyes open.</p>
+<div class="stats"><div class="stat"><span class="sv">$100–250</span><span class="sl">per page, web audits</span></div><div class="stat"><span class="sv">$195</span><span class="sl">per hour, specialist billing</span></div><div class="stat"><span class="sv">$0</span><span class="sl">to earn the first two credentials</span></div></div><p>Motivation that lasts is built on facts, not hype. So here are the numbers behind this work, plainly. Decide with your eyes open.</p>
+<div class="toc"><p>On this page</p><ol><li><a href="#pays">What the work pays</a></li><li><a href="#ai">What about AI?</a></li><li><a href="#lasts">Why it lasts</a></li></ol></div>
+<div class="band " id="pays"><span class="bi" aria-hidden="true">§</span><h2>What the work pays</h2></div>
 <h3 class="sh">What it pays</h3>
-<p>The average U.S. salary for a Web Accessibility Specialist is about $91,584 (ZipRecruiter, 2025).</p>
-<p>Freelance and consulting work commonly runs $37–$85 an hour, and credentialed experts regularly bill over $100 an hour.</p>
-<p>A realistic note, because honesty is the point: those are mature numbers. Most people start lower — often with contract work in the lower end of that hourly range — and climb as the credentials and real projects stack up. The ceiling is high and the floor is livable. Both things are true.</p>
+
+<p>Two kinds of numbers get quoted in this field, and they are not equally trustworthy. Here are both, labelled.</p>
+
+<p><strong>Published service rates — reliable.</strong> These are posted prices from a firm whose auditors hold the same DHS Trusted Tester credential you would earn here:</p>
+
+<ul class="bul" role="list">
+<li><strong>$100–250 per page</strong> for a web accessibility audit, or <strong>$1,250–2,750</strong> for a typical whole audit.</li>
+<li><strong>From $7.50 a page</strong> for PDF remediation.</li>
+<li><strong>$195 an hour</strong> for specialist technical support.</li>
+</ul>
+
+<p><strong>Salary averages — treat with caution.</strong> You will see figures like $91,584 quoted for "web accessibility specialist." We looked into where that comes from, and the data is thin: the same source reports a 25th percentile <em>above</em> its own average, which is not possible, and lists Nome, Alaska among its top-paying cities. Salary aggregators struggle with job titles this narrow. <strong>Believe the posted service prices; treat the salary averages as rumour.</strong></p>
+
+<p>A realistic note, because honesty is the point. Most people start at the lower end and climb as credentials and real projects stack up. The ceiling is high and the floor is livable. Both things are true.</p>
+
+<div class="todo">Full rate tables, entry-level ranges, and what you can charge at each stage are on <a href="/course/horizon.html">The Horizon</a>, the map you will read at the start of Part C. This is the overview.</div>
+
+<div class="band char" id="ai"><span class="bi" aria-hidden="true">◉</span><h2>What about AI?</h2></div>
+<p>You should hear this now rather than three modules in, because it is the first question anyone will ask you — and the first doubt that will surface at 2am.</p>
+
+<p><strong>Yes, software is getting good at part of this.</strong> Current tools genuinely auto-tag documents, repair table structure, and rebuild reading order. Anyone who tells you otherwise will be corrected by a client in the first two minutes of a meeting.</p>
+
+<p><strong>And no, it cannot finish the job.</strong> Two facts worth carrying:</p>
+
+<ul class="bul" role="list">
+<li>When the Justice Department pushed back the ADA Title II deadlines in April 2026, its stated reasons included <strong>the limits of generative AI for remediation</strong>. The federal government said in writing that automation is not solving this.</li>
+<li>The remediation vendors themselves <strong>recommend human review</strong> before publishing anything high-stakes. You would not be arguing against the software industry. You would be agreeing with it.</li>
+</ul>
+
+<p>The pattern is consistent and it is the reason this career exists: <strong>automation handles structure. It cannot judge meaning.</strong> A tool can tell you an image has no description. Only a person can say what that image is <em>for</em> in that document, for that reader.</p>
+
+<div class="todo"><strong>The honest forecast, in one line:</strong> the cheap, bulk end of this work is being automated and will keep getting cheaper. The judgment end pays more and is not going anywhere. Aim there from your first contract. We go through the research properly — including the studies that disagree with each other — on <a href="/course/horizon.html">The Horizon</a> at the start of Part C.</div>
+
+<div class="band violet" id="lasts"><span class="bi" aria-hidden="true">◉</span><h2>Why it lasts</h2></div>
 <h3 class="sh">Why the demand lasts</h3>
-<p>It’s remote-first — work you can do from anywhere, for clients anywhere.</p>
-<p>It’s credential-driven — a certification you earn, not a network you’re born into, opens the door.</p>
-<p>It’s recession-resistant — demand is created by law, not consumer mood. Companies fix accessibility because they’re required to.</p>
-<p>It’s growing — the global digital accessibility market is projected to grow from $1.42 billion in 2025 to $3.24 billion by 2034, and the U.S. leads with about 36% of it.</p>
-<p>And the pressure is rising in real time: ADA web-accessibility lawsuits rose 37% in the first half of 2025 alone. Every filing is a company that now has to pay someone to fix its website. That someone is increasingly people like you.</p>
+<ul class="bul" role="list">
+<li>It’s remote-first — work you can do from anywhere, for clients anywhere.</li>
+<li>It’s credential-driven — a certification you earn, not a network you’re born into, opens the door.</li>
+<li>It’s recession-resistant — demand is created by law, not consumer mood. Companies fix accessibility because they’re required to.</li>
+<li><strong>It’s growing</strong> — the global digital accessibility market is valued at about <strong>$1.42 billion in 2025</strong> and projected to reach <strong>$3.24 billion by 2034</strong>, a compound growth rate of 8.6%. <strong>North America holds roughly 36%</strong> of it (<a href="https://straitsresearch.com/report/digital-accessibility-market" target="_blank" rel="noopener">Straits Research</a>).</li>
+</ul>
+<p>And the pressure is rising in real time. Federal digital-accessibility filings hit roughly <strong>2,000 in the first half of 2025 — a 37% jump</strong> over the same period the year before, and the full year closed with <strong>more than 5,000 cases</strong> across federal and key state courts (<a href="https://blog.usablenet.com/2025-midyear-accessibility-lawsuit-report-key-legal-trends" target="_blank" rel="noopener">UsableNet</a>). Every filing is an organisation that now has to pay someone to fix what it shipped. That someone is increasingly people like you.</p>
 <h3 class="sh">The throughline</h3>
 <p>This is a field where effort and credentials outweigh pedigree and connections — which is exactly why it works as a path to economic mobility. You are not asking anyone for a seat. You are earning a credential the market already needs.</p>
 <div class="recap"><p class="rk"><span class="ic">✦</span> The short version</p><div class="rl">
-<p>Average specialist salary ~$91,584; freelance $37–$85/hr; experts $100/hr+.</p>
-<p>Demand is remote, credential-driven, legally mandated, and growing — and accessibility lawsuits are climbing fast.</p>
-<p>Credentials and effort matter more than pedigree here — that’s the whole opportunity.</p>
+<ul class="bul" role="list">
+<li>Published rates: <strong>$100–250</strong> per audit page, <strong>from $7.50</strong> per remediated page, <strong>$195/hr</strong> specialist support. Salary averages for this title are unreliable — we show you why.</li>
+<li>Demand is remote, credential-driven, legally mandated, and growing.</li>
+<li>AI handles structure, not meaning — and DOJ said as much in writing when it extended the deadline.</li>
+<li>Credentials and effort matter more than pedigree here. That is the whole opportunity.</li>
+</ul>
 </div></div>
 <div class="next"><p class="nk">What's next</p>
 <p>If the why is settled, the next three modules cover the how of working for yourself — starting with what self-employment actually means.</p>
 </div>
-<nav class="pn"><a class="navlink" href="/course/module-00.html">← Module 0</a><a class="navlink nx" href="/course/module-02.html">Module 2 →</a></nav>
+<div class="src"><p class="srck">◇ Sources &amp; attribution</p><p>Market size and growth from <em>Digital Accessibility Market Size, Share, Growth, Analysis, 2034</em>, Straits Research, 2025. <a href="https://straitsresearch.com/report/digital-accessibility-market" target="_blank" rel="noopener">straitsresearch.com/report/digital-accessibility-market</a> — $1,417.47M in 2025 rising to $3,239.42M by 2034, 8.6% CAGR, North America 36.27% share. Commissioned market research rather than peer-reviewed work; read it as directional.</p><p>Litigation volume from the <em>2025 Midyear Digital Accessibility Lawsuit Report</em>, UsableNet. <a href="https://blog.usablenet.com/2025-midyear-accessibility-lawsuit-report-key-legal-trends" target="_blank" rel="noopener">blog.usablenet.com/2025-midyear-accessibility-lawsuit-report-key-legal-trends</a> — approximately 2,000 federal filings in the first half of 2025, up 37% year on year, and more than 5,000 across federal and key state courts for the full year. UsableNet sells accessibility services; the underlying filing counts track Seyfarth Shaw’s independent ADA Title III data.</p><p>Service rates from <em>Accessibility Services Pricing</em>, Accessible.org, updated 25 July 2026. <a href="https://accessible.org/pricing/" target="_blank" rel="noopener">accessible.org/pricing</a> — one firm’s published prices, not a market average.</p><p>Compliance dates and the stated reasons for their extension from <em>Extension of Compliance Dates for Nondiscrimination on the Basis of Disability; Accessibility of Web Information and Services of State and Local Government Entities</em>, U.S. Department of Justice, 20 April 2026. <a href="https://www.federalregister.gov/documents/2026/04/20/2026-07663/extension-of-compliance-dates-for-nondiscrimination-on-the-basis-of-disability-accessibility-of-web" target="_blank" rel="noopener">federalregister.gov</a></p><p>Salary aggregate figures referenced in this module come from <em>Web Accessibility Specialist Salary</em>, ZipRecruiter, August 2026. <a href="https://www.ziprecruiter.com/Salaries/Web-Accessibility-Specialist-Salary" target="_blank" rel="noopener">ziprecruiter.com/Salaries/Web-Accessibility-Specialist-Salary</a> — cited to show why we do not rely on it.</p><p>None of these organisations endorses GlowStrm or this course. Figures were current when checked and will drift; verify before quoting them to a client.</p></div><nav class="pn"><a class="navlink" href="/course/module-00.html">← Module 0</a><a class="navlink nx" href="/course/module-02.html">Module 2 →</a></nav>
 </div>
 </main>
 <footer><span class="wm">GlowStrm, LLC</span><span class="tl">What grows, glows.</span></footer>
