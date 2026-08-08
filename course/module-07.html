@@ -1,0 +1,199 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="noindex, nofollow"><title>See It in Action · GlowStrm Pathway</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Source+Sans+3:ital,wght@0,400;0,600;0,700&display=swap" rel="stylesheet"><style>:root{--charcoal:#271F41;--cream:#F8F4EE;--rose:#BB4072;--plum:#783E8D;--violet:#774ECE;--coral:#FB896D;--gold:#E6B65C;--text:#1A1528;--mid:#4A4260;--muted:#8B82A7;--lt1:#F5F3F9;--lt2:#EDE9F5;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Source Sans 3',system-ui,sans-serif}
+*{box-sizing:border-box}body{margin:0;background:var(--lt1);color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.75}
+.pbar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--gold);z-index:99}
+.topbar{background:var(--charcoal);color:#fff;padding:14px 24px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px}
+.mark{font-family:var(--serif);font-size:20px;font-weight:600;color:#fff;text-decoration:none}.mark span{color:var(--gold)}
+.lbl{font-size:10px;text-transform:uppercase;letter-spacing:.16em;opacity:.5}
+.rail{display:flex;gap:5px;justify-content:center;flex-wrap:wrap;background:#201936;padding:10px 16px}
+.rn{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#cfc7e0;background:#2e2550;text-decoration:none}
+.rn:hover{background:var(--plum);color:#fff}
+.rn.cur{background:var(--gold);color:var(--charcoal)}
+.wrap{max-width:780px;margin:0 auto;background:#fff;padding:0 0 48px;min-height:70vh}
+.hero{background:var(--cream);padding:34px 34px 26px;display:flex;gap:20px;align-items:flex-start;border-bottom:3px solid var(--gold)}
+.hnum{flex:0 0 64px;height:64px;border-radius:50%;background:var(--charcoal);color:var(--gold);font-family:var(--serif);font-size:30px;font-weight:600;display:flex;align-items:center;justify-content:center}
+.hmeta{flex:1}
+.kick{font-size:11px;font-weight:700;color:var(--plum);text-transform:uppercase;letter-spacing:.2em;margin:0 0 6px}
+h1{font-family:var(--serif);font-size:36px;font-weight:600;color:var(--charcoal);margin:0 0 10px;line-height:1.1}
+.badges{display:flex;gap:7px;flex-wrap:wrap}
+.badge{font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:.08em}
+.b1{background:#EDE9F5;color:var(--plum)}.b2{background:#FDF3F0;color:#993C1D}.b3{background:#FAEEDA;color:#854F0B}
+.wrap>*:not(.hero):not(.pn):not(.gatebox),#content>*:not(.hero):not(.pn){margin-left:34px;margin-right:34px}
+h2{font-family:var(--serif);font-size:25px;font-weight:600;color:var(--charcoal)}
+.sh{font-family:var(--serif);font-size:24px;font-weight:600;color:var(--charcoal);margin:32px 0 8px;padding-left:12px;border-left:3px solid var(--gold)}
+p{margin:0 0 15px}
+.lead2{font-size:19px;color:var(--charcoal);font-weight:600;line-height:1.6;margin:18px 0}
+ul.bl{margin:0 0 16px;padding-left:0;list-style:none}
+ul.bl li{position:relative;padding:5px 0 5px 26px}
+ul.bl li:before{content:"";position:absolute;left:6px;top:14px;width:7px;height:7px;border-radius:50%;background:var(--coral)}
+a{color:var(--plum)}a:hover{color:var(--rose)}
+strong{color:var(--charcoal)}
+.stats{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0}
+.stat{flex:1;min-width:150px;background:var(--charcoal);border-radius:10px;padding:16px 18px}
+.sv{display:block;font-family:var(--serif);font-size:27px;font-weight:600;color:var(--gold);line-height:1.1}
+.sl{display:block;font-size:12.5px;color:#cfc7e0;margin-top:4px;line-height:1.4}
+.recap{background:var(--cream);border-radius:10px;padding:18px 22px;margin:26px 0;border-left:4px solid var(--gold)}
+.rk{font-size:12px;font-weight:700;color:var(--plum);text-transform:uppercase;letter-spacing:.14em;margin:0 0 8px}
+.ic{margin-right:5px}
+.rl p{position:relative;padding-left:24px;margin:0 0 8px;font-size:15.5px;color:var(--mid)}
+.rl p:before{content:"✓";position:absolute;left:0;color:var(--violet);font-weight:700}
+.rescards{display:grid;gap:10px;margin:16px 0}
+.rescard{display:block;border:1px solid var(--lt2);border-left:3px solid var(--violet);border-radius:0 8px 8px 0;padding:13px 16px;text-decoration:none;background:#fff}
+.rescard:hover{border-color:var(--plum);border-left-color:var(--plum);background:#FCFBFE}
+.rc-t{display:block;font-weight:600;color:var(--charcoal);font-size:15.5px}
+.rc-n{display:block;font-size:13.5px;color:var(--muted);margin-top:2px}
+.rc-go{display:inline-block;font-size:12px;font-weight:700;color:var(--plum);margin-top:6px;text-transform:uppercase;letter-spacing:.06em}
+.chk{background:#FBF9FE;border:1px solid var(--lt2);border-radius:10px;padding:18px 22px;margin:24px 0}
+.ck{font-size:12px;font-weight:700;color:var(--plum);text-transform:uppercase;letter-spacing:.14em;margin:0 0 10px}
+.ci-intro{font-size:15px;color:var(--mid);margin:0 0 10px}
+.ci{display:flex;gap:11px;align-items:flex-start;padding:7px 0;cursor:pointer;font-size:15.5px}
+.ci input{width:19px;height:19px;accent-color:var(--violet);margin-top:3px;flex:0 0 19px;cursor:pointer}
+.ci input:checked+span{color:var(--muted);text-decoration:line-through}
+.vid{margin:22px 0}
+.vframe{position:relative;padding-bottom:56.25%;height:0;border-radius:10px;overflow:hidden;background:var(--charcoal)}
+.vframe iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+.vcap{font-size:13.5px;color:var(--muted);margin-top:8px}
+.vcard{display:flex;gap:14px;align-items:center;border:1px solid var(--lt2);border-radius:10px;padding:14px 16px;text-decoration:none;background:#fff;margin:12px 0}
+.vcard:hover{border-color:var(--plum);background:#FCFBFE}
+.vplay{flex:0 0 46px;height:46px;border-radius:50%;background:var(--rose);position:relative}
+.vplay:after{content:"";position:absolute;left:18px;top:14px;border-left:14px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent}
+.vc-t{display:block;font-weight:600;color:var(--charcoal);font-size:15.5px}
+.vc-n{display:block;font-size:13.5px;color:var(--muted);margin-top:2px}
+.quiz{background:var(--lt1);border-radius:12px;padding:22px 24px;margin:30px 0}
+.qk{font-size:12px;font-weight:700;color:var(--plum);text-transform:uppercase;letter-spacing:.14em;margin:0 0 4px}
+.qhint{font-size:14px;color:var(--muted);margin-bottom:14px}
+.qq{margin:18px 0}
+.qt{font-weight:600;color:var(--charcoal);margin-bottom:8px;font-size:16px}
+.opt{display:block;padding:9px 13px;border:1px solid var(--lt2);border-radius:8px;margin:6px 0;cursor:pointer;background:#fff;font-size:15px}
+.opt:hover{border-color:var(--plum)}
+.opt b{color:var(--plum);margin-right:3px}
+.fb{font-size:14.5px;font-weight:600;margin:8px 0 0}
+.fb.ok{color:#0F6E56}.fb.no{color:var(--rose)}
+.act{background:var(--cream);border-top:3px solid var(--gold);border-radius:0 0 10px 10px;padding:20px 22px;margin:26px 0}
+.act.big{border-top-width:5px}
+.ak{font-size:12px;font-weight:700;color:var(--plum);text-transform:uppercase;letter-spacing:.14em;margin:0 0 6px}
+.act p{font-size:15.5px;color:var(--mid)}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.btn{display:inline-block;background:var(--charcoal);color:#fff;border:0;padding:12px 20px;border-radius:8px;font-family:var(--sans);font-weight:700;font-size:14.5px;cursor:pointer;text-decoration:none}
+.btn:hover{background:var(--plum);color:#fff}
+.btn.gold{background:var(--gold);color:var(--charcoal)}
+.btn.gold:hover{background:#d9a744;color:var(--charcoal)}
+.fallback{font-size:13px;color:var(--muted);margin-top:10px}
+.next{border-left:3px solid var(--coral);background:#FDF3F0;border-radius:0 8px 8px 0;padding:14px 18px;margin:26px 0}
+.nk{font-size:12px;font-weight:700;color:#993C1D;text-transform:uppercase;letter-spacing:.14em;margin:0 0 4px}
+.next p{margin:0;font-size:15.5px;color:var(--mid)}
+.todo{background:#FDF3F0;border-left:3px solid var(--coral);padding:11px 15px;margin:16px 0;font-size:14.5px;color:var(--mid)}
+.pn{display:flex;justify-content:space-between;margin:38px 34px 0;border-top:1px solid var(--lt2);padding-top:20px;font-size:15px;gap:12px}
+.navlink{text-decoration:none;font-weight:700}
+footer{background:var(--charcoal);color:#fff;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.wm{font-family:var(--serif);font-size:15px}
+.tl{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:14px}
+.gatebox{background:var(--cream);border-top:4px solid var(--gold);padding:30px 34px;margin:0}
+.gk{font-size:11px;font-weight:700;color:var(--plum);text-transform:uppercase;letter-spacing:.2em;margin:0 0 4px}
+.passrow{display:flex;gap:9px;margin:14px 0 4px;flex-wrap:wrap}
+.passrow input{flex:1;min-width:180px;max-width:260px;padding:11px 13px;border:1px solid var(--lt2);border-radius:8px;font-size:16px}
+.parts{display:grid;gap:16px;margin:24px 0}
+.pc{border:1px solid var(--lt2);border-left:4px solid var(--gold);border-radius:0 10px 10px 0;padding:20px 22px;background:#fff}
+.pc.mid{border-left-color:var(--coral)}
+.pc.locked{border-left-color:var(--plum);background:#FBF9FE}
+.pc h2{margin:0 0 2px;font-size:22px}
+.ps{font-size:13.5px;color:var(--muted);margin:0 0 12px}
+.lock{display:inline-block;font-size:10.5px;color:var(--plum);font-weight:700;text-transform:uppercase;letter-spacing:.1em;background:#EDE9F5;padding:3px 9px;border-radius:20px;margin-bottom:6px}
+.mlist{display:grid;gap:2px}
+.ml{display:flex;gap:12px;align-items:center;padding:8px 10px;border-radius:7px;text-decoration:none}
+.ml:hover{background:var(--cream)}
+.mn{flex:0 0 30px;height:30px;border-radius:50%;background:var(--lt2);color:var(--plum);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+.ml:hover .mn{background:var(--gold);color:var(--charcoal)}
+.mt{font-size:15.5px;color:var(--charcoal)}
+@media(max-width:680px){.wrap>*:not(.hero):not(.pn):not(.gatebox),#content>*:not(.hero):not(.pn){margin-left:18px;margin-right:18px}.hero{padding:24px 18px 20px;gap:14px}.hnum{flex:0 0 50px;height:50px;font-size:24px}h1{font-size:27px}.pn{margin-left:18px;margin-right:18px}.stats{flex-direction:column}}
+
+.fig{margin:26px 0;padding:0}
+.svgfit{width:100%;height:auto;display:block;background:#fff;border:1px solid #EDE9F5;border-radius:12px}
+.fig figcaption{font-size:13.5px;color:#8B82A7;margin-top:9px;font-style:italic}
+.pill4,.pill3,.pill2{display:grid;gap:12px;margin:24px 0}
+.pill4{grid-template-columns:repeat(2,1fr)}
+.pill3{grid-template-columns:repeat(3,1fr)}
+.pill2{grid-template-columns:repeat(2,1fr)}
+.pill{background:#F8F4EE;border-radius:10px;padding:16px 18px;border-left:3px solid #E6B65C}
+.pill.vio{border-left-color:#774ECE}
+.pill.gld{border-left-color:#E6B65C}
+.pi{display:block;font-size:22px;color:#783E8D;line-height:1;margin-bottom:7px}
+.pt{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;font-weight:600;color:#271F41;margin-bottom:3px}
+.pd{display:block;font-size:14px;color:#4A4260;line-height:1.5}
+.pq{margin:28px 0;padding:20px 26px;background:#271F41;border-radius:12px}
+.pq p{font-family:'Cormorant Garamond',Georgia,serif;font-size:25px;font-style:italic;color:#fff;margin:0 0 8px;line-height:1.35}
+.pq cite{font-style:normal;font-size:12px;font-weight:700;color:#E6B65C;letter-spacing:.14em;text-transform:uppercase}
+@media(max-width:680px){.pill4,.pill3,.pill2{grid-template-columns:1fr}}
+.hunt{background:#FBF9FE;border:1px solid #EDE9F5;border-left:4px solid #FB896D;border-radius:0 10px 10px 0;padding:20px 22px;margin:28px 0}
+.hk{font-size:12px;font-weight:700;color:#993C1D;text-transform:uppercase;letter-spacing:.14em;margin:0 0 8px}
+.hi{font-size:15px;color:#4A4260;margin:0 0 12px}
+.why{background:#F8F4EE;border-top:3px solid #E6B65C;border-radius:0 0 10px 10px;padding:18px 22px;margin:22px 0}
+.wk{font-size:12px;font-weight:700;color:#783E8D;text-transform:uppercase;letter-spacing:.14em;margin:0 0 8px}
+.why p{font-size:16px;color:#4A4260;margin:0}
+.stories{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0}
+.story{display:flex;flex-direction:column;background:#F8F4EE;border:1px solid #EDE9F5;border-top:4px solid #BB4072;border-radius:10px;padding:18px 16px 16px;text-decoration:none;transition:.15s}
+.story:hover{background:#fff;border-top-color:#783E8D;box-shadow:0 2px 0 #EDE9F5}
+.st-av{width:40px;height:40px;border-radius:50%;background:#271F41;color:#E6B65C;font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;font-weight:600;display:flex;align-items:center;justify-content:center;margin-bottom:10px}
+.st-n{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:21px;font-weight:600;color:#271F41;line-height:1.1}
+.st-w{display:block;font-size:12px;font-weight:700;color:#783E8D;margin:4px 0 8px;line-height:1.35}
+.st-d{display:block;font-size:13.5px;color:#4A4260;line-height:1.5;flex:1}
+.st-go{display:block;font-size:11.5px;font-weight:700;color:#BB4072;text-transform:uppercase;letter-spacing:.06em;margin-top:12px}
+@media(max-width:680px){.stories{grid-template-columns:1fr}}
+
+.src{background:#F6F3FB;border-left:3px solid #8B82A7;border-radius:0 8px 8px 0;padding:14px 18px;margin:28px 0}
+.srck{font-size:11px;font-weight:700;color:#4A4260;text-transform:uppercase;letter-spacing:.14em;margin:0 0 8px}
+.src p{font-size:12.5px;color:#4A4260;line-height:1.55;margin:0 0 7px}
+.src p:last-child{margin:0}
+.src a{color:#783E8D}
+.band{display:flex;align-items:center;gap:11px;margin:38px 0 16px;padding:12px 17px;border-radius:9px;background:var(--plum)}
+.band h2{margin:0;font-family:var(--serif);font-size:21px;font-weight:600;color:#fff;line-height:1.25}
+.band .bi{font-size:18px;color:#fff;opacity:.85;flex:0 0 auto}
+.band.violet{background:var(--violet)} .band.rose{background:var(--rose)} .band.char{background:var(--charcoal)}
+.band.gold{background:var(--gold)} .band.gold h2,.band.gold .bi{color:var(--charcoal)}
+.toc{background:#fff;border:1px solid var(--lt2);border-left:4px solid var(--plum);border-radius:0 10px 10px 0;padding:15px 19px;margin:22px 0}
+.toc p{font-size:12px;font-weight:700;color:var(--plum);text-transform:uppercase;letter-spacing:.14em;margin:0 0 9px}
+.toc ol{margin:0;padding-left:19px}
+.toc li{font-size:15px;padding:3px 0}
+.toc a{color:var(--charcoal);text-decoration:none;border-bottom:1px solid var(--lt2)}
+.toc a:hover{color:var(--plum);border-bottom-color:var(--plum)}
+</style></head><body>
+<div class="pbar" id="pbar"></div>
+<div class="topbar"><a class="mark" href="/course/index.html">Glow<span>Strm</span></a><span class="lbl">The Web Accessibility Contractor Pathway</span></div>
+<nav class="rail" aria-label="Course progress"><a class="rn" href="/course/module-00.html" title="0">0</a><a class="rn" href="/course/module-01.html" title="1">1</a><a class="rn" href="/course/module-02.html" title="2">2</a><a class="rn" href="/course/module-03.html" title="3">3</a><a class="rn" href="/course/module-04.html" title="4">4</a><a class="rn" href="/course/module-05.html" title="5">5</a><a class="rn" href="/course/lantern-a.html" title="✦">✦</a><a class="rn" href="/course/module-06.html" title="6">6</a><a class="rn cur" href="/course/module-07.html" title="7">7</a><a class="rn" href="/course/module-08.html" title="8">8</a><a class="rn" href="/course/lantern-b.html" title="✦">✦</a><a class="rn" href="/course/checkpoint.html" title="▸">▸</a><a class="rn" href="/course/horizon.html" title="The Horizon">◆</a><a class="rn" href="/course/module-09.html" title="9">9</a><a class="rn" href="/course/module-10.html" title="10">10</a><a class="rn" href="/course/module-11.html" title="11">11</a><a class="rn" href="/course/lantern-c.html" title="✦">✦</a><a class="rn" href="/course/module-12.html" title="12">12</a><a class="rn" href="/course/lantern-d.html" title="✦">✦</a></nav>
+<main class="wrap">
+<div class="gatebox" id="gate" hidden><p class="gk">This part is gated</p><h2>One step first, traveler</h2><p>Everything past the Checkpoint opens with a passcode Sharéa texts you personally, once you've declared your pace. If you have it, enter it below. If not, head to the <a href="/course/checkpoint.html">Checkpoint</a> — it takes ten minutes.</p><div class="passrow"><input type="password" id="passin" placeholder="passcode" aria-label="passcode"><button class="btn" onclick="tryPass()">Open the road</button></div><p class="fb" id="passfb" hidden></p></div>
+<div id="content">
+<header class="hero"><div class="hnum">7</div><div class="hmeta"><p class="kick">Part B</p><h1>See It in Action</h1><div class="badges"><span class="badge b1">PART B</span><span class="badge b2">Experiential</span><span class="badge b3">~30 minutes</span></div></div></header>
+<p>This lesson is mostly watching, and that’s the point. Reading about a screen reader is abstract; seeing someone actually use one is what makes accessibility click. Everything here is free, short, and captioned, from the most trusted sources in the field. Plan about 30 minutes; watch in order.</p>
+<div class="why"><p class="wk">◈ Why this module matters</p><p>Everything else on this path teaches you <em>what</em> to fix. This module is where you learn <strong>who you are fixing it for</strong>. You cannot audit a website well if the person on the other side of the screen is an abstraction to you — you will find the code problems and miss the human ones. So meet them first: how they perceive a page, how they type, how they navigate, and what stops them cold. Every finding you write for the rest of your career traces back to somebody in this module.</p></div><div class="toc"><p>On this page</p><ol><li><a href="#watch">Watch it happen</a></li><li><a href="#tools">How the work gets done</a></li><li><a href="#people">Nine people, in their own words</a></li></ol></div>
+<div class="band " id="watch"><span class="bi" aria-hidden="true">▶</span><h2>Watch it happen</h2></div>
+<h3 class="sh">Watch first — 4 minutes</h3>
+<div class="vid"><div class="vframe"><iframe src="https://www.youtube-nocookie.com/embed/20SHvU2PKsM" title="Introduction to Web Accessibility and W3C Standards" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen></iframe></div><p class="vcap"><strong>Introduction to Web Accessibility and W3C Standards</strong> — a short, captioned animation explaining what accessibility is and why standards exist. <a href="https://www.youtube.com/watch?v=20SHvU2PKsM" target="_blank" rel="noopener">Watch on YouTube ↗</a></p></div>
+<h3 class="sh">Watch next — about 8 minutes</h3>
+<div class="vid"><div class="vframe"><iframe src="https://www.youtube-nocookie.com/embed/3f31oufqFSM" title="Web Accessibility Perspectives — compilation of 10 topics" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><p class="vcap"><strong>Web Accessibility Perspectives</strong> — ten short clips, each showing one feature helping a real person, and what happens when it’s missing. <a href="https://www.youtube.com/watch?v=3f31oufqFSM" target="_blank" rel="noopener">Watch on YouTube ↗</a> · <a href="https://www.w3.org/WAI/perspective-videos/" target="_blank" rel="noopener">All ten on W3C ↗</a></p></div>
+<div class="band violet" id="tools"><span class="bi" aria-hidden="true">⚙</span><h2>How the work gets done</h2></div>
+<h3 class="sh">Tools and techniques</h3><p>Now that you have seen the impact, here is a look at the tools and techniques practitioners actually use. You are not expected to master any of this yet — just get familiar with the shape of the work.</p><div class="vid"><div class="vframe"><iframe src="https://www.youtube-nocookie.com/embed/HG4PXNRjXoU" title="Accessibility tools and techniques" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><p class="vcap"><strong>Tools and techniques</strong> — an introduction to how accessibility work is actually carried out. <a href="https://www.youtube.com/watch?v=HG4PXNRjXoU" target="_blank" rel="noopener">Watch on YouTube ↗</a></p></div><p class="lead2">Then read all four — this is the required part.</p><p>W3C breaks the tools people use into four categories. Read every one; they are short. Together they are the clearest map that exists of how disabled people actually move through a page — and it is the map you will be testing against in Module 9.</p><div class="rescards"><a class="rescard" href="https://www.w3.org/WAI/people-use-web/tools-techniques/perception/" target="_blank" rel="noopener"><span class="rc-t">1 · Perception</span><span class="rc-n">hearing, feeling and seeing — how information reaches a person at all</span><span class="rc-go">Read ↗</span></a><a class="rescard" href="https://www.w3.org/WAI/people-use-web/tools-techniques/presentation/" target="_blank" rel="noopener"><span class="rc-t">2 · Presentation</span><span class="rc-n">distinguishing and understanding — text size, contrast, layout, clarity</span><span class="rc-go">Read ↗</span></a><a class="rescard" href="https://www.w3.org/WAI/people-use-web/tools-techniques/input/" target="_blank" rel="noopener"><span class="rc-t">3 · Input</span><span class="rc-n">typing, writing, and clicking — keyboards, switches, voice, and more</span><span class="rc-go">Read ↗</span></a><a class="rescard" href="https://www.w3.org/WAI/people-use-web/tools-techniques/navigation/" target="_blank" rel="noopener"><span class="rc-t">4 · Interaction</span><span class="rc-n">navigating and finding — moving through a site and knowing where you are</span><span class="rc-go">Read ↗</span></a></div><div class="todo">Hold onto one distinction as you read: an <strong>assistive technology</strong> is software or hardware someone uses (a screen reader, a magnifier, a switch). An <strong>adaptive strategy</strong> is a technique someone uses (enlarging text, slowing the mouse, turning on captions). Clients mix these up constantly. You will not.</div><div class="band rose" id="people"><span class="bi" aria-hidden="true">◉</span><h2>Nine people, in their own words</h2></div>
+<h3 class="sh">Meet nine people — this is the heart of it</h3><p>W3C keeps nine short profiles of real web users. They take about a minute each, and they are the closest thing this field has to sitting beside somebody while they hit a wall. <strong>Read at least two before you go on</strong> — and notice that not one of these barriers is a coding problem until you decide to see it that way.</p><div class="stories"><a class="story" href="https://www.w3.org/WAI/people-use-web/user-stories/story-one/" target="_blank" rel="noopener"><span class="st-av">A</span><span class="st-n">Ade</span><span class="st-w">reporter with limited use of his arms</span><span class="st-d">Navigates with the keyboard alone after a spinal cord injury.</span><span class="st-go">Read the story ↗</span></a><a class="story" href="https://www.w3.org/WAI/people-use-web/user-stories/story-two/" target="_blank" rel="noopener"><span class="st-av">I</span><span class="st-n">Ian</span><span class="st-w">data entry clerk with autism</span><span class="st-d">Carousels, pop-ups and autoplay video make content hard to follow.</span><span class="st-go">Read the story ↗</span></a><a class="story" href="https://www.w3.org/WAI/people-use-web/user-stories/story-three/" target="_blank" rel="noopener"><span class="st-av">L</span><span class="st-n">Lakshmi</span><span class="st-w">senior accountant who is blind</span><span class="st-d">Uses a screen reader for images, forms and navigation.</span><span class="st-go">Read the story ↗</span></a><a class="story" href="https://www.w3.org/WAI/people-use-web/user-stories/story-four/" target="_blank" rel="noopener"><span class="st-av">L</span><span class="st-n">Lexie</span><span class="st-w">online shopper with colour blindness</span><span class="st-d">Red, green, orange and brown are hard to tell apart.</span><span class="st-go">Read the story ↗</span></a><a class="story" href="https://www.w3.org/WAI/people-use-web/user-stories/story-five/" target="_blank" rel="noopener"><span class="st-av">S</span><span class="st-n">Sophie</span><span class="st-w">basketball fan with Down syndrome</span><span class="st-d">Acronyms and unfamiliar words get in the way of meaning.</span><span class="st-go">Read the story ↗</span></a><a class="story" href="https://www.w3.org/WAI/people-use-web/user-stories/story-six/" target="_blank" rel="noopener"><span class="st-av">D</span><span class="st-n">Dhruv</span><span class="st-w">older adult student who is deaf</span><span class="st-d">Relies on real-time captions or transcripts for audio.</span><span class="st-go">Read the story ↗</span></a><a class="story" href="https://www.w3.org/WAI/people-use-web/user-stories/story-seven/" target="_blank" rel="noopener"><span class="st-av">M</span><span class="st-n">Marta</span><span class="st-w">marketing assistant who is deaf and blind</span><span class="st-d">Reads small portions of screen at high magnification.</span><span class="st-go">Read the story ↗</span></a><a class="story" href="https://www.w3.org/WAI/people-use-web/user-stories/story-eight/" target="_blank" rel="noopener"><span class="st-av">S</span><span class="st-n">Stefan</span><span class="st-w">student with ADHD and dyslexia</span><span class="st-d">Both make focusing on and reading content difficult.</span><span class="st-go">Read the story ↗</span></a><a class="story" href="https://www.w3.org/WAI/people-use-web/user-stories/story-nine/" target="_blank" rel="noopener"><span class="st-av">E</span><span class="st-n">Elias</span><span class="st-w">retiree with low vision, tremor, memory loss</span><span class="st-d">Consistent layouts and resizable text make the difference.</span><span class="st-go">Read the story ↗</span></a></div><p class="vcap">Profiles summarised from <em>Stories of Web Users</em>, W3C Web Accessibility Initiative. Copyright © W3C®. <a href="https://www.w3.org/WAI/people-use-web/user-stories/" target="_blank" rel="noopener">Read the originals ↗</a></p><div class="act"><p class="ak">Start here</p><p>Open the full set and pick the two that pull you.</p><div class="btnrow"><a class="btn gold" href="https://www.w3.org/WAI/people-use-web/user-stories/" target="_blank" rel="noopener">Stories of Web Users ↗</a></div></div><div class="hunt"><p class="hk">◉ Field notes — go looking on purpose</p><p class="hi">Most of this lesson lives on W3C’s site, which makes it easy to skim and lose. So hunt for specifics. Tick these off as you find them — they save on this device, and this is the first real research you will do in this field.</p><label class="ci"><input type="checkbox" data-ck="m07-h0"> <span>Open <strong>Stories of Web Users</strong> and read <strong>two</strong> of the nine stories. Write down each person’s name, their job, and the barrier they hit.</span></label><label class="ci"><input type="checkbox" data-ck="m07-h1"> <span>From <strong>Perception</strong>: name one assistive technology that turns a page into something a person can hear or feel.</span></label><label class="ci"><input type="checkbox" data-ck="m07-h2"> <span>From <strong>Presentation</strong>: find one adjustment a person might make that has nothing to do with special software.</span></label><label class="ci"><input type="checkbox" data-ck="m07-h3"> <span>From <strong>Input</strong>: find one way of operating a computer that uses neither a mouse nor a standard keyboard.</span></label><label class="ci"><input type="checkbox" data-ck="m07-h4"> <span>From <strong>Interaction</strong>: note one thing a site can do that helps a person know where they are — and one that leaves them lost.</span></label><label class="ci"><input type="checkbox" data-ck="m07-h5"> <span>Open <strong>Diverse Abilities and Barriers</strong> and skim the five categories: auditory, cognitive and learning, physical, speech, visual. Which surprised you most?</span></label><label class="ci"><input type="checkbox" data-ck="m07-h6"> <span>Pick one of the ten Perspectives topics and watch its own short clip on the W3C page.</span></label><label class="ci"><input type="checkbox" data-ck="m07-h7"> <span>Bookmark the W3C WAI site — you will come back to it for the rest of your career. Then look back at what you collected: <strong>which item did you have to hunt for hardest?</strong> That is usually the thing you understood least going in, and it is worth a second pass.</span></label></div><section class="quiz"><p class="qk"><span class="ic">✓</span> One thing worth getting right</p><p class="qhint">Only one factual check in this module — because you will say this out loud in front of a client, and being wrong is expensive.</p><div class="qq" data-c="1"><p class="qt">1. What is the difference between an assistive technology and an adaptive strategy?</p><label class="opt"><input type="radio" name="m07-0" value="0"> <span><b>A.</b> They are two names for the same thing.</span></label><label class="opt"><input type="radio" name="m07-0" value="1"> <span><b>B.</b> An assistive technology is the tool someone uses; an adaptive strategy is the technique they use.</span></label><label class="opt"><input type="radio" name="m07-0" value="2"> <span><b>C.</b> Assistive technologies are free; adaptive strategies must be purchased.</span></label><label class="opt"><input type="radio" name="m07-0" value="3"> <span><b>D.</b> Assistive technologies are for physical disabilities; adaptive strategies are for cognitive ones.</span></label><p class="fb" hidden></p></div></section><div class="hunt"><p class="hk">◉ Think about your thinking</p><p class="hi">Private — for your own notebook, nothing submitted. No right answers. These are for noticing <em>how</em> you learn, which is the skill that carries you through the 85 hours ahead — more than any fact on this page will.</p><label class="ci"><input type="checkbox" data-ck="m07-t0"> <span><strong>What did you believe about how disabled people use the internet before today?</strong> Name the specific thing that changed it — a story, a clip, one sentence. If nothing changed, say that too; it means you came in knowing something most people don’t.</span></label><label class="ci"><input type="checkbox" data-ck="m07-t1"> <span><strong>Which of the nine stories stayed with you after you closed the tab?</strong> Now the harder half: what does that tell you about where your attention naturally goes — and who you might <em>under</em>-notice when you are auditing a real site?</span></label><label class="ci"><input type="checkbox" data-ck="m07-t2"> <span><strong>Where did you catch yourself skimming?</strong> Be honest — the reading, the videos, the technical parts? That is your pattern, and knowing it is worth more than pretending it isn’t there. Module 9 is 85 hours long; your pattern will show up again.</span></label><label class="ci"><input type="checkbox" data-ck="m07-t3"> <span><strong>You just read four pages of tools you had mostly never heard of.</strong> How did not-knowing feel — curious, or exposing? You will meet that feeling constantly from here on, and deciding now how you will respond to it is most of the difference between finishing and stopping.</span></label><label class="ci"><input type="checkbox" data-ck="m07-t4"> <span><strong>Could you answer “who actually needs this?” tomorrow, without looking anything up?</strong> If not — what would you go back and re-read? Go do that now, while it is cheap.</span></label></div><div class="act"><p class="ak">Share one before you move on</p><p>Post one of the stories you read — the person’s name, what they do, and the barrier they hit. Then say what you would have missed about them if you had only read the code. Reading someone else’s find is how this gets real for all of us.</p><div class="btnrow"><a class="btn" href="https://join.slack.com/t/glowstrmworkspace/shared_invite/zt-45eanybv8-B0erYF4_MwsFXHc6y20obQ" target="_blank" rel="noopener">Post in Slack</a><a class="btn gold" href="mailto:course@glowstrm.com?subject=Field%20notes%20%E2%80%94%20Module%207&body=The%20story%20I%20read%3A%0A%0AThe%20barrier%20they%20hit%3A%0A%0AWhat%20I%20would%20have%20missed%3A%0A">Email it instead</a></div><p class="fallback">Trouble joining? Email course@glowstrm.com and Sharéa will get you in.</p></div><div class="recap"><p class="rk"><span class="ic">✦</span> The short version</p><div class="rl">
+<p>Seeing real people use assistive technology is the fastest way to understand accessibility.</p>
+<p>You watched the W3C intro, the Perspectives clips, and the assistive-technology demonstrations — all free and captioned.</p>
+<p>You wrote a short reflection. That conviction is what carries you into the real coursework.</p>
+</div></div>
+<div class="next"><p class="nk">What's next</p>
+<p>That’s the end of Part B. You now know what web accessibility is and why it matters. The Checkpoint opens the credentialing path.</p>
+</div>
+<div class="src"><p class="srck">◇ Sources &amp; attribution</p><p>Video: <em>Introduction to Web Accessibility and W3C Standards</em>, W3C Web Accessibility Initiative (WAI). Copyright © W3C®. <a href="https://www.w3.org/WAI/videos/standards-and-benefits/" target="_blank" rel="noopener">w3.org/WAI/videos/standards-and-benefits/</a></p><p>Video: <em>Web Accessibility Perspectives — Compilation of 10 Topics</em>, W3C Web Accessibility Initiative (WAI). Copyright © W3C®. <a href="https://www.w3.org/WAI/perspective-videos/" target="_blank" rel="noopener">w3.org/WAI/perspective-videos/</a></p><p>The nine user profiles are summarised from <em>Stories of Web Users</em>, W3C Web Accessibility Initiative (WAI). Kevin White and Shadi Abou-Zahra, eds. Copyright © W3C®. Updated 13 March 2025. <a href="https://www.w3.org/WAI/people-use-web/user-stories/" target="_blank" rel="noopener">w3.org/WAI/people-use-web/user-stories/</a></p><p>The four tools categories — perception, presentation, input, interaction — are from <em>Tools and Techniques</em>, in <em>How People with Disabilities Use the Web</em>, W3C Web Accessibility Initiative (WAI). Shadi Abou-Zahra, ed. Copyright © W3C®. Updated 25 June 2024. <a href="https://www.w3.org/WAI/people-use-web/tools-techniques/" target="_blank" rel="noopener">w3.org/WAI/people-use-web/tools-techniques/</a></p><p>The assistive technology / adaptive strategy distinction is W3C’s, from the same page.</p><p>Used with attribution under the <a href="https://www.w3.org/Consortium/Legal/copyright-documents" target="_blank" rel="noopener">W3C Document License</a>. W3C does not endorse GlowStrm or this course. Summaries and commentary are GlowStrm’s own; refer to the linked originals as the authoritative text.</p></div><nav class="pn"><a class="navlink" href="/course/module-06.html">← Module 6</a><a class="navlink nx" href="/course/module-08.html">Module 8 →</a></nav>
+</div>
+</main>
+<footer><span class="wm">GlowStrm, LLC</span><span class="tl">What grows, glows.</span></footer>
+<script>var PASS="what@gl0wg!rl";
+(function(){if(document.body.dataset.gated==="1"&&localStorage.getItem("gsPass")!==PASS){document.getElementById("gate").hidden=false;document.getElementById("content").style.display="none";}})();
+function tryPass(){var v=document.getElementById("passin").value.trim().toLowerCase(),f=document.getElementById("passfb");
+if(v===PASS){localStorage.setItem("gsPass",PASS);location.reload();}else{f.hidden=false;f.textContent="That’s not it — check the text from Sharéa, or visit the Checkpoint.";f.className="fb no";}}
+document.addEventListener("change",function(e){
+ if(e.target.type==="radio"){var q=e.target.closest(".qq");if(!q)return;var f=q.querySelector(".fb");f.hidden=false;
+  if(parseInt(e.target.value,10)===parseInt(q.dataset.c,10)){f.textContent="Right. Keep moving, traveler.";f.className="fb ok";}
+  else{f.textContent="Not quite — look back at the lesson and try again.";f.className="fb no";}}
+ if(e.target.dataset&&e.target.dataset.ck){localStorage.setItem("gsck_"+e.target.dataset.ck,e.target.checked?"1":"");}
+});
+document.querySelectorAll("[data-ck]").forEach(function(b){if(localStorage.getItem("gsck_"+b.dataset.ck)==="1")b.checked=true;});
+window.addEventListener("scroll",function(){var h=document.documentElement,p=(h.scrollTop)/(h.scrollHeight-h.clientHeight)*100;document.getElementById("pbar").style.width=Math.min(p,100)+"%";});
+</script></body></html>
